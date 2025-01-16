@@ -38,10 +38,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link
+    <noscript>
+      <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    </noscript>
   </head>
   <body>
     <!-- Pantalla de carga -->
@@ -58,6 +60,7 @@
         src="img/header/img-header-left.webp"
         alt="Imagen izquierda del header"
         width="200px"
+        height="auto"
         loading="lazy"
       />
       <!-- Barra de navegación -->
@@ -67,6 +70,7 @@
             src="img/title-logo-navidad.webp"
             alt="El Patita Logo"
             width="60"
+            height="auto"
             loading="lazy"
           />
         </div>
@@ -81,6 +85,7 @@
         src="img/header/img-header-right.webp"
         alt="Imagen derecha del header"
         width="200px"
+        height="auto"
         loading="lazy"
       />
     </header>
@@ -103,7 +108,7 @@
       <div class="hero-content">
         <!-- Texto e imagen de bienvenida -->
         <div class="hero-text">
-          <img src="img/texto-inicio.webp" alt="Texto El Patita" width="400" loading="lazy"/>
+          <img src="img/texto-inicio.webp" alt="Texto El Patita" width="400" height="auto" loading="lazy"/>
           <p>
             <strong>Disfrute de un buen pollo a la brasa en Huanchaco</strong>
           </p>
@@ -113,6 +118,8 @@
           src="img/pollo-inicio.webp"
           alt="Imagen Pollo a la brasa"
           width="450"
+          height="auto"
+          loading="lazy"
         />
       </div>
     </section>
@@ -125,7 +132,7 @@
       <!-- Combo Personal -->
       <div class="combo">
         <h3><strong class="combo-title">Combo Personal</strong></h3>
-        <img src="img/combos/1-4-pollo.webp" alt="1/4 Pollo" width="245" loading="lazy"/>
+        <img src="img/combos/1-4-pollo.webp" alt="1/4 Pollo" width="245" height="auto" loading="lazy"/>
         <p class="combo-description">
           1/4 de Pollo + Papas fritas + ensalada + 1/2 litro de jugo de
           maracuyá.
@@ -136,7 +143,7 @@
       <!-- Combo Familiar -->
       <div class="combo">
         <h3><strong class="combo-title">Combo Familiar</strong></h3>
-        <img src="img/combos/1-2-pollo.webp" alt="1/2 Pollo" width="245" loading="lazy"/>
+        <img src="img/combos/1-2-pollo.webp" alt="1/2 Pollo" width="245" height="auto" loading="lazy"/>
         <p class="combo-description">
           1/2 Pollo + Papas fritas + ensalada familiar + 1 litro de limonada
           frozen.
@@ -147,7 +154,7 @@
       <!-- Combo Extra Familiar -->
       <div class="combo">
         <h3><strong class="combo-title">Combo Extra Familiar</strong></h3>
-        <img src="img/combos/1-pollo.webp" alt="Pollo Entero" width="245" loading="lazy"/>
+        <img src="img/combos/1-pollo.webp" alt="Pollo Entero" width="245" height="auto" loading="lazy"/>
         <p class="combo-description">
           1 Pollo Entero + Papas fritas + ensalada familiar + 1 litro de chicha
           morada.
@@ -168,12 +175,14 @@
           src="img/title-logo-navidad.webp"
           alt="El Patita Logo"
           width="150"
+          height="auto"
           loading="lazy"
         />
         <img
           src="img/footer/texto-footer.webp"
           alt="Texto footer"
           width="300"
+          height="auto"
           loading="lazy"
         />
         <!-- Sección de encuesta -->
@@ -182,6 +191,7 @@
             src="img/footer/img-texto-encuesta.webp"
             alt="Encuesta"
             width="200"
+            height="auto"
             loading="lazy"
           />
           <!-- Botón para redirigir a la encuesta -->

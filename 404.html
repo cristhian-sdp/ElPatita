@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página no encontrada</title>
+    <!-- Enlaces a hojas de estilo CSS -->
     <link rel="stylesheet" href="css/404-styles.css" />
+    <!-- Metadatos para SEO -->
     <meta
       name="description"
       content="Página no encontrada en El Patita. Lo sentimos, la página que buscas no existe."
@@ -17,19 +19,24 @@
     />
     <meta name="robots" content="noindex, follow" />
     <link rel="canonical" href="https://elpatita.pages.dev/404" />
+    <!-- Metadatos para Open Graph (para compartir en redes sociales) -->
     <meta property="og:title" content="Página no encontrada - El Patita" />
     <meta
       property="og:description"
       content="Lo sentimos, la página que buscas no existe. Vuelve a la página principal para continuar navegando."
     />
     <meta property="og:image" content="img/404-image.webp" />
-    <meta property="og:url" content="https://www.ElPatita.pages.dev/404.html" />
+    <meta property="og:url" content="https://www.ElPatita.pages.dev/404" />
     <meta property="og:type" content="website" />
+    <!-- Favicon de la página -->
     <link rel="icon" href="img/title-logo-navidad.webp" type="image/webp" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Enlace a fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    </noscript>
   </head>
   <body>
     <!-- Contenido principal de la página de error -->
@@ -40,7 +47,7 @@
     </div>
     <!-- Imagen de error -->
     <div class="error-image">
-      <img src="img/404-image.webp" alt="Imagen de error 404" width="250px" />
+      <img src="img/404-image.webp" alt="Imagen de error 404" width="250px" height="auto" loading="lazy" />
     </div>
   </body>
 </html>

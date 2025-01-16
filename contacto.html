@@ -32,10 +32,15 @@
     <!-- Favicon de la página -->
     <link rel="icon" href="img/title-logo-navidad.webp" type="image/webp" />
     <!-- Enlace a fuentes de Google Fonts -->
-    <link
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    </noscript>
   </head>
   <body>
     <!-- Pantalla de carga -->
@@ -52,6 +57,7 @@
         src="img/header/img-header-left.webp"
         alt="Imagen izquierda del header"
         width="200px"
+        height="auto"
         loading="lazy"
       />
       <!-- Barra de navegación -->
@@ -61,6 +67,7 @@
             src="img/title-logo-navidad.webp"
             alt="El Patita Logo"
             width="60"
+            height="auto"
             loading="lazy"
           />
         </div>
@@ -75,6 +82,7 @@
         src="img/header/img-header-right.webp"
         alt="Imagen derecha del header"
         width="200px"
+        height="auto"
         loading="lazy"
       />
     </header>
@@ -102,6 +110,7 @@
             src="img/contacto/texto-contacto.webp"
             alt="Texto Contacto"
             width="400"
+            height="auto"
             loading="lazy"
           />
           <!-- Botón para copiar el número de teléfono -->
@@ -109,7 +118,7 @@
             <button onclick="copyPhoneNumber(this)" class="button">
               <span class="button-content">
                 <strong>COPIAR TELÉFONO</strong>
-                <img src="img/icons/copy-icon.webp" alt="Copiar" width="30px" loading="lazy"/>
+                <img src="img/icons/copy-icon.webp" alt="Copiar" width="30px" height="auto" loading="lazy"/>
               </span>
             </button>
           </p>
@@ -120,6 +129,7 @@
           src="img/contacto/numero-contacto.webp"
           alt="Numero Contacto"
           width="500"
+          height="auto"
           loading="lazy"
         />
       </div>
@@ -134,12 +144,14 @@
           src="img/title-logo-navidad.webp"
           alt="El Patita Logo"
           width="150"
+          height="auto"
           loading="lazy"
         />
         <img
           src="img/footer/texto-footer.webp"
           alt="Texto footer"
           width="300"
+          height="auto"
           loading="lazy"
         />
         <!-- Sección de encuesta -->
@@ -148,6 +160,7 @@
             src="img/footer/img-texto-encuesta.webp"
             alt="Encuesta"
             width="200"
+            height="auto"
             loading="lazy"
           />
           <!-- Botón para redirigir a la encuesta -->
