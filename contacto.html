@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Metadatos y configuración de la página -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | El Patita</title>
+    <!-- Enlaces a hojas de estilo CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/contacto-styles.css" />
+    <!-- Metadatos para SEO -->
+    <meta
+      name="description"
+      content="Contáctenos para cualquier consulta o pedido"
+    />
+    <meta
+      name="keywords"
+      content="El Patita, pollo a la brasa, Huanchaco, restaurante, contacto, numero, dirección, horario de atención"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.ElPatita.pages.dev/contacto.html" />
+    <!-- Metadatos para Open Graph (para compartir en redes sociales) -->
+    <meta property="og:title" content="El Patita - Contacto" />
+    <meta
+      property="og:description"
+      content="Contáctenos para cualquier consulta o pedido"
+    />
+    <meta property="og:image" content="img/contacto/texto-contacto.webp" />
+    <meta property="og:url" content="https://www.ElPatita.pages.dev/contacto.html" />
+    <meta property="og:type" content="website" />
+    <!-- Favicon de la página -->
+    <link rel="icon" href="img/title-logo-navidad.webp" type="image/webp" />
+    <!-- Enlace a fuentes de Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Pantalla de carga -->
+    <div class="loading-screen">
+      <img src="img/screen-charged.gif" alt="Cargando..." id="loadingGif" />
+    </div>
+    <header>
+    <!-- Encabezado de la pagina-->  
+      <img
+        class="header-img-left"
+        src="img/header/img-header-left.webp"
+        alt="Imagen izquierda del header"
+        width="200px"
+      />
+      <!-- Barra de navegación -->
+      <nav>
+        <div class="logo">
+          <img
+            src="img/title-logo-navidad.webp"
+            alt="El Patita Logo"
+            width="60"
+          />
+        </div>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="carta.html">Carta</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+      </nav>
+      <img
+        class="header-img-right"
+        src="img/header/img-header-right.webp"
+        alt="Imagen derecha del header"
+        width="200px"
+      />
+    </header>
+    <!-- Sección de Iconos Fijos en la pagina -->
+    <div class="fixed-icons">
+      <a href="https://maps.app.goo.gl/EmZLFnjT7ZtSFn2n9" target="_blank">
+        <img src="img/icons/google-maps-icon.webp" alt="Google Maps" />
+      </a>
+      <a href="https://wa.me/51993229832" target="_blank">
+        <img src="img/icons/whatsapp-icon.webp" alt="WhatsApp" />
+      </a>
+      <a
+        href="https://drive.google.com/file/d/1w1i2sDZ49lIOiozdJhh7nAbF4yL1RBA2/view?usp=sharing"
+        target="_blank"
+      >
+        <img src="img/icons/yape-icon.webp" alt="Drive" />
+      </a>
+    </div>
+    <!-- Sección principal de contacto -->
+    <section class="hero">
+      <div class="hero-content">
+        <div>
+          <img
+            class="contact-image"
+            src="img/contacto/texto-contacto.webp"
+            alt="Texto Contacto"
+            width="400"
+          />
+          <!-- Botón para copiar el número de teléfono -->
+          <p>
+            <button onclick="copyPhoneNumber(this)" class="button">
+              <span class="button-content">
+                <strong>COPIAR TELÉFONO</strong>
+                <img src="img/icons/copy-icon.webp" alt="Copiar" width="30px" />
+              </span>
+            </button>
+          </p>
+        </div>
+        <!-- Imagen del número de contacto -->
+        <img
+          class="number-image"
+          src="img/contacto/numero-contacto.webp"
+          alt="Numero Contacto"
+          width="500"
+        />
+      </div>
+    </section>
+
+    <!-- Línea horizontal personalizada para separar secciones -->
+    <hr class="custom-line" />
+    <!-- Sección del pie de página -->
+    <footer>
+      <div class="footer-content">
+        <img
+          src="img/title-logo-navidad.webp"
+          alt="El Patita Logo"
+          width="150"
+        />
+        <img
+          src="img/footer/texto-footer.webp"
+          alt="Texto footer"
+          width="300"
+        />
+        <!-- Sección de encuesta -->
+        <div class="encuesta">
+          <img
+            src="img/footer/img-texto-encuesta.webp"
+            alt="Encuesta"
+            width="200"
+          />
+          <!-- Botón para redirigir a la encuesta -->
+          <button
+            class="encuesta-button"
+            onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdYzkBOdLRSeoieGLIxuFA7cyFeME0NgLloQCdg2s4Ohp1Zew/viewform?usp=header';"
+          >
+            ENCUESTA
+          </button>
+        </div>
+      </div>
+      <div class="footer-center-content">
+        <!-- Información del desarrollador -->
+        <p>
+          Desarrollado por:
+          <a href="https://github.com/cristhian-sdp" target="_blank"
+            >Cristhian-sdp</a
+          >
+        </p>
+        <!-- Derechos reservados -->
+        <p>&copy;ElPatita'2024 todos los derechos reservados.</p>
+        <!-- Licencia Creative Commons -->
+        <a
+          rel="license"
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          class="license-link"
+        >
+          Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
+          Internacional
+        </a>
+      </div>
+      <div class="footer-links">
+        <!-- Enlaces a términos y condiciones y políticas de privacidad -->
+        <a href="pdf/Terminos-condiciones.pdf" target="_blank"
+          >Términos y Condiciones</a
+        >
+        <a href="pdf/Políticas-privacidad.pdf" target="_blank"
+          >Políticas de Privacidad</a
+        >
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

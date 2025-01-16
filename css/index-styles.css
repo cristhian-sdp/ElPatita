@@ -1,0 +1,27 @@
+/* Reglas para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  /* Estilos para la sección hero */
+  .hero {
+      margin-top: -10px;
+  }
+
+  /* Estilos para el contenido de la sección hero */
+  .hero-content {
+      margin: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: -70px;
+  }
+
+  /* Estilos para la imagen dentro del contenido de la sección hero */
+  .hero-content img {
+      margin: 0;
+      width: 275px;
+      max-width: 300px;
+  }
+
+  /* Estilos específicos para la imagen con alt "Imagen Pollo a la brasa" */
+  .hero-content img[alt="Imagen Pollo a la brasa"] {
+      margin-top: -90px;
+  }
+}

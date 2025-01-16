@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /404.html
+Disallow: /pdf/
+Allow: /
+
+Sitemap: https://www.ElPatita.pages.dev/sitemap.xml
