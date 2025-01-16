@@ -40,7 +40,10 @@
   <body>
     <!-- Pantalla de carga -->
     <div class="loading-screen">
-      <img src="img/screen-charged.gif" alt="Cargando..." id="loadingGif" />
+      <video autoplay loop muted>
+        <source src="video/screen-charged.mp4" type="video/mp4" alt="Cargando...">
+        Tu navegador no soporta el elemento de video.
+      </video>
     </div>
     <header>
     <!-- Encabezado de la pagina-->  
@@ -49,6 +52,7 @@
         src="img/header/img-header-left.webp"
         alt="Imagen izquierda del header"
         width="200px"
+        loading="lazy"
       />
       <!-- Barra de navegación -->
       <nav>
@@ -57,6 +61,7 @@
             src="img/title-logo-navidad.webp"
             alt="El Patita Logo"
             width="60"
+            loading="lazy"
           />
         </div>
           <ul>
@@ -70,21 +75,22 @@
         src="img/header/img-header-right.webp"
         alt="Imagen derecha del header"
         width="200px"
+        loading="lazy"
       />
     </header>
     <!-- Sección de Iconos Fijos en la pagina -->
     <div class="fixed-icons">
       <a href="https://maps.app.goo.gl/EmZLFnjT7ZtSFn2n9" target="_blank">
-        <img src="img/icons/google-maps-icon.webp" alt="Google Maps" />
+        <img src="img/icons/google-maps-icon.webp" alt="Google Maps" loading="lazy"/>
       </a>
       <a href="https://wa.me/51993229832" target="_blank">
-        <img src="img/icons/whatsapp-icon.webp" alt="WhatsApp" />
+        <img src="img/icons/whatsapp-icon.webp" alt="WhatsApp" loading="lazy"/>
       </a>
       <a
         href="https://drive.google.com/file/d/1w1i2sDZ49lIOiozdJhh7nAbF4yL1RBA2/view?usp=sharing"
         target="_blank"
       >
-        <img src="img/icons/yape-icon.webp" alt="Drive" />
+        <img src="img/icons/yape-icon.webp" alt="yape" loading="lazy"/>
       </a>
     </div>
     <section class="hero">
@@ -95,6 +101,7 @@
             src="img/texto-pollo-inicio.webp"
             alt="Imagen Pollo a la brasa"
             width="460"
+            loading="lazy"
           />
         </div>
         <!-- Imagen del menú de brasas -->
@@ -103,6 +110,7 @@
           src="img/menu/brasas.webp"
           alt="Menú Brasas"
           width="460"
+          loading="lazy"
         />
       </div>
     </section>
@@ -118,6 +126,7 @@
             src="img/menu/parrillas.webp"
             alt="Menú Parrillas"
             width="460"
+            loading="lazy"
           />
         </div>
         <!-- Imagen del menú de bebidas -->
@@ -126,6 +135,7 @@
           src="img/menu/bebidas.webp"
           alt="Menú Bebidas"
           width="460"
+          loading="lazy"
         />
       </div>
     </section>
@@ -137,11 +147,13 @@
           src="img/title-logo-navidad.webp"
           alt="El Patita Logo"
           width="150"
+          loading="lazy"
         />
         <img
           src="img/footer/texto-footer.webp"
           alt="Texto footer"
           width="300"
+          loading="lazy"
         />
         <!-- Sección de encuesta -->
         <div class="encuesta">
@@ -149,6 +161,7 @@
             src="img/footer/img-texto-encuesta.webp"
             alt="Encuesta"
             width="200"
+            loading="lazy"
           />
           <!-- Botón para redirigir a la encuesta -->
           <button

@@ -40,8 +40,8 @@ body {
   z-index: 1000;
 }
 
-/* Estilos para la imagen dentro de la pantalla de carga */
-.loading-screen img {
+/* Estilos para el video de la pantalla de carga */
+.loading-screen video {
   width: 600px;
 }
 

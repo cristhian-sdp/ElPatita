@@ -19,7 +19,7 @@
       content="El Patita, pollo a la brasa, Huanchaco, trujillo, restaurante, comida rápida, combos familiares"
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://elpatita.pages.dev/" />
+    <link rel="canonical" href="https://elpatita.pages.dev" />
     <!-- Metadatos para Open Graph (para compartir en redes sociales) -->
     <meta property="og:title" content="El Patita" />
     <meta
@@ -29,12 +29,15 @@
     <meta property="og:image" content="img/pollo-inicio.webp" />
     <meta
       property="og:url"
-      content="https://elpatita.pages.dev/"
+      content="https://elpatita.pages.dev"
     />
     <meta property="og:type" content="website" />
     <!-- Favicon de la página -->
     <link rel="icon" href="img/title-logo-navidad.webp" type="image/webp" />
     <!-- Enlace a fuentes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
       rel="stylesheet"
@@ -43,7 +46,10 @@
   <body>
     <!-- Pantalla de carga -->
     <div class="loading-screen">
-      <img src="img/screen-charged.gif" alt="Cargando..." id="loadingGif" />
+      <video autoplay loop muted>
+        <source src="video/screen-charged.mp4" type="video/mp4" alt="Cargando...">
+        Tu navegador no soporta el elemento de video.
+      </video>
     </div>
     <header>
       <!-- Encabezado de la pagina-->
@@ -52,6 +58,7 @@
         src="img/header/img-header-left.webp"
         alt="Imagen izquierda del header"
         width="200px"
+        loading="lazy"
       />
       <!-- Barra de navegación -->
       <nav>
@@ -60,6 +67,7 @@
             src="img/title-logo-navidad.webp"
             alt="El Patita Logo"
             width="60"
+            loading="lazy"
           />
         </div>
           <ul>
@@ -73,28 +81,29 @@
         src="img/header/img-header-right.webp"
         alt="Imagen derecha del header"
         width="200px"
+        loading="lazy"
       />
     </header>
     <!-- Sección de Iconos Fijos en la pagina -->
     <div class="fixed-icons">
       <a href="https://maps.app.goo.gl/EmZLFnjT7ZtSFn2n9" target="_blank">
-        <img src="img/icons/google-maps-icon.webp" alt="Google Maps" />
+        <img src="img/icons/google-maps-icon.webp" alt="Google Maps" loading="lazy" />
       </a>
       <a href="https://wa.me/51993229832" target="_blank">
-        <img src="img/icons/whatsapp-icon.webp" alt="WhatsApp" />
+        <img src="img/icons/whatsapp-icon.webp" alt="WhatsApp" loading="lazy"/>
       </a>
       <a
         href="https://drive.google.com/file/d/1w1i2sDZ49lIOiozdJhh7nAbF4yL1RBA2/view?usp=sharing"
         target="_blank"
       >
-        <img src="img/icons/yape-icon.webp" alt="yape" />
+        <img src="img/icons/yape-icon.webp" alt="yape" loading="lazy"/>
       </a>
     </div>
     <section class="hero">
       <div class="hero-content">
         <!-- Texto e imagen de bienvenida -->
         <div class="hero-text">
-          <img src="img/texto-inicio.webp" alt="Texto El Patita" width="400" />
+          <img src="img/texto-inicio.webp" alt="Texto El Patita" width="400" loading="lazy"/>
           <p>
             <strong>Disfrute de un buen pollo a la brasa en Huanchaco</strong>
           </p>
@@ -103,7 +112,8 @@
         <img
           src="img/pollo-inicio.webp"
           alt="Imagen Pollo a la brasa"
-          width="500"
+          width="450"
+          loading="lazy"
         />
       </div>
     </section>
@@ -116,7 +126,7 @@
       <!-- Combo Personal -->
       <div class="combo">
         <h3><strong class="combo-title">Combo Personal</strong></h3>
-        <img src="img/combos/1-4-pollo.webp" alt="1/4 Pollo" width="245" />
+        <img src="img/combos/1-4-pollo.webp" alt="1/4 Pollo" width="245" loading="lazy"/>
         <p class="combo-description">
           1/4 de Pollo + Papas fritas + ensalada + 1/2 litro de jugo de
           maracuyá.
@@ -127,7 +137,7 @@
       <!-- Combo Familiar -->
       <div class="combo">
         <h3><strong class="combo-title">Combo Familiar</strong></h3>
-        <img src="img/combos/1-2-pollo.webp" alt="1/2 Pollo" width="245" />
+        <img src="img/combos/1-2-pollo.webp" alt="1/2 Pollo" width="245" loading="lazy"/>
         <p class="combo-description">
           1/2 Pollo + Papas fritas + ensalada familiar + 1 litro de limonada
           frozen.
@@ -138,7 +148,7 @@
       <!-- Combo Extra Familiar -->
       <div class="combo">
         <h3><strong class="combo-title">Combo Extra Familiar</strong></h3>
-        <img src="img/combos/1-pollo.webp" alt="Pollo Entero" width="245" />
+        <img src="img/combos/1-pollo.webp" alt="Pollo Entero" width="245" loading="lazy"/>
         <p class="combo-description">
           1 Pollo Entero + Papas fritas + ensalada familiar + 1 litro de chicha
           morada.
@@ -159,11 +169,13 @@
           src="img/title-logo-navidad.webp"
           alt="El Patita Logo"
           width="150"
+          loading="lazy"
         />
         <img
           src="img/footer/texto-footer.webp"
           alt="Texto footer"
           width="300"
+          loading="lazy"
         />
         <!-- Sección de encuesta -->
         <div class="encuesta">
@@ -171,6 +183,7 @@
             src="img/footer/img-texto-encuesta.webp"
             alt="Encuesta"
             width="200"
+            loading="lazy"
           />
           <!-- Botón para redirigir a la encuesta -->
           <button
