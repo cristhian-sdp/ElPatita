@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
   const isInitialLoad = !sessionStorage.getItem("initialLoadDone");
 
   // Establece el tiempo de espera según si es la carga inicial o no
-  const timeoutDuration = isInitialLoad ? 1800 : 1000;
+  const timeoutDuration = isInitialLoad ? 1700 : 1000;
 
   // Después del tiempo de espera, oculta la pantalla de carga
   setTimeout(function () {
