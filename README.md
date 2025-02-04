@@ -32,13 +32,7 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
 
 ## Contribución
 
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
-3. Realiza tus cambios y haz commit (git commit -m 'Agrega nueva funcionalidad').
-4. Sube tus cambios (git push origin feature/nueva-funcionalidad).
-5. Abre un Pull Request.
+Si deseas contribuir a este proyecto, por favor dirígete al archivo de [Guías de Contribución](./CONTRIBUTING.md).
 
 ## Licencia
 
