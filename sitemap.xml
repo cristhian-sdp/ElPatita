@@ -6,17 +6,17 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://elpatita.pages.dev/</loc>
-  <lastmod>2025-02-04T04:32:15+00:00</lastmod>
+  <lastmod>2023-10-01T00:00:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://elpatita.pages.dev/carta</loc>
-  <lastmod>2025-02-04T04:32:15+00:00</lastmod>
+  <lastmod>2023-10-01T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://elpatita.pages.dev/contacto</loc>
-  <lastmod>2025-02-04T04:32:15+00:00</lastmod>
+  <lastmod>2023-10-01T00:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 </urlset>
