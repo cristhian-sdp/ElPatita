@@ -1,806 +1,572 @@
-/* Estilos generales para el cuerpo de la página */
+/* Aplicar la fuente Nunito a todos los elementos */
+* {
+    font-family: "Nunito";
+}
+
+/* Estilos para el cuerpo de la página */
 body {
-  position: relative;
-  font-family: "Nunito";
-  background-color: black;
-  color: white;
-  margin: 0;
-  padding: 0;
-}
-
-/* Estilos para los copos de nieve */
-.snowflake {
-  position: fixed;
-  top: -10px;
-  background: white;
-  border-radius: 50%;
-  opacity: 0.8;
-  pointer-events: none;
-  animation: fall linear infinite;
-}
-
-/* Animación para los copos de nieve */
-@keyframes fall {
-  to {
-      transform: translateY(100vh);
-  }
+    background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
 /* Estilos para la pantalla de carga */
 .loading-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fe9d2c;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fe9d2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 /* Estilos para el video de la pantalla de carga */
 .loading-screen video {
-  width: 600px;
+    width: 600px;
 }
 
 /* Estilos para el encabezado */
 header {
-  background-color: black;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 10;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 30px;
+    flex-wrap: wrap;
 }
 
-/* Estilos para las imágenes del encabezado */
-.header-img-left,
-.header-img-right {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
-
-.header-img-left {
-  left: 0;
-}
-
-.header-img-right {
-  right: 0;
-}
-
-/* Estilos para la navegación */
+/* Estilos para la barra de navegación */
 nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 55px;
-  width: 100%;
-  max-width: 390px;
-  margin: 0 auto;
-  padding: 0 20px;
-  position: fixed;
-  top: 25px;
-  z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideDown 1.2s ease-in-out 0.6s forwards;
 }
 
-/* Estilos para los enlaces de navegación */
-nav a {
-  font-size: 18px;
-  color: black;
-  text-decoration: none;
-  padding: 10px;
+/* Animación para deslizar la barra de navegación hacia abajo */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* Estilos para la lista de navegación */
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
 
-/* Estilos para los elementos de la lista de navegación */
-nav ul li {
-  margin: 0 15px;
+nav li {
+    margin: 0 25px;
 }
 
-/* Estilos para los enlaces dentro de los elementos de la lista de navegación */
-nav ul li a {
-  position: relative;
-  color: inherit;
-  text-decoration: none;
-  color: black;
-  padding: 10px 20px;
-  display: block;
+/* Estilos para los enlaces de navegación */
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+    overflow: hidden;
+    transition: color 0.4s ease;
 }
-/* Estilos para los enlaces dentro de los elementos de la lista de navegación con pseudo-elemento ::after */
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  width: 80%;
-  height: 2px;
-  bottom: 5px;
-  left: 10%;
-  background-color: black;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #f0781f;
+    transition: width 0.4s ease, left 0.5s ease;
 }
 
-/* Estilos para los enlaces dentro de los elementos de la lista de navegación al pasar el ratón */
-nav ul li a:hover::after {
-  visibility: visible;
-  transform: scaleX(1);
+nav a:hover {
+    color: #f0781f;
 }
 
-/* Estilos para la clase nav-hidden */
-.nav-hidden {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* Estilos para la clase nav-visible */
-.nav-visible {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+nav a:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 /* Estilos para el logo */
 .logo {
-  display: flex;
-  align-items: center;
-  height: 50px;
-  margin-right: 20px;
+    margin: 10px;
+    transition: transform 0.4s ease;
+    animation: fadeIn 1.2s ease-in-out 0.6s forwards;
 }
 
-/* Estilos para la imagen dentro del logo */
-.logo img {
-  max-height: none;
-  object-fit: contain;
+.logo:hover {
+    transform: scale(1.1);
+}
+/* Estilos para el contenedor del mensaje de navegación */
+.msg-nav {
+    margin: 10px;
+    right: 0;
+    animation: slideInFromRight 1.2s ease-in-out 0.6s forwards;
+}
+.msg-text {
+    background-color: white;
+    box-shadow: 0 4px 30px rgb(255, 111, 0);
+    border-radius: 40px;
+    color: black;
+    padding: 10px 20px;
+    transition: color 0.5s ease;
+}
+.msg-text:hover {
+    background-color: #a6a6a6;
+    color: white;
 }
 
-/* Estilos para los iconos fijos */
-.fixed-icons {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  z-index: 3;
-}
-
-/* Estilos para los enlaces dentro de los iconos fijos */
-.fixed-icons a {
-  display: block;
-  width: 80px;
-  height: 50px;
-}
-
-/* Estilos para las imágenes dentro de los iconos fijos */
-.fixed-icons img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.4s ease;
-}
-
-/* Estilos para las imágenes dentro de los iconos fijos al pasar el ratón */
-.fixed-icons img:hover {
-  transform: scale(1.25);
+/* Animación para deslizar el mensaje de navegación desde la derecha */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* Estilos para la sección hero */
 .hero {
-  background-color: black;
-  padding: 160px;
-  text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 180px 20px;
+    gap: 60px;
+    flex-wrap: wrap;
 }
 
-/* Estilos para los párrafos dentro de la sección hero */
-.hero p {
-  font-size: 1.1em;
+/* Estilos para el texto y botón de bienvenida */
+.hero-text-button {
+    text-align: left;
+    color: white;
 }
 
-/* Estilos para el contenido de la sección hero */
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 100px;
+.hero-text-button span a {
+    color: #ec5228;
+    text-decoration: none;
+    transition: color 0.4s ease;
 }
 
-/* Estilos para las imágenes dentro del contenido de la sección hero */
-.hero-content img {
-  z-index: 3;
-  position: relative;
-  margin-right: 0px;
+.hero-text-button span a:hover {
+    text-decoration: underline;
+    color: orange;
 }
 
-/* Estilos para el texto dentro de la sección hero */
-.hero-text {
-  max-width: 100%;
-  text-align: center;
+.hero-text-button h1 {
+    font-size: 3.2em;
+    margin: 0;
 }
 
-/* Estilos para la línea personalizada */
-.custom-line {
-  border: 0;
-  height: 2px;
-  background-color: white;
-  width: 30%;
-  margin: 0 auto;
-  animation: expand-contract 2s infinite;
+.hero-text-button p {
+    font-size: 1.1em;
+    margin: 30px 0;
 }
 
-/* Estilos para la sección combos */
-.combos {
-  background-color: black;
-  padding: 160px 0px;
-  align-items: center;
-  text-align: center;
+.hero-text-button h1 span,
+.combos h2 span,
+.hero-text-button p span {
+    color: #ec5228;
 }
 
-/* Estilos para el texto grande */
-.large-text {
-  font-size: 3em;
+.hero-text-button h1,
+.hero-text-button p {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1.2s steps(100, end) 0.6s;
+}
+
+/* Animación de escritura para el texto de bienvenida */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Estilos para los botones de WhatsApp y encuesta */
+.wpp-button,
+.encuesta-button {
+    border-radius: 40px;
+    background-color: #f0781f;
+    box-shadow: 0 3px 15px rgb(255, 111, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transform: translateZ(0);
+    will-change: transform;
+    transition: color 0.6s ease;
+    animation: fadeIn 1.2s ease-in-out 0.6s forwards;
+}
+.wpp-button:hover,
+.encuesta-button:hover {
+    background-color: #ffffff;
+    box-shadow: 0 3px 50px rgb(255, 111, 0);
+    color: black;
+}
+
+/* Animación de desvanecimiento*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        filter: brightness(0.5);
+    }
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+/* Estilos para la imagen de pollo a la brasa */
+.hero-img {
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out 0.6s forwards;
+}
+
+/* Estilos para la sección de combos, cartas y contacto local */
+.combos,
+.cartas,
+.local-contact-section {
+    background-color: white;
+    box-shadow: 0 8px 85px rgb(255, 111, 0);
+    padding: 80px 20px;
+    border-radius: 60px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out 0.6s forwards;
+}
+
+/* Estilos para la imagen de la carta */
+.carta-image {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.carta-image.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.4);
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+
+/* Estilos para el encabezado de la sección de combos */
+.combos h2 {
+    font-size: 2.4em;
+}
+
+/* Estilos para los párrafos en la sección de combos y en el pie de página */
+.combos p,
+.footer-text-button p {
+    font-size: 1.1em;
+}
+
+/* Estilos para los contenedores de combos, cartas y contacto local */
+.combos-container,
+.cartas-container,
+.local-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Estilos para cada combo */
 .combo {
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-  display: inline-block;
-  width: 300px;
-  vertical-align: top;
+    flex: 1;
+    margin: 20px;
+    background-color: black;
+    box-shadow: 0 5px 15px rgb(255, 111, 0);
+    border-radius: 40px;
+    color: white;
+    padding: 10px;
+    max-width: 300px;
 }
 
 /* Estilos para el título de cada combo */
 .combo-title {
-  position: relative;
-  z-index: 1;
-  background-color: white;
-  border-radius: 55px;
-  font: bold 22px "Nunito";
-  color: black;
-  padding: 10px;
-  display: inline-block;
-  white-space: nowrap;
-  width: 250px;
-  text-align: center;
-  margin-bottom: -30px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Estilos para el título de cada combo al pasar el ratón */
-.combo-title:hover {
-  background-color: #808080;
-  color: white;
-}
-
-/* Estilos para las imágenes dentro de cada combo */
-.combo img {
-  margin: -14px 0;
-  height: 250px;
-  object-fit: cover;
+    font-size: 1.3em;
+    color: #fdc0af;
 }
 
 /* Estilos para la descripción de cada combo */
 .combo-description {
-  position: relative;
-  z-index: 1;
-  border: 4px solid orange;
-  border-radius: 30px;
-  font: 18px "Nunito";
-  color: white;
-  padding: 30px;
-  display: inline-block;
-  width: 220px;
-  text-align: center;
-  margin-bottom: -30px;
-}
-
-/* Estilos para los párrafos dentro de la descripción de cada combo */
-.combo p {
-  margin: 5px;
+    width: 83%;
+    padding: 10px 0px;
+    margin: 0 auto;
 }
 
 /* Estilos para el precio de cada combo */
 .price {
-  position: relative;
-  z-index: 1;
-  background-color: white;
-  border-radius: 55px;
-  color: black;
-  padding: 10px;
-  display: inline-block;
-  width: 90px;
-  text-align: center;
-  top: -35px;
-  font: bold 1em "Nunito";
-  transition: transform 0.3s ease;
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-/* Estilos para el precio al pasar el ratón */
-.price:hover {
-  transform: scale(1.2) translateZ(0);
-}
-
-/* Estilos para el mensaje de combos */
-.msg-combos {
-  background-color: white;
-  border-radius: 55px;
-  font: bold 18px "Nunito";
-  color: black;
-  padding: 10px;
-  display: block;
-  width: 450px;
-  text-align: center;
-  margin: 0 auto;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Estilos para el mensaje de combos al pasar el ratón */
-.msg-combos:hover {
-  background-color: #808080;
-  color: white;
-}
-
-/* Estilos para la imagen del menú */
-.menu-image {
-  border: 5px solid white;
-  border-radius: 45px;
-  cursor: zoom-in;
-}
-
-/* Estilos para cuando el modal está abierto */
-.modal-open {
-  overflow: hidden;
-}
-
-/* Estilos para el modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Estilos para el contenido del modal */
-.modal-content {
-  margin: 250px auto;
-  display: block;
-  width: 90%;
-  max-width: 700px;
-  border: 5px solid white;
-  border-radius: 45px;
-}
-
-/* Estilos para el botón de cerrar el modal */
-.close {
-  position: fixed;
-  top: 40px;
-  right: 80px;
-  color: white;
-  font: bold 80px "Nunito";
-  transition: 0.6s;
-}
-
-/* Estilos para el botón de cerrar el modal al pasar el ratón o al enfocarse */
-.close:hover,
-.close:focus {
-  color: orange;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Estilos para la imagen de contacto */
-.contact-image {
-  width: 540px;
-  border-radius: 35px;
-  margin-bottom: 20px;
-  float: left;
-}
-
-/* Estilos para el botón de contacto */
-.button {
-  position: relative;
-  overflow: hidden;
-  height: 3rem;
-  padding: 10px 22px;
-  border-radius: 35px;
-  background: white;
-  background-size: 400%;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  transition: transform 0.3s ease;
-}
-
-/* Estilos para el botón cuando se ha copiado */
-.button.copied {
-  animation: grow 0.9s forwards;
-  background-color: #292727;
-  color: white;
-}
-
-/* Animación para el botón cuando se ha copiado */
-@keyframes grow {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Estilos para el texto dentro del botón cuando se ha copiado */
-.button.copied span {
-  display: none;
-}
-
-/* Estilos para el pseudo-elemento ::before del botón cuando se ha copiado */
-.button.copied::before {
-  display: none;
-}
-
-/* Estilos para el pseudo-elemento ::after del botón cuando se ha copiado */
-.button.copied::after {
-  content: "Copiado";
-  display: block;
-  color: white;
-  position: relative;
-  font-size: 1rem;
-}
-
-/* Estilos para el botón al hacer clic */
-.button:active {
-  transform: scale(1.1);
-}
-
-/* Estilos para el pseudo-elemento ::before del botón al pasar el ratón */
-.button:hover::before {
-  transform: scaleX(1);
-}
-
-/* Estilos para el contenido del botón */
-.button-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: none;
-}
-
-/* Estilos para las imágenes dentro del contenido del botón */
-.button-content img {
-  margin-left: 15px;
-}
-
-/* Estilos para el pseudo-elemento ::before del botón */
-.button::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(
-    82.3deg,
-    rgb(247, 178, 51) 10.8%,
-    rgb(46, 205, 253) 94.3%
-  );
-  transition: all 0.475s;
-  z-index: 0;
-}
-
-/* Estilos para el botón cuando está deshabilitado */
-.button:disabled {
-  cursor: not-allowed;
-  opacity: 0.8;
-}
-
-/* Estilos para la imagen con el número */
-.number-image {
-  position: absolute;
-  left: 470px;
-  width: 600px;
-  float: left;
-  margin-left: -300px;
-}
-
-/* Animación para expandir y contraer */
-@keyframes expand-contract {
-  0%,
-  100% {
-    width: 30%;
-  }
-  50% {
-    width: 35%;
-  }
-}
-
-/* Estilos para el pie de página */
-footer {
-  background-color: black;
-  align-items: center;
-  text-align: center;
-  font-weight: bold;
-  padding: 350px 0px 100px 0px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Estilos para el contenido del pie de página */
-.footer-content {
-  flex-wrap: wrap;
-  margin: 50px 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
-/* Estilos para el botón de encuesta */
-.encuesta-button {
-  border-radius: 55px;
-  padding: 10px 20px;
-  border: none;
-  font: bold 15px "Nunito";
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  will-change: transform;
-  backface-visibility: hidden;
-}
-
-/* Estilos para el botón de encuesta al pasar el ratón */
-.encuesta-button:hover {
-  transform: scale(1.1);
-}
-
-/* Estilos para el contenido central del pie de página */
-.footer-center-content {
-  text-align: center;
-  font-size: 14px;
-  margin: 50px 0px;
-}
-
-/* Estilos para la sección de encuesta */
-.encuesta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Estilos para los enlaces dentro del pie de página */
-footer a {
-  color: white;
-  text-decoration: underline;
-}
-
-/* Estilos para el enlace de licencia dentro del pie de página */
-footer a.license-link {
-  color: orange;
-}
-
-/* Estilos para los enlaces del pie de página */
-.footer-links {
-  background-color: gray;
-  border-radius: 55px;
-  padding: 15px 20px;
-  display: inline-block;
-  margin: 40px 0px;
-}
-
-/* Estilos para los enlaces dentro de los enlaces del pie de página */
-.footer-links a {
-  font-size: 14px;
-  color: white;
-  text-decoration: none;
-  margin: 0 30px;
-  position: relative;
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Estilos para el pseudo-elemento ::after de los enlaces dentro de los enlaces del pie de página */
-.footer-links a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: white;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-}
-
-
-/* Estilos para los enlaces dentro de los enlaces del pie de página al pasar el ratón */
-.footer-links a:hover::after {
-  visibility: visible;
-  transform: scaleX(1.1);
-}
-@media only screen and (max-width: 767px){
-  /*Reglas para dispositivos móviles*/
-  header {
-    flex-direction: column;
-    padding: 25px;
-  }
-
-  .header-img-left,
-  .header-img-right {
-    display: none;
-  }
-
-  nav {
-    width: 100%;
-    position: absolute;
-    top: 10;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 18px auto;
+    position: relative;
     background-color: white;
-    border: 4px solid orange;
-    z-index: 1000;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
+    color: black;
+    border-radius: 40px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: transform 0.4s ease;
+    transform: translateZ(0);
+    will-change: transform;
+}
 
-  nav ul {
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  nav ul li {
-    margin: 0 5px;
-  }
+.price:hover {
+    transform: scale(1.2) translateZ(0);
+    box-shadow: 0 3px 30px rgb(255, 111, 0);
+}
 
-  nav a {
-    padding: 15px 20px;
-    text-transform: uppercase;
-    font-size: 1.1em;
-  }
-  .snowflake {
-    display: none;
-  }
-  .fixed-icons a {
-    width: 50px;
-    height: 45px;
-  }
+/* Estilos para las imágenes dentro de los contenedores de combos y cartas */
+.combo img,
+.carta img {
+    border-radius: 40px;
+    box-shadow: 0 5px 35px rgb(255, 111, 0);
+    transition: transform 0.5s ease;
+}
 
-  .fixed-icons img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+.combo img:hover {
+    transform: scale(0.9);
+}
 
-  .hero-text {
-    width: 280px;
-    max-width: 500%;
-  }
+/* Estilos para las secciones de Carta y Local */
+.carta,
+.contact-image,
+.contact-map {
+    flex: 1;
+    margin: 30px;
+    padding: 10px;
+}
 
-  .large-text {
-    font-size: 2.1em;
-  }
-  .combo {
-    width: 100%;
-    padding: 0px;
-    margin: 10px auto;
-  }
-
-  .combo img {
-    width: 56%;
-    height: auto;
-  }
-
-  .combo-title {
-    width: 60%;
-    font-size: 1.3em;
-  }
-
-  .combo-description {
-    width: 50%;
-    font-size: 1.2em;
-  }
-
-  .price {
-    font-size: 1.2em;
-    margin-top: 5px;
-  }
-
-  .msg-combos {
-    width: 60%;
-    margin: 10px auto;
-  }
-
-  .contact-image {
-    width: 100% !important;
-    max-width: 395px !important;
-    height: auto !important;
+/*Estilos para la página de 404*/
+.error-page {
+    padding: 30vh 20px;
+    color: white;
+    text-align: center;
+}
+.error-page h1 {
+    font-size: 6em;
     margin: 0;
-    border-radius: 35px;
-  }
-  .number-image {
-    width: 100% !important;
-    max-width: 1000px !important;
-    height: auto !important;
-    float: none !important;
-    margin: 0 !important;
-    position: relative !important;
-    left: 90px !important;
-  }
-  .close {
-    top: 25px;
-    left: 50%;
-    font-size: 75px;
-  }
-  
-  footer {
-    padding: 0px;
-    text-align: center;
-    margin-top: 120px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .footer-content img {
-    width: 100%;
-  }
-
-  .footer-center-content {
-    margin: 25px 10px;
-    text-align: center;
-  }
-
-  .footer-links {
+}
+.error-page p {
+    font-size: 1.2em;
     margin: 0;
-    text-align: center;
+}
+
+.error-page a {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #f0781f;
+    border-radius: 45px;
+    font-weight: bold;
+}
+/* Estilos para el pie de página */
+.footer-content {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 260px 20px;
+    color: white;
+    gap: 80px;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out 0.2s;
+}
+
+/* Estilos para el pie de página cuando se muestra */
+.footer-content.fade-in {
+    opacity: 1;
+}
+
+/* Estilos para el contenedor de texto y botón */
+.footer-text-button {
+    flex: 1;
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+    margin: 0 auto;
+}
+.footer-text-button h4 {
+    margin: 20px 0;
+    font-size: 2em;
+}
+.footer-text-button h4 span {
+    color: #ec5228;
+}
+
+/* Estilos para los enlaces y el logo */
+.footer-links,
+.footer-logo {
+    flex: 1;
+    width: 100%;
+    max-width: 200px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.footer-links h5 {
+    margin: 12px 0;
+    font-size: 1.4em;
+}
+
+.footer-links a {
+    display: block;
+    margin: 16px 0;
+    color: white;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.footer-links a:hover,
+.footer-info a:hover {
+    text-decoration: underline;
+    color: #f0781f;
+}
+
+/* Estilos para la información del pie de página */
+.footer-info {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 10px;
-  }
+    color: #fdc0af;
+}
+
+.footer-info p {
+    margin: 6px;
+}
+
+.footer-info a {
+    color: #fdc0af;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+/* Estilos para la línea personalizada */
+.custom-line {
+    width: 100%;
+    border: 1px solid #f0781f;
+    margin: 0 auto;
+}
+
+/* Estilos para Dispositivos Móviles */
+@media only screen and (max-width: 767px) {
+    /* Estilos para el encabezado */
+    header {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    /* Estilos para la sección hero */
+    .hero {
+        padding: 60px 0px;
+    }
+
+    /* Estilos para el contenedor de texto y botón de bienvenida */
+    .hero-text-button {
+        text-align: center;
+        width: 90%;
+    }
+
+    .hero-text-button h1 {
+        font-size: 2.3em;
+        white-space: wrap;
+    }
+
+    .hero-text-button p {
+        font-size: 1em;
+        white-space: wrap;
+    }
+
+    .hero-text-button h1,
+    .hero-text-button p {
+        animation: fadeIn 1.2s ease-in-out 0.6s forwards;
+    }
+
+    /* Estilos para la imagen de la sección hero */
+    .hero-img {
+        transform: scale(0.9);
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Estilos para el encabezado de la sección de combos */
+    .combos h2 {
+        font-size: 2em;
+    }
+
+    .carta-image{
+        cursor: default;
+        transition: none;
+    }
+
+    .carta-image.zoomed {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        z-index: auto;
+        cursor: default;
+    }
+
+    /* Estilos para Footer */
+    .footer-content {
+        padding: 40px 20px;
+        gap: 45px;
+    }
+
+    /* Estilos para el contenedor de texto y botón, enlaces y logo en Footer*/
+    .footer-text-button,
+    .footer-links,
+    .footer-logo {
+        flex: none;
+    }
+
+    /* Estilos para el logo en Footer */
+    .footer-logo {
+        text-align: center;
+    }
+
+    /* Estilos para la imagen de la sección carta */
+    .carta-image {
+        transform: scale(0.9);
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    /* Estilos para las secciones de combos, cartas y contacto local */
+    .combos,
+    .cartas,
+    .local-contact-section {
+        border-radius: 50px;
+    }
+
+    /* Estilos para la imagen de contacto */
+    .contact-image {
+        transform: scale(0.85);
+        display: inline-block;
+        margin: 0 auto;
+    }
 }
