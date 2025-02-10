@@ -1,0 +1,5 @@
+# security.txt
+
+Contact: mailto:steffanod948@gmail.com
+
+Preferred-Languages: es, en
