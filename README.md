@@ -18,7 +18,12 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
 - `pdf/`: Directorio que contiene documentos PDF como términos y condiciones y políticas de privacidad.
 - `sitemap.xml`: Archivo XML que ayuda a los motores de búsqueda a indexar el sitio web.
 - `robots.txt`: Archivo que controla el acceso de los motores de búsqueda a ciertas partes del sitio web.
+- `browserconfig.xml`: Archivo de configuración para baldosas en navegadores de Microsoft.
+- `security.txt`: Archivo que proporciona información de contacto y políticas de seguridad.
 - `README.md`: Archivo que proporciona información sobre el proyecto.
+- `.editorconfig`: Archivo de configuración para mantener estilos de codificación consistentes.
+- `LICENSE`: Archivo que contiene la licencia del proyecto.
+- `CONTRIBUTING.md`: Archivo que proporciona guías para contribuir al proyecto.
 
 ## Instalación
 
