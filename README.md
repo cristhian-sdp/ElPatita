@@ -1,6 +1,6 @@
 # El Patita
 
-Bienvenido al repositorio de **El Patita**, un sitio web para un restaurante especializado en pollo a la brasa ubicado en Huanchaco.
+Bienvenido al repositorio de **elpatita**, un sitio web para un restaurante especializado en pollo a la brasa ubicado en Huanchaco.
 
 ## Descripción
 
@@ -10,7 +10,7 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
 
 - `index.html`: Página principal del sitio web.
 - `carta.html`: Página que muestra el menú del restaurante.
-- `contacto.html`: Página de contacto con información para comunicarse con el restaurante.
+- `local.html`: Página de contacto con información para comunicarse con el restaurante.
 - `404.html`: Página de error 404 para manejar rutas no encontradas.
 - `css/`: Directorio que contiene los archivos de estilos CSS.
 - `js/`: Directorio que contiene los archivos JavaScript.

@@ -4,11 +4,14 @@
     <!-- Metadatos y configuración de la página -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <!-- Título de la página -->
     <title>El Patita</title>
     <!-- Enlaces a hojas de estilo CSS -->
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/index-styles.css" />
     <!-- Metadatos para SEO -->
     <meta
       name="description"
@@ -21,7 +24,10 @@
     />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://elpatita.pages.dev" />
-    <meta name="google-site-verification" content="dAO6og7WskD6KDz0cd-VRkcLxs5o3kmpDiMFxkT1mFk" />
+    <meta
+      name="google-site-verification"
+      content="dAO6og7WskD6KDz0cd-VRkcLxs5o3kmpDiMFxkT1mFk"
+    />
     <meta name="author" content="Cristhian Steffano Díaz Piminchumo" />
     <!-- Metadatos para Open Graph (para compartir en redes sociales) -->
     <meta property="og:title" content="El Patita" />
@@ -30,214 +36,204 @@
       content="Disfruta de nuestros deliciosos combos de pollo a la brasa en El Patita. ¡Visítenos en Huanchaco!"
     />
     <meta property="og:image" content="img/pollo-inicio.webp" />
-    <meta
-      property="og:url"
-      content="https://elpatita.pages.dev"
-    />
+    <meta property="og:url" content="https://elpatita.pages.dev" />
     <meta property="og:type" content="website" />
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <!-- Enlace al sitemap -->
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href="/sitemap.xml"
+    />
     <!-- Favicon de la página -->
-    <link rel="icon" href="img/title-logo.webp" type="image/webp" loading="lazy" />
+    <link
+      rel="icon"
+      href="img/title-logo.webp"
+      type="image/webp"
+      loading="lazy"
+    />
     <!-- Enlace a fuentes de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" as="font" crossorigin="anonymous" >
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
     <noscript>
       <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+        rel="stylesheet"
+      />
     </noscript>
   </head>
   <body>
-    <!-- Pantalla de carga -->
+    <!-- Pantalla de carga-->
     <div class="loading-screen">
-      <video autoplay loop muted>
-        <source src="video/screen-charged.mp4" type="video/mp4" alt="Cargando...">
-        Tu navegador no soporta el elemento de video.
-      </video>
+        <video autoplay loop muted>
+          <source src="video/screen-charged.webm" type="video/webm" alt="Cargando...">
+          Tu navegador no soporta el elemento de video.
+        </video>
     </div>
+    <!-- Encabezado de la pagina-->
     <header>
-      <!-- Encabezado de la pagina-->
-      <img
-        class="header-img-left"
-        src="img/header/img-header-left.webp"
-        alt="Imagen izquierda del header"
-        width="200px"
-        height="auto"
-        loading="lazy"
-      />
+      <!-- Logo -->
+      <div class="logo">
+        <img
+          src="img/title-logo.webp"
+          alt="El Patita Logo"
+          width="80"
+          height="auto"
+          loading="lazy"
+        />
+      </div>
       <!-- Barra de navegación -->
       <nav>
-        <div class="logo">
-          <img
-            src="img/title-logo-navidad.webp"
-            alt="El Patita Logo"
-            width="60"
-            height="auto"
-            loading="lazy"
-          />
-        </div>
+        <div>
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="carta.html">Carta</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="carta.html">CARTA</a></li>
+            <li><a href="local.html">LOCAL</a></li>
           </ul>
+        </div>
       </nav>
-      <img
-        class="header-img-right"
-        src="img/header/img-header-right.webp"
-        alt="Imagen derecha del header"
-        width="200px"
+      <!-- Mensaje sobre la atención presencial -->
+      <div class="msg-nav">
+        <strong>
+          <p class="msg-text">Solo Atención Presencial</p>
+          <p>+51 993 229 832</p>
+        </strong>
+      </div>
+    </header>
+    <!-- Sección de Bienvenida -->
+    <section class="hero">
+      <!-- Texto de bienvenida -->
+      <div class="hero-text-button">
+        <h1>LA POLLERIA <span>EL PATITA</span></h1>
+        <p>
+          Tu lugar favorito para disfrutar del mejor pollo a la brasa en <span><a href="https://g.co/kgs/TymTg4Y" target="_blank" rel="noopener noreferrer nofollow">Huanchaco</a></span>. 
+          <br>
+          ¡Ven y descubre nuestro delicioso menú con una variedad de
+          platos 
+          <br>
+          tradicionales y bebidas refrescantes!
+        </p>
+        <!-- Botón para redirigir a WhatsApp -->
+        <button
+          class="wpp-button"
+          onclick="window.location.href='https://wa.me/51993229832';"
+          rel="nofollow"
+        >
+          Separa tu mesa
+        </button>
+      </div>
+      <!-- Imagen de pollo a la brasa -->
+      <div class="hero-img"">
+        <img
+        src="img/pollo-inicio.webp"
+        alt="Pollo a la brasa"
+        width="360"
         height="auto"
         loading="lazy"
       />
-    </header>
-    <!-- Sección de Iconos Fijos en la pagina -->
-    <div class="fixed-icons">
-      <a href="https://maps.app.goo.gl/EmZLFnjT7ZtSFn2n9" target="_blank">
-        <img src="img/icons/google-maps-icon.webp" alt="Google Maps" loading="lazy" />
-      </a>
-      <a href="https://wa.me/51993229832" target="_blank">
-        <img src="img/icons/whatsapp-icon.webp" alt="WhatsApp" loading="lazy"/>
-      </a>
-      <a
-        href="https://drive.google.com/file/d/1w1i2sDZ49lIOiozdJhh7nAbF4yL1RBA2/view?usp=sharing"
-        target="_blank"
-      >
-        <img src="img/icons/yape-icon.webp" alt="yape" loading="lazy"/>
-      </a>
-    </div>
-    <section class="hero">
-      <div class="hero-content">
-        <!-- Texto e imagen de bienvenida -->
-        <div class="hero-text">
-          <img src="img/texto-inicio.webp" alt="Texto El Patita" width="400" height="auto" loading="lazy"/>
-          <p>
-            <strong>Disfrute de un buen pollo a la brasa en Huanchaco</strong>
-          </p>
-        </div>
-        <!-- Imagen de pollo a la brasa -->
-        <img
-          src="img/pollo-inicio.webp"
-          alt="Imagen Pollo a la brasa"
-          width="450"
-          height="auto"
-          loading="lazy"
-        />
       </div>
     </section>
-    <!-- Línea horizontal personalizada para separar secciones -->
-    <hr class="custom-line" />
     <!-- Sección de combos clásicos -->
     <section class="combos">
-      <h2 class="large-text"><strong>Combos Clásicos</strong></h2>
+      <h2><strong>COMBOS <span>CLÁSICOS</span></strong></h2>
+      <p>¡Elige tu favorito y comparte momentos únicos con familia y amigos!</p>
 
-      <!-- Combo Personal -->
-      <div class="combo">
-        <h3><strong class="combo-title">Combo Personal</strong></h3>
-        <img src="img/combos/1-4-pollo.webp" alt="1/4 Pollo" width="245" height="auto" loading="lazy"/>
-        <p class="combo-description">
-          1/4 de Pollo + Papas fritas + ensalada + 1/2 litro de jugo de
-          maracuyá.
-        </p>
-        <p><strong class="price">S/. 29.00</strong></p>
-      </div>
-
-      <!-- Combo Familiar -->
-      <div class="combo">
-        <h3><strong class="combo-title">Combo Familiar</strong></h3>
-        <img src="img/combos/1-2-pollo.webp" alt="1/2 Pollo" width="245" height="auto" loading="lazy"/>
-        <p class="combo-description">
-          1/2 Pollo + Papas fritas + ensalada familiar + 1 litro de limonada
-          frozen.
-        </p>
-        <p><strong class="price">S/. 50.00</strong></p>
-      </div>
-
-      <!-- Combo Extra Familiar -->
-      <div class="combo">
-        <h3><strong class="combo-title">Combo Extra Familiar</strong></h3>
-        <img src="img/combos/1-pollo.webp" alt="Pollo Entero" width="245" height="auto" loading="lazy"/>
-        <p class="combo-description">
-          1 Pollo Entero + Papas fritas + ensalada familiar + 1 litro de chicha
-          morada.
-        </p>
-        <p><strong class="price">S/. 84.00</strong></p>
-      </div>
-
-      <!-- Mensaje sobre la atención presencial -->
-      <div class="msg-combos">
-        <strong>Atendemos de manera presencial actualmente.</strong>
-      </div>
-    </section>
-    <hr class="custom-line" />
-    <!-- Sección del pie de página -->
-    <footer>
-      <div class="footer-content">
-        <img
-          src="img/title-logo-navidad.webp"
-          alt="El Patita Logo"
-          width="150"
-          height="auto"
-          loading="lazy"
-        />
-        <img
-          src="img/footer/texto-footer.webp"
-          alt="Texto footer"
-          width="300"
-          height="auto"
-          loading="lazy"
-        />
-        <!-- Sección de encuesta -->
-        <div class="encuesta">
-          <img
-            src="img/footer/img-texto-encuesta.webp"
-            alt="Encuesta"
-            width="200"
-            height="auto"
-            loading="lazy"
-          />
-          <!-- Botón para redirigir a la encuesta -->
-          <button
-            class="encuesta-button"
-            onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdYzkBOdLRSeoieGLIxuFA7cyFeME0NgLloQCdg2s4Ohp1Zew/viewform?usp=header';"
-            rel="nofollow"
-          >
-            ENCUESTA
-          </button>
+      <div class="combos-container">
+        <!-- Combo Personal -->
+        <div class="combo">
+          <h3><strong class="combo-title">Combo Personal</strong></h3>
+          <img src="img/combos/1-4-pollo.webp" alt="1/4 Pollo" width="240" height="auto" loading="lazy"/>
+          <p class="combo-description">
+              1/4 de Pollo + Papas fritas + ensalada + 1/2 litro de jugo de
+              maracuyá.
+          </p>
+          <p><strong class="price">S/. 29.00</strong></p>
+        </div>
+        <!-- Combo Familiar -->
+        <div class="combo">
+          <h3><strong class="combo-title">Combo Familiar</strong></h3>
+          <img src="img/combos/1-2-pollo.webp" alt="1/2 Pollo" width="240" height="auto" loading="lazy"/>
+          <p class="combo-description">
+            1/2 Pollo + Papas fritas + ensalada familiar + 1 litro de limonada
+            frozen.
+          </p>
+          <p><strong class="price">S/. 50.00</strong></p>
+        </div>
+        <!-- Combo Extra Familiar -->
+        <div class="combo">
+          <h3><strong class="combo-title">Combo Extra Familiar</strong></h3>
+          <img src="img/combos/1-pollo.webp" alt="Pollo Entero" width="240" height="auto" loading="lazy"/>
+          <p class="combo-description">
+            1 Pollo Entero + Papas fritas + ensalada familiar + 1 litro de chicha
+            morada.
+          </p>
+          <p><strong class="price">S/. 84.00</strong></p>
         </div>
       </div>
-      <div class="footer-center-content">
-        <p>
-          <!-- Información del desarrollador -->
-          Desarrollado por:
-          <a href="https://github.com/cristhian-sdp" target="_blank" rel="nofollow"
-            >Cristhian-sdp</a
-          >
-        </p>
-        <!-- Derechos reservados -->
-        <p>&copy;ElPatita'2024 todos los derechos reservados.</p>
-        <!-- Licencia Creative Commons -->
-        <a
-          rel="license"
-          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-          class="license-link"
-        >
-          Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0
-          Internacional
-        </a>
-      </div>
-      <div class="footer-links">
-        <!-- Enlaces a términos y condiciones y políticas de privacidad -->
-        <a href="pdf/Terminos-condiciones.pdf" target="_blank"
-          >Términos y Condiciones</a
-        >
-        <a href="pdf/Políticas-privacidad.pdf" target="_blank"
-          >Políticas de Privacidad</a
-        >
-      </div>
+    </section>
+    <!-- Sección del pie de página -->
+    <footer>
+        <div class="footer-content">
+          <!-- Logo del pie de página -->
+            <div class="footer-logo">
+                <img
+                    src="img/title-logo.webp"
+                    alt="El Patita Logo"
+                    width="160"
+                    height="auto"
+                    loading="lazy"
+                />
+            </div>
+            <!-- Texto de agradecimiento y botón de encuesta -->
+            <div class="footer-text-button">
+                <h4>GRACIAS POR <span>PREFERIRNOS</span></h4>
+                <hr class="custom-line" />
+                <p>Nos esforzamos cada día para ofrecerte la mejor experiencia y los sabores más deliciosos. ¡Esperamos verte pronto!</p>
+                <!-- Botón para redirigir a la encuesta -->
+                <button
+                class="encuesta-button"
+                onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdYzkBOdLRSeoieGLIxuFA7cyFeME0NgLloQCdg2s4Ohp1Zew/viewform?usp=header';"
+                rel="noopener noreferrer nofollow"
+              >
+                ENCUESTA
+              </button>
+            </div>
+            <!-- Enlaces legales -->
+            <div class="footer-links">
+                <h5>LEGAL</h5>
+                <hr class="custom-line" />
+                <!-- Enlaces a términos y condiciones-->
+                <a href="pdf/Terminos-condiciones.pdf" target="_blank" rel="noopener noreferrer nofollow"
+                >Términos y Condiciones</a>
+                <!-- Enlaces a políticas de privacidad-->
+                <a href="pdf/Políticas-privacidad.pdf" target="_blank" rel="noopener noreferrer nofollow"
+                >Políticas de Privacidad</a>
+                <!-- Enlaces a Licencia Creative Commons-->
+                <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer nofollow"
+                >Licencia Creative Commons</a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <!-- Información del desarrollador -->
+            <p>Desarrollado por:
+                <a href="https://github.com/cristhian-sdp" target="_blank" rel="nofollow"
+                >Cristhian-sdp</a>
+            </p>
+            <!-- Derechos reservados -->
+            <p>&copy;ElPatita'2024 todos los derechos reservados.</p>
+            </div>
     </footer>
     <script src="js/script.js"></script>
   </body>
