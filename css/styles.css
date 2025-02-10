@@ -46,7 +46,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: slideDown 1.2s ease-in-out 0.6s forwards;
+    animation: slideDown 1.3s ease-in-out 0.6s forwards;
 }
 
 /* Animación para deslizar la barra de navegación hacia abajo */
@@ -106,7 +106,7 @@ nav a:hover::after {
 .logo {
     margin: 10px;
     transition: transform 0.4s ease;
-    animation: fadeIn 1.2s ease-in-out 0.6s forwards;
+    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
 }
 
 .logo:hover {
@@ -116,7 +116,7 @@ nav a:hover::after {
 .msg-nav {
     margin: 10px;
     right: 0;
-    animation: slideInFromRight 1.2s ease-in-out 0.6s forwards;
+    animation: slideInFromRight 1.3s ease-in-out 0.6s forwards;
 }
 .msg-text {
     background-color: white;
@@ -190,7 +190,7 @@ nav a:hover::after {
 .hero-text-button p {
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 1.2s steps(100, end) 0.6s;
+    animation: typing 1.3s steps(100, end) 0.6s;
 }
 
 /* Animación de escritura para el texto de bienvenida */
@@ -208,16 +208,14 @@ nav a:hover::after {
 .encuesta-button {
     border-radius: 40px;
     background-color: #f0781f;
-    box-shadow: 0 3px 15px rgb(255, 111, 0);
+    box-shadow: 0 3px 14px rgb(255, 111, 0);
     color: white;
     border: none;
-    padding: 10px 20px;
     font-size: 1.1em;
+    padding: 12px 20px; 
     cursor: pointer;
-    transform: translateZ(0);
-    will-change: transform;
     transition: color 0.6s ease;
-    animation: fadeIn 1.2s ease-in-out 0.6s forwards;
+    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
 }
 .wpp-button:hover,
 .encuesta-button:hover {
@@ -241,7 +239,7 @@ nav a:hover::after {
 /* Estilos para la imagen de pollo a la brasa */
 .hero-img {
     text-align: center;
-    animation: fadeIn 1.2s ease-in-out 0.6s forwards;
+    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
 }
 
 /* Estilos para la sección de combos, cartas y contacto local */
@@ -254,7 +252,7 @@ nav a:hover::after {
     border-radius: 60px;
     text-align: center;
     opacity: 0;
-    animation: fadeIn 1.2s ease-in-out 0.6s forwards;
+    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
 }
 
 /* Estilos para la imagen de la carta */
@@ -502,13 +500,13 @@ nav a:hover::after {
 
     .hero-text-button h1,
     .hero-text-button p {
-        animation: fadeIn 1.2s ease-in-out 0.6s forwards;
+        animation: fadeIn 1.3s ease-in-out 0.6s forwards;
     }
 
-    /* Estilos para la imagen de la sección hero */
-    .hero-img {
-        transform: scale(0.9);
-        display: block;
+    /* Estilos para la imagen de la sección hero, carta y contacto*/
+    .hero-img, .carta-image, .contact-image {
+        transform: scale(0.85);
+        display: inline-block;
         margin: 0 auto;
     }
 
@@ -549,24 +547,10 @@ nav a:hover::after {
         text-align: center;
     }
 
-    /* Estilos para la imagen de la sección carta */
-    .carta-image {
-        transform: scale(0.9);
-        display: inline-block;
-        margin: 0 auto;
-    }
-
     /* Estilos para las secciones de combos, cartas y contacto local */
     .combos,
     .cartas,
     .local-contact-section {
         border-radius: 50px;
-    }
-
-    /* Estilos para la imagen de contacto */
-    .contact-image {
-        transform: scale(0.85);
-        display: inline-block;
-        margin: 0 auto;
     }
 }
