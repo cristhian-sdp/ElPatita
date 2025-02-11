@@ -106,11 +106,11 @@ nav a:hover::after {
 .logo {
     margin: 10px;
     transition: transform 0.4s ease;
-    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
+    animation: fadeIn 1.5s ease-in-out 0.6s forwards;
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 /* Estilos para el contenedor del mensaje de navegación */
 .msg-nav {
@@ -190,7 +190,7 @@ nav a:hover::after {
 .hero-text-button p {
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 1.3s steps(100, end) 0.6s;
+    animation: typing 1.3s steps(130, end) 0.6s;
 }
 
 /* Animación de escritura para el texto de bienvenida */
@@ -208,7 +208,7 @@ nav a:hover::after {
 .encuesta-button {
     border-radius: 40px;
     background-color: #f0781f;
-    box-shadow: 0 3px 14px rgb(255, 111, 0);
+    box-shadow: 0 3px 12px rgb(255, 111, 0);
     color: white;
     border: none;
     font-size: 1.1em;
@@ -220,7 +220,7 @@ nav a:hover::after {
 .wpp-button:hover,
 .encuesta-button:hover {
     background-color: #ffffff;
-    box-shadow: 0 3px 50px rgb(255, 111, 0);
+    box-shadow: 0 3px 55px rgb(255, 111, 0);
     color: black;
 }
 
@@ -270,6 +270,15 @@ nav a:hover::after {
     cursor: zoom-out;
 }
 
+/* Deshabilitar eventos de puntero en todas las imágenes cuando una está en modo zoom */
+body.zoom-active .carta-image {
+    pointer-events: none;
+}
+
+/* Habilitar eventos de puntero solo en la imagen que está en modo zoom */
+body.zoom-active .carta-image.zoomed {
+    pointer-events: auto;
+}
 
 /* Estilos para el encabezado de la sección de combos */
 .combos h2 {
@@ -297,7 +306,7 @@ nav a:hover::after {
     margin: 20px;
     background-color: black;
     box-shadow: 0 5px 15px rgb(255, 111, 0);
-    border-radius: 40px;
+    border-radius: 50px 10px;
     color: white;
     padding: 10px;
     max-width: 300px;
@@ -331,7 +340,7 @@ nav a:hover::after {
 
 .price:hover {
     transform: scale(1.2) translateZ(0);
-    box-shadow: 0 3px 30px rgb(255, 111, 0);
+    box-shadow: 0 4px 40px rgb(255, 111, 0);
 }
 
 /* Estilos para las imágenes dentro de los contenedores de combos y cartas */
