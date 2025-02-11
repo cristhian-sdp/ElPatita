@@ -1,0 +1,565 @@
+/* Aplicar la fuente Nunito a todos los elementos */
+* {
+    font-family: "Nunito";
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la pantalla de carga */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fe9d2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Estilos para el video de la pantalla de carga */
+.loading-screen video {
+    width: 600px;
+}
+
+/* Estilos para el encabezado */
+header {
+    color: white;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 30px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideDown 1.3s ease-in-out 0.6s forwards;
+}
+
+/* Animación para deslizar la barra de navegación hacia abajo */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos para la lista de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 25px;
+}
+
+/* Estilos para los enlaces de navegación */
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+    overflow: hidden;
+    transition: color 0.4s ease;
+}
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #f0781f;
+    transition: width 0.4s ease, left 0.5s ease;
+}
+
+nav a:hover {
+    color: #f0781f;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Estilos para el logo */
+.logo {
+    margin: 10px;
+    transition: transform 0.4s ease;
+    animation: fadeIn 1.5s ease-in-out 0.6s forwards;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+/* Estilos para el contenedor del mensaje de navegación */
+.msg-nav {
+    margin: 10px;
+    right: 0;
+    animation: slideInFromRight 1.3s ease-in-out 0.6s forwards;
+}
+.msg-text {
+    background-color: white;
+    box-shadow: 0 4px 30px rgb(255, 111, 0);
+    border-radius: 40px;
+    color: black;
+    padding: 10px 20px;
+    transition: color 0.5s ease;
+}
+.msg-text:hover {
+    background-color: #a6a6a6;
+    color: white;
+}
+
+/* Animación para deslizar el mensaje de navegación desde la derecha */
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Estilos para la sección hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 180px 20px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para el texto y botón de bienvenida */
+.hero-text-button {
+    text-align: left;
+    color: white;
+}
+
+.hero-text-button span a {
+    color: #ec5228;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.hero-text-button span a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+.hero-text-button h1 {
+    font-size: 3.2em;
+    margin: 0;
+}
+
+.hero-text-button p {
+    font-size: 1.1em;
+    margin: 30px 0;
+}
+
+.hero-text-button h1 span,
+.combos h2 span,
+.hero-text-button p span {
+    color: #ec5228;
+}
+
+.hero-text-button h1,
+.hero-text-button p {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1.3s steps(130, end) 0.6s;
+}
+
+/* Animación de escritura para el texto de bienvenida */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Estilos para los botones de WhatsApp y encuesta */
+.wpp-button,
+.encuesta-button {
+    border-radius: 40px;
+    background-color: #f0781f;
+    box-shadow: 0 3px 12px rgb(255, 111, 0);
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    padding: 12px 20px; 
+    cursor: pointer;
+    transition: color 0.6s ease;
+    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
+}
+.wpp-button:hover,
+.encuesta-button:hover {
+    background-color: #ffffff;
+    box-shadow: 0 3px 55px rgb(255, 111, 0);
+    color: black;
+}
+
+/* Animación de desvanecimiento*/
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        filter: brightness(0.5);
+    }
+    100% {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+/* Estilos para la imagen de pollo a la brasa */
+.hero-img {
+    text-align: center;
+    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
+}
+
+/* Estilos para la sección de combos, cartas y contacto local */
+.combos,
+.cartas,
+.local-contact-section {
+    background-color: white;
+    box-shadow: 0 8px 85px rgb(255, 111, 0);
+    padding: 80px 20px;
+    border-radius: 60px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
+}
+
+/* Estilos para la imagen de la carta */
+.carta-image {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.carta-image.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.4);
+    z-index: 1000;
+    cursor: zoom-out;
+}
+
+/* Deshabilitar eventos de puntero en todas las imágenes cuando una está en modo zoom */
+body.zoom-active .carta-image {
+    pointer-events: none;
+}
+
+/* Habilitar eventos de puntero solo en la imagen que está en modo zoom */
+body.zoom-active .carta-image.zoomed {
+    pointer-events: auto;
+}
+
+/* Estilos para el encabezado de la sección de combos */
+.combos h2 {
+    font-size: 2.4em;
+}
+
+/* Estilos para los párrafos en la sección de combos y en el pie de página */
+.combos p,
+.footer-text-button p {
+    font-size: 1.1em;
+}
+
+/* Estilos para los contenedores de combos, cartas y contacto local */
+.combos-container,
+.cartas-container,
+.local-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada combo */
+.combo {
+    flex: 1;
+    margin: 20px;
+    background-color: black;
+    box-shadow: 0 5px 15px rgb(255, 111, 0);
+    border-radius: 50px 10px;
+    color: white;
+    padding: 10px;
+    max-width: 300px;
+}
+
+/* Estilos para el título de cada combo */
+.combo-title {
+    font-size: 1.3em;
+    color: #fdc0af;
+}
+
+/* Estilos para la descripción de cada combo */
+.combo-description {
+    width: 83%;
+    padding: 10px 0px;
+    margin: 0 auto;
+}
+
+/* Estilos para el precio de cada combo */
+.price {
+    position: relative;
+    background-color: white;
+    color: black;
+    border-radius: 40px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: transform 0.4s ease;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.price:hover {
+    transform: scale(1.2) translateZ(0);
+    box-shadow: 0 4px 40px rgb(255, 111, 0);
+}
+
+/* Estilos para las imágenes dentro de los contenedores de combos y cartas */
+.combo img,
+.carta img {
+    border-radius: 40px;
+    box-shadow: 0 5px 35px rgb(255, 111, 0);
+    transition: transform 0.5s ease;
+}
+
+.combo img:hover {
+    transform: scale(0.9);
+}
+
+/* Estilos para las secciones de Carta y Local */
+.carta,
+.contact-image,
+.contact-map {
+    flex: 1;
+    margin: 30px;
+    padding: 10px;
+}
+
+/*Estilos para la página de 404*/
+.error-page {
+    padding: 30vh 20px;
+    color: white;
+    text-align: center;
+}
+.error-page h1 {
+    font-size: 6em;
+    margin: 0;
+}
+.error-page p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.error-page a {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    background-color: #f0781f;
+    border-radius: 45px;
+    font-weight: bold;
+}
+/* Estilos para el pie de página */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 260px 20px;
+    color: white;
+    gap: 80px;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out 0.2s;
+}
+
+/* Estilos para el pie de página cuando se muestra */
+.footer-content.fade-in {
+    opacity: 1;
+}
+
+/* Estilos para el contenedor de texto y botón */
+.footer-text-button {
+    flex: 1;
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+    margin: 0 auto;
+}
+.footer-text-button h4 {
+    margin: 20px 0;
+    font-size: 2em;
+}
+.footer-text-button h4 span {
+    color: #ec5228;
+}
+
+/* Estilos para los enlaces y el logo */
+.footer-links,
+.footer-logo {
+    flex: 1;
+    width: 100%;
+    max-width: 200px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.footer-links h5 {
+    margin: 12px 0;
+    font-size: 1.4em;
+}
+
+.footer-links a {
+    display: block;
+    margin: 16px 0;
+    color: white;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+.footer-links a:hover,
+.footer-info a:hover {
+    text-decoration: underline;
+    color: #f0781f;
+}
+
+/* Estilos para la información del pie de página */
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fdc0af;
+}
+
+.footer-info p {
+    margin: 6px;
+}
+
+.footer-info a {
+    color: #fdc0af;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+/* Estilos para la línea personalizada */
+.custom-line {
+    width: 100%;
+    border: 1px solid #f0781f;
+    margin: 0 auto;
+}
+
+/* Estilos para Dispositivos Móviles */
+@media only screen and (max-width: 767px) {
+    /* Estilos para el encabezado */
+    header {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    /* Estilos para la sección hero */
+    .hero {
+        padding: 60px 0px;
+    }
+
+    /* Estilos para el contenedor de texto y botón de bienvenida */
+    .hero-text-button {
+        text-align: center;
+        width: 90%;
+    }
+
+    .hero-text-button h1 {
+        font-size: 2.3em;
+        white-space: wrap;
+    }
+
+    .hero-text-button p {
+        font-size: 1em;
+        white-space: wrap;
+    }
+
+    .hero-text-button h1,
+    .hero-text-button p {
+        animation: fadeIn 1.3s ease-in-out 0.6s forwards;
+    }
+
+    /* Estilos para la imagen de la sección hero, carta y contacto*/
+    .hero-img, .carta-image, .contact-image {
+        transform: scale(0.85);
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    /* Estilos para el encabezado de la sección de combos */
+    .combos h2 {
+        font-size: 2em;
+    }
+
+    .carta-image{
+        cursor: default;
+        transition: none;
+    }
+
+    .carta-image.zoomed {
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+        z-index: auto;
+        cursor: default;
+    }
+
+    /* Estilos para Footer */
+    .footer-content {
+        padding: 40px 20px;
+        gap: 45px;
+    }
+
+    /* Estilos para el contenedor de texto y botón, enlaces y logo en Footer*/
+    .footer-text-button,
+    .footer-links,
+    .footer-logo {
+        flex: none;
+    }
+
+    /* Estilos para el logo en Footer */
+    .footer-logo {
+        text-align: center;
+    }
+
+    /* Estilos para las secciones de combos, cartas y contacto local */
+    .combos,
+    .cartas,
+    .local-contact-section {
+        border-radius: 50px;
+    }
+}
