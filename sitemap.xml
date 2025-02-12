@@ -6,17 +6,32 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://elpatita.pages.dev/</loc>
-  <lastmod>2025-02-10T19:34:29+00:00</lastmod>
+  <lastmod>2025-02-12T17:09:53+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://elpatita.pages.dev/carta</loc>
-  <lastmod>2025-02-10T19:34:29+00:00</lastmod>
+  <lastmod>2025-02-12T17:09:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://elpatita.pages.dev/local</loc>
-  <lastmod>2025-02-10T19:34:29+00:00</lastmod>
+  <lastmod>2025-02-12T17:09:53+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elpatita.pages.dev/pdf/Terminos-condiciones.pdf</loc>
+  <lastmod>2025-02-12T17:09:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elpatita.pages.dev/pdf/Pol%C3%ADticas-privacidad.pdf</loc>
+  <lastmod>2025-02-12T17:09:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://elpatita.pages.dev/video/screen-charged.webm</loc>
+  <lastmod>2025-02-10T19:34:29+00:00</lastmod>
+  <priority>0.50</priority>
 </url>
 </urlset>
