@@ -64,7 +64,11 @@
         />
         <!-- Enlace a fuentes de Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="anonymous"
+        />
         <link
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap&subset=latin"
             rel="stylesheet"
@@ -86,7 +90,7 @@
                 />
             </div>
             <!-- Barra de navegación -->
-            <nav class="navbar" aria-label="Barra de navegación principal" role="navigation">
+            <nav class="navbar" aria-label="Barra de navegación principal">
                 <ul>
                     <li>
                         <a href="#" aria-current="page"
@@ -122,12 +126,11 @@
             </nav>
             <!-- Botón de Dark Mode -->
             <div class="dark-mode">
-                <input 
-                    type="checkbox" 
+                <input
+                    type="checkbox"
                     id="darkModeToggle"
                     aria-label="Activar o desactivar el modo oscuro"
-                    aria-checked="false"
-                    role="switch" 
+                    role="switch"
                 />
                 <label class="dark-mode-toggle" for="darkModeToggle">
                     <div class="toggle-circle"></div>
@@ -181,15 +184,36 @@
                     <!-- Contenedor de texto, videos y botón de acción-->
                     <h2><span>PRUEBA NUESTROS DELICIOSOS </span>COMBOS</h2>
                     <div>
-                        <video autoplay loop muted playsinline preload="metadata" aria-label="Video de brasas en la pantalla de inicio">
-                        <source src="video/brasas.webm" />
-                        Tu navegador no soporta el elemento de video.
+                        <video
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            preload="metadata"
+                            aria-label="Video corto de brasas"
+                        >
+                            <source src="video/brasas.webm" />
+                            Tu navegador no soporta el elemento de video.
                         </video>
-                        <video autoplay loop muted playsinline preload="metadata" "Video de papas fritas en la pantalla de inicio">
+                        <video
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            preload="metadata"
+                            aria-label="Video corto de papas fritas"
+                        >
                             <source src="video/papas.webm" />
                             Tu navegador no soporta el elemento de video.
                         </video>
-                        <video autoplay loop muted playsinline preload="metadata" aria-label="Vi    deo de bebidas en la pantalla de inicio">
+                        <video
+                            autoplay
+                            loop
+                            muted
+                            playsinline
+                            preload="metadata"
+                            aria-label="Video corto de bebidas"
+                        >
                             <source src="video/bebida.webm" />
                             Tu navegador no soporta el elemento de video.
                         </video>
@@ -200,7 +224,6 @@
                             rel="noopener noreferrer nofollow"
                             title="Haz clic para ver nuestras promociones"
                             aria-label="Desplazarse a la sección de promociones"
-                            role="button"
                         >
                             Ver Promociones
                         </button>
@@ -248,17 +271,47 @@
                 <!-- Navegación de la carta -->
                 <nav class="carta-nav" aria-label="Navegación de la carta">
                     <ul>
-                        <li><a href="#promociones" aria-label="Ir a la sección de promociones" aria-current="page">PROMOCIONES</a></li>
-                        <li><a href="#brasas" aria-label="Ir a la sección de brasas">BRASAS</a></li>
-                        <li><a href="#parrillas" aria-label="Ir a la sección de parrillas">PARRILLAS</a></li>
-                        <li><a href="#guarniciones" aria-label="Ir a la sección de guarniciones">GUARNICIONES</a></li>
-                        <li><a href="#bebidas" aria-label="Ir a la sección de bebidas">BEBIDAS</a></li>
+                        <li>
+                            <a
+                                href="#promociones"
+                                aria-label="Ir a la sección de promociones"
+                                aria-current="page"
+                                >PROMOCIONES</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#brasas"
+                                aria-label="Ir a la sección de brasas"
+                                >BRASAS</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#parrillas"
+                                aria-label="Ir a la sección de parrillas"
+                                >PARRILLAS</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#guarniciones"
+                                aria-label="Ir a la sección de guarniciones"
+                                >GUARNICIONES</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#bebidas"
+                                aria-label="Ir a la sección de bebidas"
+                                >BEBIDAS</a
+                            >
+                        </li>
                     </ul>
                 </nav>
             </article>
             <!-- Sección de productos -->
             <article class="promociones" id="promociones">
-                
                 <section class="combo">
                     <img
                         src="img/cart/1-4-pollo.webp"
@@ -570,8 +623,8 @@
                     <img
                         src="img/icon/people.webp"
                         alt="Ícono de personas"
-                        width="90px"
-                        height="80px"
+                        width="90"
+                        height="80"
                         loading="lazy"
                         decoding="async"
                     />
@@ -695,7 +748,6 @@
                         rel="noopener noreferrer nofollow"
                         title="Haz clic para responder nuestra encuesta"
                         aria-label="Abrir encuesta en Google Forms"
-                        role="button"
                     >
                         Encuesta
                     </button>
