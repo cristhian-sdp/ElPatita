@@ -38,7 +38,12 @@ Si deseas contribuir a este proyecto, por favor dirígete al archivo de [Guías 
 
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional. Para más detalles, consulta el archivo [LICENSE](./LICENSE).
+Este proyecto está licenciado bajo la Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional. Esto significa que puedes usar, compartir y adaptar el contenido de este proyecto siempre que:
+- Des crédito al autor original.
+- No lo uses con fines comerciales.
+- Distribuyas cualquier trabajo derivado bajo la misma licencia.
+
+Para más detalles, consulta el archivo [LICENSE](./LICENSE) o visita [Creative Commons](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 ## Contacto
 
