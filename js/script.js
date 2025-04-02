@@ -1,17 +1,3 @@
-// Pantalla de carga:
-window.addEventListener("load", function () {
-    const loadingScreen = document.querySelector(".loading-screen");
-    // Asegura que la pantalla de carga dure exactamente 0.6 segundos
-    const startTime = performance.now();
-    setTimeout(function () {
-        const elapsedTime = performance.now() - startTime;
-        const remainingTime = 600 - elapsedTime; // Calcula el tiempo restante
-        setTimeout(() => {
-            loadingScreen.style.display = "none";
-        }, Math.max(remainingTime, 0)); // Asegura que no sea menor a 0
-    }, 0);
-});
-
 // Barra de progreso:
 const progressBarEl = document.getElementById("progress-bar");
 window.addEventListener("scroll", () => {
