@@ -5,12 +5,10 @@
     --celeste: #17c6d2;
     --blanco: #eeeeee;
     --negro: #0e081b;
-
     /* Colores Adicionales*/
     --naranja-claro: #f8dfce;
     --naranja-oscuro: #ec5228;
     --blanco-puro: #ffffff;
-
     /* Colores en modo oscuro */
     --celeste-oscuro: #31acb5;
     --gris-oscuro: #545454;
@@ -27,7 +25,6 @@
 html {
     scroll-behavior: smooth;
 }
-/* Estilos para el cuerpo de la página */
 body {
     background-color: var(--blanco);
     margin: 0;
@@ -92,20 +89,6 @@ body {
     }
 }
 
-/* Estilos para la pantalla de carga */
-.loading-screen {
-    background-color: #fe9c2c;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-}
-.loading-screen video {
-    width: 320px;
-}
-
 /* Estilos para la barra de progreso */
 .progress-bar {
     height: 0.5rem;
@@ -117,8 +100,31 @@ body {
     transition: width 0.4s ease;
 }
 
+/* Animaciones para mostrar los elementos al hacer scroll */
+.welcome-promo-img,
+.welcome-promo-text,
+.carta-title,
+.carta-nav,
+.combo,
+.promociones,
+.local-title,
+.local-text,
+.local-msg,
+.contact-map,
+.contact-img,
+.contact-hours,
+.contact-address,
+.contact-phone,
+.faq-title,
+.faq-item {
+    view-timeline-name: --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 20% cover 40%;
+}
+
 /* Estilos generales para la alineación de elementos */
-.loading-screen,
 .logo,
 .navbar,
 .dark-mode,
@@ -136,7 +142,7 @@ details summary::before,
     align-items: center;
 }
 
-/* Estilos compartidos para bordes */
+/* Estilos compartidos para bordes y background*/
 .logo,
 .navbar,
 .dark-mode,
@@ -169,8 +175,6 @@ details summary::before,
     border: solid 2px var(--negro);
     box-sizing: border-box;
 }
-
-/* Estilos compartidos para el background naranja */
 .progress-bar,
 .title,
 .dark-mode-toggle,
@@ -186,8 +190,6 @@ details summary::before,
 .right-section h3 {
     background-color: var(--naranja);
 }
-
-/* Estilos compartidos para el background celeste */
 .logo,
 .hero-logo,
 .price-half,
@@ -221,7 +223,7 @@ details summary::before,
 .logo {
     border-radius: 20px;
     padding: 5px;
-    animation: slideDown 1.8s ease-in-out 0.6s forwards;
+    animation: slideDown 1.8s ease-in-out forwards;
 }
 
 /* Estilos para la barra de navegación */
@@ -229,7 +231,7 @@ details summary::before,
     background-color: var(--naranja-claro);
     border-radius: 20px;
     padding: 10px 20px;
-    animation: slideDown 1.5s ease-in-out 0.6s forwards;
+    animation: slideDown 1.5s ease-in-out forwards;
 }
 .navbar ul {
     list-style: none;
@@ -261,15 +263,11 @@ details summary::before,
     color: var(--naranja);
     border-color: var(--negro);
 }
-
-/* Estilos para los icons de la barra de navegación */
 .navbar img {
     width: 30px;
     height: 30px;
     object-fit: cover;
 }
-
-/* Estilo para la barra de navegación vertical */
 .navbar-vertical {
     position: fixed;
     top: 50%;
@@ -280,7 +278,7 @@ details summary::before,
     padding: 5px;
     display: flex;
     flex-direction: column;
-    z-index: 1000;
+    z-index: 900;
     opacity: 0.7;
     transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     animation: fadeIn 0.8s ease-in-out;
@@ -318,7 +316,7 @@ details summary::before,
     border-radius: 20px;
     padding: 10px;
     height: auto;
-    animation: slideDown 1.2s ease-in-out 0.6s forwards;
+    animation: slideDown 1.2s ease-in-out forwards;
 }
 .dark-mode-toggle {
     width: 70px;
@@ -335,14 +333,10 @@ details summary::before,
     box-shadow: 0 0 11px 1px rgba(240, 120, 31, 0.8);
     transition: box-shadow 0.4s ease;
 }
-
-/* Estilo para el hover del botón en modo oscuro */
 .dark-mode input:checked + .dark-mode-toggle:hover {
     box-shadow: 0 0 11px 1px rgba(255, 255, 255, 0.8);
     transition: box-shadow 0.4s ease;
 }
-
-/* Estilo para el círculo del botón de alternancia */
 .dark-mode-toggle .toggle-circle {
     width: 30px;
     height: 30px;
@@ -351,8 +345,6 @@ details summary::before,
     right: 5px;
     transition: right 0.5s ease, transform 0.5s ease;
 }
-
-/* Iconos del botón de dark mode*/
 .dark-mode-toggle .icon-sun,
 .dark-mode-toggle .icon-moon {
     width: 28px;
@@ -368,12 +360,9 @@ details summary::before,
     right: 8px;
     opacity: 0;
 }
-
-/* Ocultar el input */
 .dark-mode input {
     display: none;
 }
-
 .dark-mode input:checked + .dark-mode-toggle,
 .dark-mode-toggle .toggle-circle,
 .faq-item,
@@ -487,7 +476,7 @@ body.dark-mode-active .contact-phone {
     grid-row: span 2 / span 2;
     border-radius: 20px;
     color: var(--blanco);
-    animation: slideInFromLeft 1.3s ease-in-out 0.6s forwards;
+    animation: slideInFromLeft 1.3s ease-in-out forwards;
 }
 .hero-papas img,
 .contact-img img {
@@ -526,7 +515,7 @@ body.dark-mode-active .contact-phone {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
+    animation: fadeIn 1.3s ease-in-out forwards;
 }
 .title h1 {
     width: 100%;
@@ -553,7 +542,7 @@ hr {
 /* Estilos para la imagen de pollo a la brasa*/
 .hero-pollo {
     grid-column-start: 4;
-    animation: slideInFromRight 1.2s ease-in-out 0.6s forwards;
+    animation: slideInFromRight 1.2s ease-in-out forwards;
 }
 .hero-pollo img,
 .welcome-promo-img img,
@@ -570,7 +559,7 @@ hr {
     grid-column-start: 4;
     grid-row-start: 2;
     border-radius: 20px;
-    animation: slideInFromRight 1.6s ease-in-out 0.6s forwards;
+    animation: slideInFromRight 1.6s ease-in-out forwards;
 }
 .hero-logo img {
     transition: transform 0.6s ease;
@@ -590,7 +579,7 @@ hr {
     justify-content: center;
     flex-wrap: wrap;
     padding: 25px;
-    animation: fadeIn 1.7s ease-in-out 0.6s forwards;
+    animation: fadeIn 1.7s ease-in-out forwards;
 }
 .promo-button h2 {
     font-size: 1.9em;
@@ -615,7 +604,7 @@ hr {
     cursor: pointer;
     transition: background-color 0.5s ease, color 0.5s ease,
         font-weight 0.5s ease;
-    animation: fadeIn 1.7s ease-in-out 0.6s forwards;
+    animation: fadeIn 1.7s ease-in-out forwards;
 }
 .button-promo:hover {
     background-color: var(--naranja);
@@ -646,30 +635,6 @@ hr {
     margin: 0;
 }
 
-/* Animaciones para mostrar los elementos al hacer scroll */
-.welcome-promo-img,
-.welcome-promo-text,
-.carta-title,
-.carta-nav,
-.combo,
-.promociones,
-.local-title,
-.local-text,
-.local-msg,
-.contact-map,
-.contact-img,
-.contact-hours,
-.contact-address,
-.contact-phone,
-.faq-title,
-.faq-item {
-    view-timeline-name: --reveal;
-    animation-name: show;
-    animation-fill-mode: both;
-    animation-timeline: --reveal;
-    animation-range: entry 20% cover 40%;
-}
-
 /* Estilos para la sección de carta */
 .carta-content {
     flex-wrap: wrap;
@@ -682,8 +647,6 @@ hr {
     text-align: center;
     border-radius: 20px;
 }
-
-/* Estilo para la barra de navegación de carta*/
 .carta-nav {
     background-color: var(--naranja-claro);
     grid-column: span 3 / span 3;
@@ -721,7 +684,7 @@ hr {
     display: none !important;
 }
 
-/* Estilos para las secciones de promociones, brasas, parrillas, guarniciones y bebidas */
+/* Estilos para las enlaces de carta */
 .promociones,
 .brasas,
 .parrillas,
@@ -755,8 +718,6 @@ hr {
     border: 2px solid transparent;
     border-radius: 20px;
 }
-
-/* Estilos para la información del producto */
 .product-info {
     font-size: 1em;
     color: var(--blanco);
@@ -800,8 +761,6 @@ hr {
     align-content: center;
     text-align: center;
 }
-
-/* Estilo para el mensaje importante del local*/
 .local-msg {
     grid-column-start: 4;
     border-radius: 20px;
@@ -809,10 +768,6 @@ hr {
     padding: 10px 20px;
     font-size: 1.3em;
     gap: 10px;
-}
-.local-msg img {
-    width: 90px;
-    height: auto;
 }
 
 /* Estilos para la sección de Contacto */
@@ -823,8 +778,6 @@ hr {
     grid-template-rows: repeat(2, 1fr);
     gap: 25px;
 }
-
-/* Estilo para el mapa de contacto */
 .contact-map {
     grid-row: span 2 / span 2;
     width: 100%;
@@ -844,8 +797,6 @@ hr {
     position: relative;
     overflow: hidden;
 }
-
-/* Estilos para la información de contacto */
 .contact-hours,
 .contact-address,
 .contact-phone {
@@ -866,8 +817,6 @@ hr {
     color: var(--blanco);
     grid-column-start: 3;
 }
-
-/* Estilos para los iconos de la información de contacto */
 .contact-hours img,
 .contact-address img,
 .contact-phone img {
@@ -924,8 +873,6 @@ hr {
     grid-template-rows: repeat(3, 1fr);
     gap: 25px;
 }
-
-/* Estilos para los elementos de preguntas frecuentes */
 .faq-item {
     grid-column: span 4 / span 4;
     border-radius: 20px;
@@ -935,8 +882,6 @@ hr {
     background-color: var(--gris-claro);
     transform: scale(1.01);
 }
-
-/* Estilos para las preguntas */
 details {
     padding: 20px 30px;
     position: relative;
@@ -953,13 +898,9 @@ details summary {
     gap: 20px;
     outline: none;
 }
-
-/* Oculta el marcador predeterminado de los elementos <details> en navegadores basados en WebKit */
 details summary::-webkit-details-marker {
     display: none;
 }
-
-/* Estilo para el ícono de summary */
 details summary::before {
     content: "+";
     font-size: 1.2em;
@@ -970,8 +911,6 @@ details summary::before {
     border-radius: 50%;
     transition: transform 0.5s ease, color 0.5s ease;
 }
-
-/* Cambia el ícono y aplica una rotación cuando el elemento <details> está abierto */
 details[open] summary::before {
     content: "-";
     transform: rotate(180deg);
@@ -1003,6 +942,7 @@ details[open] summary::before {
     border-radius: 45px;
     font-weight: bold;
 }
+
 /* Estilos para el footer */
 footer {
     color: var(--blanco);
@@ -1023,8 +963,6 @@ footer {
     flex: 1;
     min-width: 200px;
 }
-
-/* Estilos para la sección de la izquierda */
 .left-section,
 .legal-section {
     display: flex;
@@ -1040,8 +978,6 @@ footer {
     margin: 0;
     font-size: 0.8em;
 }
-
-/* Estilos para el botón de encuesta */
 .encuesta-button {
     border-radius: 20px;
     border: solid 2px var(--blanco-puro);
@@ -1057,8 +993,6 @@ footer {
     font-weight: bold;
     border: solid 2px var(--celeste);
 }
-
-/* Estilos para la sección de enlaces legales */
 .legal-section a {
     display: block;
     color: var(--blanco);
@@ -1068,8 +1002,6 @@ footer {
 .legal-section a:hover {
     color: var(--naranja);
 }
-
-/* Estilos para la sección de la derecha */
 .right-section {
     display: flex;
     flex-direction: column;
