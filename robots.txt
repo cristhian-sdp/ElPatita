@@ -1,6 +1,9 @@
+# Permitir a todos los motores de búsqueda indexar el sitio
 User-agent: *
 Allow: /
 
-User-agent: *
+# Bloquear la página de error 404
 Disallow: /404
+
+# Enlace al sitemap
 Sitemap: https://elpatita.pages.dev/sitemap.xml

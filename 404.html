@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Metadatos y configuración de la página -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <!-- Título de la página -->
-    <title>Página no encontrada</title>
-    <!-- Enlaces a hojas de estilo CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- Metadatos para SEO -->
-    <meta
-      name="description"
-      content="Página no encontrada en El Patita. Lo sentimos, la página que buscas no existe."
-    />
-    <meta
-      name="keywords"
-      content="404, página no encontrada, error, El Patita"
-    />
-    <meta name="robots" content="noindex, follow" />
-    <link rel="canonical" href="https://elpatita.pages.dev/404" />
-    <!-- Enlace al sitemap -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <!-- Favicon de la página -->
-    <link rel="icon" href="img/favicon/title-logo.webp" type="image/webp" />
-    <!-- Enlace a fuentes de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" as="font" crossorigin="anonymous" >
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-      <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    </noscript>
-  </head>
-  <body>
-    <!-- Contenido principal de la página de error -->
-    <div class="error-page">
-      <h1>404</h1>
-      <p>Lo sentimos, la página que buscas no existe.</p>
-      <a href="index.html">Volver a la pagina</a>
-    </div>
-  </body>
+    <head>
+        <!-- Metadatos y configuración de la página -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+        />
+        <!-- Título de la página -->
+        <title>Página no encontrada</title>
+        <!-- Enlaces a hojas de estilo CSS -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-- Metadatos para SEO -->
+        <meta
+            name="description"
+            content="Página no encontrada en El Patita. Lo sentimos, la página que buscas no existe."
+        />
+        <meta
+            name="keywords"
+            content="404, página no encontrada, error, El Patita"
+        />
+        <!-- Enlace canónico -->
+        <link rel="canonical" href="https://elpatita.pages.dev/404" />
+        <!-- Permite indexar la página y seguir los enlaces -->
+        <meta name="robots" content="noindex, nofollow" />
+        <!-- Enlace al sitemap -->
+        <link
+            rel="sitemap"
+            type="application/xml"
+            title="Sitemap"
+            href="/sitemap.xml"
+        />
+        <!-- Favicon de la página -->
+        <link rel="icon" href="img/favicon/title-logo.webp" type="image/webp" sizes="any" />
+        <!-- Enlace a fuentes de Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Contenido principal de la página de error -->
+        <div class="error-page">
+            <h1>404</h1>
+            <p>Lo sentimos, la página que buscas no existe.</p>
+            <!-- Enlace para volver a la página principal -->
+            <a href="index.html" aria-label="Ir a la pagina web de el Patita">Volver a la pagina</a>
+        </div>
+    </body>
 </html>

@@ -1,56 +1,42 @@
-/* Aplicar la fuente Nunito a todos los elementos */
-* {
-    font-family: "Nunito";
+/* Variables CSS */
+:root {
+    /* Paleta de colores */
+    --naranja: #f0781f;
+    --celeste: #17c6d2;
+    --blanco: #eeeeee;
+    --negro: #0e081b;
+
+    /* Colores Adicionales*/
+    --naranja-claro: #f8dfce;
+    --naranja-oscuro: #ec5228;
+    --blanco-puro: #ffffff;
+
+    /* Colores en modo oscuro */
+    --celeste-oscuro: #31acb5;
+    --gris-oscuro: #545454;
+    --gris: #737373;
+    --gris-claro: #d9d9d9;
 }
 
+/* Estilo global para todos los elementos */
+* {
+    font-family: "Nunito";
+    scrollbar-width: auto;
+    scrollbar-color: var(--naranja) var(--blanco-puro);
+}
+html {
+    scroll-behavior: smooth;
+}
 /* Estilos para el cuerpo de la página */
 body {
-    background-color: black;
+    background-color: var(--blanco);
     margin: 0;
     padding: 0;
 }
 
-/* Estilos para la pantalla de carga */
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fe9d2c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-/* Estilos para el video de la pantalla de carga */
-.loading-screen video {
-    width: 600px;
-}
-
-/* Estilos para el encabezado */
-header {
-    color: white;
-    text-align: center;
-    z-index: 10;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 30px;
-    flex-wrap: wrap;
-}
-
-/* Estilos para la barra de navegación */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: slideDown 1.3s ease-in-out 0.6s forwards;
-}
-
-/* Animación para deslizar la barra de navegación hacia abajo */
+/*ANIMACIONES CSS*/
 @keyframes slideDown {
+    /* Animación para deslizar la barra de navegación hacia abajo */
     0% {
         transform: translateY(-100%);
         opacity: 0;
@@ -60,79 +46,8 @@ nav {
         opacity: 1;
     }
 }
-
-/* Estilos para la lista de navegación */
-nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    margin: 0 25px;
-}
-
-/* Estilos para los enlaces de navegación */
-nav a {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    font-size: 1.4em;
-    overflow: hidden;
-    transition: color 0.4s ease;
-}
-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: #f0781f;
-    transition: width 0.4s ease, left 0.5s ease;
-}
-
-nav a:hover {
-    color: #f0781f;
-}
-
-nav a:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-/* Estilos para el logo */
-.logo {
-    margin: 10px;
-    transition: transform 0.4s ease;
-    animation: fadeIn 1.5s ease-in-out 0.6s forwards;
-}
-
-.logo:hover {
-    transform: scale(1.2);
-}
-/* Estilos para el contenedor del mensaje de navegación */
-.msg-nav {
-    margin: 10px;
-    right: 0;
-    animation: slideInFromRight 1.3s ease-in-out 0.6s forwards;
-}
-.msg-text {
-    background-color: white;
-    box-shadow: 0 4px 30px rgb(255, 111, 0);
-    border-radius: 40px;
-    color: black;
-    padding: 10px 20px;
-    transition: color 0.5s ease;
-}
-.msg-text:hover {
-    background-color: #a6a6a6;
-    color: white;
-}
-
-/* Animación para deslizar el mensaje de navegación desde la derecha */
 @keyframes slideInFromRight {
+    /* Animación para deslizar el contenido de derecha a izquierda*/
     0% {
         transform: translateX(100%);
         opacity: 0;
@@ -142,424 +57,1308 @@ nav a:hover::after {
         opacity: 1;
     }
 }
-
-/* Estilos para la sección hero */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 180px 20px;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-/* Estilos para el texto y botón de bienvenida */
-.hero-text-button {
-    text-align: left;
-    color: white;
-}
-
-.hero-text-button span a {
-    color: #ec5228;
-    text-decoration: none;
-    transition: color 0.4s ease;
-}
-
-.hero-text-button span a:hover {
-    text-decoration: underline;
-    color: orange;
-}
-
-.hero-text-button h1 {
-    font-size: 3.2em;
-    margin: 0;
-}
-
-.hero-text-button p {
-    font-size: 1.1em;
-    margin: 30px 0;
-}
-
-.hero-text-button h1 span,
-.combos h2 span,
-.hero-text-button p span {
-    color: #ec5228;
-}
-
-.hero-text-button h1,
-.hero-text-button p {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typing 1.3s steps(130, end) 0.6s;
-}
-
-/* Animación de escritura para el texto de bienvenida */
-@keyframes typing {
-    from {
-        width: 0;
+@keyframes slideInFromLeft {
+    /* Animación para deslizar el contenido de izquierda a derecha */
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
     }
-    to {
-        width: 100%;
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
-
-/* Estilos para los botones de WhatsApp y encuesta */
-.wpp-button,
-.encuesta-button {
-    border-radius: 40px;
-    background-color: #f0781f;
-    box-shadow: 0 3px 12px rgb(255, 111, 0);
-    color: white;
-    border: none;
-    font-size: 1.1em;
-    padding: 12px 20px; 
-    cursor: pointer;
-    transition: color 0.6s ease;
-    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
-}
-.wpp-button:hover,
-.encuesta-button:hover {
-    background-color: #ffffff;
-    box-shadow: 0 3px 55px rgb(255, 111, 0);
-    color: black;
-}
-
-/* Animación de desvanecimiento*/
 @keyframes fadeIn {
+    /* Animación de aparecimiento */
     0% {
         opacity: 0;
-        filter: brightness(0.5);
+        transform: scale(0.9);
     }
     100% {
         opacity: 1;
-        filter: brightness(1);
+        transform: scale(1);
+    }
+}
+@keyframes show {
+    /* Animación de scroll para mostrar los elementos */
+    from {
+        opacity: 0;
+        scale: 20%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
     }
 }
 
-/* Estilos para la imagen de pollo a la brasa */
-.hero-img {
-    text-align: center;
-    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
+/* Estilos para la pantalla de carga */
+.loading-screen {
+    background-color: #fe9c2c;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+.loading-screen video {
+    width: 320px;
 }
 
-/* Estilos para la sección de combos, cartas y contacto local */
-.combos,
-.cartas,
-.local-contact-section {
-    background-color: white;
-    box-shadow: 0 8px 85px rgb(255, 111, 0);
-    padding: 80px 20px;
-    border-radius: 60px;
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
+/* Estilos para la barra de progreso */
+.progress-bar {
+    height: 0.5rem;
+    width: 0%;
+    position: fixed;
+    opacity: 0.7;
+    border-radius: 30px;
+    z-index: 100;
+    transition: width 0.4s ease;
 }
 
-/* Estilos para la imagen de la carta */
-.carta-image {
-    cursor: zoom-in;
-    transition: transform 0.3s ease;
+/* Estilos generales para la alineación de elementos */
+.loading-screen,
+.logo,
+.navbar,
+.dark-mode,
+.hero-pollo,
+.hero-logo,
+details summary::before,
+.carta-title,
+.local-title,
+.local-msg,
+.promo-button div,
+.combo,
+.navbar-vertical a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.carta-image.zoomed {
+/* Estilos compartidos para bordes */
+.logo,
+.navbar,
+.dark-mode,
+.hero-papas,
+.title,
+.hero-pollo img,
+.promo-button,
+.button-promo,
+.hero-logo,
+.welcome-promo-img img,
+.welcome-promo-text,
+.carta-title,
+.carta-nav,
+.local-title,
+.local-text,
+.local-msg,
+.contact-map,
+.contact-img img,
+.contact-hours,
+.contact-address,
+.contact-phone,
+.faq-title,
+.faq-item,
+.combo:hover,
+.combo:hover img,
+.combo:hover .category,
+.combo:hover .price,
+.combo:hover .price-half,
+.navbar-vertical {
+    border: solid 2px var(--negro);
+    box-sizing: border-box;
+}
+
+/* Estilos compartidos para el background naranja */
+.progress-bar,
+.title,
+.dark-mode-toggle,
+.hero-papas,
+.carta-title,
+.local-title,
+.carta-nav a.active,
+.carta-nav a:hover,
+.price,
+.faq-title,
+details summary::before,
+.error-page a,
+.right-section h3 {
+    background-color: var(--naranja);
+}
+
+/* Estilos compartidos para el background celeste */
+.logo,
+.hero-logo,
+.price-half,
+.local-msg,
+.encuesta-button {
+    background-color: var(--celeste);
+}
+
+/* Estilos compartidos para la estructura del grid*/
+.header-content,
+.local-content,
+.faq-header,
+.promos-content,
+.carta-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 25px;
+}
+
+/* Estilos compartidos para el espaciado y el ajuste del contenido */
+.header-content,
+.local-content,
+.faq-header,
+.promos-content {
+    flex-wrap: wrap;
+    padding: 25px 100px;
+}
+
+/* Estilos para el logo */
+.logo {
+    border-radius: 20px;
+    padding: 5px;
+    animation: slideDown 1.8s ease-in-out 0.6s forwards;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: var(--naranja-claro);
+    border-radius: 20px;
+    padding: 10px 20px;
+    animation: slideDown 1.5s ease-in-out 0.6s forwards;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+.navbar li,
+.navbar a,
+.promo-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar a {
+    text-decoration: none;
+    padding: 5px 25px;
+    border-radius: 30px;
+    color: var(--naranja);
+    color: var(--negro);
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    border: 2px solid transparent;
+}
+.navbar a:hover {
+    background-color: var(--blanco-puro);
+    color: var(--naranja);
+    border-color: var(--negro);
+}
+
+/* Estilos para los icons de la barra de navegación */
+.navbar img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+/* Estilo para la barra de navegación vertical */
+.navbar-vertical {
     position: fixed;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.4);
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: var(--naranja-claro);
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
     z-index: 1000;
-    cursor: zoom-out;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease-in-out;
+}
+.navbar-vertical:hover {
+    opacity: 0.9;
+}
+.navbar-vertical ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar-vertical a {
+    padding: 10px;
+    text-indent: -9999px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.navbar-vertical a:hover {
+    transform: scale(1.3);
+}
+.navbar-vertical img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s ease;
+}
+.navbar-vertical a:hover img {
+    transform: rotate(15deg);
 }
 
-/* Deshabilitar eventos de puntero en todas las imágenes cuando una está en modo zoom */
-body.zoom-active .carta-image {
+/* Estilos para el botón de Dark Mode */
+.dark-mode {
+    background-color: var(--naranja-claro);
+    grid-column-start: 4;
+    border-radius: 20px;
+    padding: 10px;
+    height: auto;
+    animation: slideDown 1.2s ease-in-out 0.6s forwards;
+}
+.dark-mode-toggle {
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.5s ease box-shadow 0.4s ease;
+}
+.dark-mode-toggle:hover {
+    box-shadow: 0 0 11px 1px rgba(240, 120, 31, 0.8);
+    transition: box-shadow 0.4s ease;
+}
+
+/* Estilo para el hover del botón en modo oscuro */
+.dark-mode input:checked + .dark-mode-toggle:hover {
+    box-shadow: 0 0 11px 1px rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.4s ease;
+}
+
+/* Estilo para el círculo del botón de alternancia */
+.dark-mode-toggle .toggle-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: 5px;
+    transition: right 0.5s ease, transform 0.5s ease;
+}
+
+/* Iconos del botón de dark mode*/
+.dark-mode-toggle .icon-sun,
+.dark-mode-toggle .icon-moon {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    transition: opacity 0.5s ease;
+}
+.dark-mode-toggle .icon-sun {
+    left: 8px;
+    opacity: 1;
+}
+.dark-mode-toggle .icon-moon {
+    right: 8px;
+    opacity: 0;
+}
+
+/* Ocultar el input */
+.dark-mode input {
+    display: none;
+}
+
+.dark-mode input:checked + .dark-mode-toggle,
+.dark-mode-toggle .toggle-circle,
+.faq-item,
+.encuesta-button:hover {
+    background-color: var(--blanco-puro);
+}
+.dark-mode input:checked + .dark-mode-toggle .toggle-circle {
+    right: auto;
+    left: 5px;
+    background-color: var(--negro);
+}
+.dark-mode input:checked + .dark-mode-toggle .icon-sun {
+    opacity: 0;
+}
+.dark-mode input:checked + .dark-mode-toggle .icon-moon {
+    opacity: 1;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode-active {
+    background-color: var(--negro);
+    transition: background-color 0.6s ease, color 0.6s ease;
+}
+body.dark-mode-active .logo,
+body.dark-mode-active .navbar,
+body.dark-mode-active .dark-mode,
+body.dark-mode-active .hero-papas,
+body.dark-mode-active .title,
+body.dark-mode-active .hero-pollo img,
+body.dark-mode-active .promo-button,
+body.dark-mode-active .hero-logo,
+body.dark-mode-active .welcome-promo-img img,
+body.dark-mode-active .welcome-promo-text,
+body.dark-mode-active .carta-title,
+body.dark-mode-active .carta-nav,
+body.dark-mode-active .combo:hover,
+body.dark-mode-active .combo:hover img,
+body.dark-mode-active .combo:hover .category,
+body.dark-mode-active .combo:hover .price,
+body.dark-mode-active .combo:hover .discount,
+body.dark-mode-active .combo:hover .price-half,
+body.dark-mode-active .local-title,
+body.dark-mode-active .local-text,
+body.dark-mode-active .local-msg,
+body.dark-mode-active .contact-map,
+body.dark-mode-active .contact-img img,
+body.dark-mode-active .contact-hours,
+body.dark-mode-active .contact-address,
+body.dark-mode-active .contact-phone,
+body.dark-mode-active .faq-title,
+body.dark-mode-active .faq-item {
+    border: solid 2px var(--blanco-puro);
+    box-sizing: border-box;
+}
+body.dark-mode-active .navbar,
+body.dark-mode-active .carta-nav {
+    background-color: var(--gris-claro);
+}
+body.dark-mode-active .logo,
+body.dark-mode-active .hero-logo,
+body.dark-mode-active .local-msg {
+    background-color: var(--celeste-oscuro);
+}
+body.dark-mode-active .dark-mode {
+    background-color: var(--gris-oscuro);
+}
+body.dark-mode-active .title {
+    background-color: rgba(240, 120, 31, 0.85);
+}
+body.dark-mode-active .button-promo {
+    background-color: var(--naranja-oscuro);
+}
+body.dark-mode-active .faq-item details,
+body.dark-mode-active .local-text,
+body.dark-mode-active .button-promo {
+    color: var(--blanco-puro);
+}
+body.dark-mode-active .button-promo:hover {
+    background-color: var(--blanco-puro);
+    color: var(--negro);
+}
+body.dark-mode-active .hero-papas {
+    background-color: #9c561f;
+}
+body.dark-mode-active .welcome-promo-text,
+body.dark-mode-active .combo,
+body.dark-mode-active .contact-hours,
+body.dark-mode-active .contact-address,
+body.dark-mode-active .faq-item {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco);
+}
+body.dark-mode-active .local-text {
+    background-color: #a6a6a6;
+}
+body.dark-mode-active .contact-phone {
+    background: radial-gradient(circle at 50% 50%, #25d365d2, #54f35cd0);
+}
+
+/* Estilos para hero*/
+.hero-content {
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Estilos para la imagen de papas*/
+.hero-papas {
+    grid-row: span 2 / span 2;
+    border-radius: 20px;
+    color: var(--blanco);
+    animation: slideInFromLeft 1.3s ease-in-out 0.6s forwards;
+}
+.hero-papas img,
+.contact-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hero-papas img {
+    opacity: 0.6;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+.hero-papas img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+.hero-papas p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 3.5em;
+    z-index: 1;
+    margin: 0;
+    line-height: 1.1;
     pointer-events: none;
 }
 
-/* Habilitar eventos de puntero solo en la imagen que está en modo zoom */
-body.zoom-active .carta-image.zoomed {
-    pointer-events: auto;
-}
-
-/* Estilos para el encabezado de la sección de combos */
-.combos h2 {
-    font-size: 2.4em;
-}
-
-/* Estilos para los párrafos en la sección de combos y en el pie de página */
-.combos p,
-.footer-text-button p {
-    font-size: 1.1em;
-}
-
-/* Estilos para los contenedores de combos, cartas y contacto local */
-.combos-container,
-.cartas-container,
-.local-container {
+/* Estilos para el titulo del inicio */
+.title {
+    position: relative;
+    border-radius: 20px;
+    color: var(--blanco-puro);
+    padding: 15px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    text-align: center;
+    animation: fadeIn 1.3s ease-in-out 0.6s forwards;
 }
-
-/* Estilos para cada combo */
-.combo {
-    flex: 1;
-    margin: 20px;
-    background-color: black;
-    box-shadow: 0 5px 15px rgb(255, 111, 0);
-    border-radius: 50px 10px;
-    color: white;
-    padding: 10px;
-    max-width: 300px;
+.title h1 {
+    width: 100%;
+    font-size: 3.2em;
+    margin: 0 auto;
 }
-
-/* Estilos para el título de cada combo */
-.combo-title {
-    font-size: 1.3em;
-    color: #fdc0af;
+.title h1 span,
+.right-section h3 span {
+    color: var(--negro);
 }
-
-/* Estilos para la descripción de cada combo */
-.combo-description {
-    width: 83%;
-    padding: 10px 0px;
+.title p {
+    opacity: 0.9;
+    font-style: italic;
+    font-size: 1.2em;
+}
+hr {
+    height: 3px;
+    border: none;
+    background-color: var(--blanco-puro);
+    width: 75%;
     margin: 0 auto;
 }
 
-/* Estilos para el precio de cada combo */
-.price {
-    position: relative;
-    background-color: white;
-    color: black;
-    border-radius: 40px;
-    padding: 10px 20px;
-    display: inline-block;
-    transition: transform 0.4s ease;
-    transform: translateZ(0);
-    will-change: transform;
+/* Estilos para la imagen de pollo a la brasa*/
+.hero-pollo {
+    grid-column-start: 4;
+    animation: slideInFromRight 1.2s ease-in-out 0.6s forwards;
+}
+.hero-pollo img,
+.welcome-promo-img img,
+.hero-papas img,
+.contact-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
-.price:hover {
-    transform: scale(1.2) translateZ(0);
-    box-shadow: 0 4px 40px rgb(255, 111, 0);
+/* Estilos para el logo grande*/
+.hero-logo {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    border-radius: 20px;
+    animation: slideInFromRight 1.6s ease-in-out 0.6s forwards;
+}
+.hero-logo img {
+    transition: transform 0.6s ease;
+}
+.hero-logo img:hover {
+    transform: scale(1.1) rotate(40deg);
 }
 
-/* Estilos para las imágenes dentro de los contenedores de combos y cartas */
-.combo img,
-.carta img {
-    border-radius: 40px;
-    box-shadow: 0 5px 35px rgb(255, 111, 0);
-    transition: transform 0.5s ease;
+/* Estilos para la promociones del inicio */
+.promo-button {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: var(--naranja-claro);
+    border-radius: 20px;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 25px;
+    animation: fadeIn 1.7s ease-in-out 0.6s forwards;
+}
+.promo-button h2 {
+    font-size: 1.9em;
+}
+.promo-button div {
+    gap: 30px;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.welcome-promo-text h2 span,
+.local-text h2 span,
+.promo-button h2 span {
+    color: var(--naranja-oscuro);
 }
 
-.combo img:hover {
-    transform: scale(0.9);
+/* Estilos para el botón de promociones */
+.button-promo {
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease,
+        font-weight 0.5s ease;
+    animation: fadeIn 1.7s ease-in-out 0.6s forwards;
+}
+.button-promo:hover {
+    background-color: var(--naranja);
+    color: var(--blanco-puro);
 }
 
-/* Estilos para las secciones de Carta y Local */
-.carta,
-.contact-image,
-.contact-map {
-    flex: 1;
-    margin: 30px;
+/* Estilos para la sección de bienvenida a las promociones */
+.welcome-promo-img,
+.welcome-promo-text,
+.local-text,
+.navbar,
+.title {
+    grid-column: span 2 / span 2;
+}
+.welcome-promo-text {
+    background-color: var(--naranja-claro);
+    padding: 45px;
+    grid-column-start: 3;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 70px;
+}
+.welcome-promo-text h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Animaciones para mostrar los elementos al hacer scroll */
+.welcome-promo-img,
+.welcome-promo-text,
+.carta-title,
+.carta-nav,
+.combo,
+.promociones,
+.local-title,
+.local-text,
+.local-msg,
+.contact-map,
+.contact-img,
+.contact-hours,
+.contact-address,
+.contact-phone,
+.faq-title,
+.faq-item {
+    view-timeline-name: --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 20% cover 40%;
+}
+
+/* Estilos para la sección de carta */
+.carta-content {
+    flex-wrap: wrap;
+    padding: 0 100px;
+}
+.carta-title,
+.local-title {
+    color: var(--blanco);
+    font-size: 1.8em;
+    text-align: center;
+    border-radius: 20px;
+}
+
+/* Estilo para la barra de navegación de carta*/
+.carta-nav {
+    background-color: var(--naranja-claro);
+    grid-column: span 3 / span 3;
+    border-radius: 20px;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.carta-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.carta-nav a {
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    color: var(--negro);
+    font-size: 1.2em;
+    transition: background-color 0.5s, color 0.5s;
+}
+.carta-nav a.active,
+.carta-nav a:hover {
+    color: var(--blanco);
+    border: solid 2px var(--negro);
+}
+
+/* Estilos para ocultar secciones  de carta*/
+.hidden {
+    display: none !important;
+}
+
+/* Estilos para las secciones de promociones, brasas, parrillas, guarniciones y bebidas */
+.promociones,
+.brasas,
+.parrillas,
+.guarniciones,
+.bebidas {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    padding: 0px 100px;
+    display: grid;
+    flex-wrap: nowrap;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Estilos para los combos */
+.combo {
+    border: 2px solid transparent;
+    background-color: var(--blanco-puro);
+    flex: 1 0 auto;
+    margin: 25px 0;
+    flex-direction: column;
+    padding: 35px 25px;
+    grid-row: span 2 / span 2;
+    border-radius: 20px;
+    gap: 25px;
+    transition: border 0.5s ease;
+}
+.combo img {
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+
+/* Estilos para la información del producto */
+.product-info {
+    font-size: 1em;
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.category,
+.price,
+.discount,
+.price-half {
+    border-radius: 30px;
+    padding: 10px 15px;
+    margin: 0;
+    border: 2px solid transparent;
+}
+.category {
+    background-color: var(--gris-claro);
+    color: var(--negro);
+}
+.discount {
+    background-color: var(--negro);
+}
+.cart-title {
+    font-size: 1.6em;
+    margin: 0;
+}
+.cart-description {
+    font-size: 1em;
+    margin: 0;
+    max-width: 75%;
+}
+
+/* Estilos para la sección de Local */
+.local-text {
     padding: 10px;
+    background-color: var(--blanco-puro);
+    border-radius: 20px;
+    font-size: 1.3em;
+    align-content: center;
+    text-align: center;
+}
+
+/* Estilo para el mensaje importante del local*/
+.local-msg {
+    grid-column-start: 4;
+    border-radius: 20px;
+    color: var(--blanco);
+    padding: 10px 20px;
+    font-size: 1.3em;
+    gap: 10px;
+}
+.local-msg img {
+    width: 90px;
+    height: auto;
+}
+
+/* Estilos para la sección de Contacto */
+.contact-container {
+    padding: 0px 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Estilo para el mapa de contacto */
+.contact-map {
+    grid-row: span 2 / span 2;
+    width: 100%;
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+}
+.contact-img,
+.hero-papas {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos para la información de contacto */
+.contact-hours,
+.contact-address,
+.contact-phone {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--blanco-puro);
+    color: var(--naranja-oscuro);
+    border-radius: 20px;
+    gap: 15px;
+}
+.contact-address {
+    grid-column-start: 2;
+}
+.contact-phone {
+    background: radial-gradient(circle at 50% 50%, #25d366, #54f35b);
+    color: var(--blanco);
+    grid-column-start: 3;
+}
+
+/* Estilos para los iconos de la información de contacto */
+.contact-hours img,
+.contact-address img,
+.contact-phone img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+.contact-hours span,
+.contact-address span,
+.contact-phone span {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+.contact-hours h3,
+.contact-address h3,
+.contact-phone h3 {
+    display: block;
+    margin: 0;
+    font-size: 1.3em;
+}
+.contact-hours p,
+.contact-address p,
+.contact-phone a {
+    margin: 0;
+    font-size: 1em;
+    color: inherit;
+}
+.contact-phone a {
+    text-decoration: none;
+    color: inherit;
+    text-decoration-color: transparent;
+    transition: color 0.6s ease, text-decoration-color 0.6s ease;
+}
+.contact-phone a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--blanco);
+    font-weight: bold;
+}
+
+/* Estilos para la sección de preguntas frecuentes */
+.faq-title {
+    padding: 10px 40px;
+    border-radius: 20px;
+    color: var(--blanco);
+    grid-column: span 4 / span 4;
+    font-size: 1.7em;
+}
+.faq-content {
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Estilos para los elementos de preguntas frecuentes */
+.faq-item {
+    grid-column: span 4 / span 4;
+    border-radius: 20px;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+.faq-item:hover {
+    background-color: var(--gris-claro);
+    transform: scale(1.01);
+}
+
+/* Estilos para las preguntas */
+details {
+    padding: 20px 30px;
+    position: relative;
+    font-size: 1.2em;
+    color: var(--negro);
+    cursor: pointer;
+}
+details summary {
+    padding: 25px 0;
+    list-style: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    outline: none;
+}
+
+/* Oculta el marcador predeterminado de los elementos <details> en navegadores basados en WebKit */
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Estilo para el ícono de summary */
+details summary::before {
+    content: "+";
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--blanco);
+    width: 40px;
+    height: 39px;
+    border-radius: 50%;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+/* Cambia el ícono y aplica una rotación cuando el elemento <details> está abierto */
+details[open] summary::before {
+    content: "-";
+    transform: rotate(180deg);
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
 /*Estilos para la página de 404*/
 .error-page {
     padding: 30vh 20px;
-    color: white;
+    color: var(--negro);
     text-align: center;
 }
 .error-page h1 {
-    font-size: 6em;
+    font-size: 5.5em;
     margin: 0;
 }
-.error-page p {
-    font-size: 1.2em;
+.error-page p,
+.welcome-promo-text p {
+    font-size: 1.1em;
+    font-style: italic;
     margin: 0;
 }
-
 .error-page a {
     display: inline-block;
     margin: 20px 0;
     padding: 10px 20px;
-    color: white;
+    color: var(--blanco);
     text-decoration: none;
-    background-color: #f0781f;
     border-radius: 45px;
     font-weight: bold;
 }
-/* Estilos para el pie de página */
+/* Estilos para el footer */
+footer {
+    color: var(--blanco);
+    padding: 30px 100px;
+}
 .footer-content {
+    background-color: var(--negro);
+    border: solid 2px var(--blanco-puro);
+    padding: 25px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
-    padding: 260px 20px;
-    color: white;
-    gap: 80px;
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out 0.2s;
+    gap: 10px;
+    border-radius: 20px;
 }
-
-/* Estilos para el pie de página cuando se muestra */
-.footer-content.fade-in {
-    opacity: 1;
-}
-
-/* Estilos para el contenedor de texto y botón */
-.footer-text-button {
+.footer-content div {
     flex: 1;
-    width: 100%;
-    max-width: 460px;
-    text-align: center;
-    margin: 0 auto;
-}
-.footer-text-button h4 {
-    margin: 20px 0;
-    font-size: 2em;
-}
-.footer-text-button h4 span {
-    color: #ec5228;
+    min-width: 200px;
 }
 
-/* Estilos para los enlaces y el logo */
-.footer-links,
-.footer-logo {
-    flex: 1;
-    width: 100%;
-    max-width: 200px;
-    text-align: left;
-    margin: 0 auto;
-}
-
-.footer-links h5 {
-    margin: 12px 0;
-    font-size: 1.4em;
-}
-
-.footer-links a {
-    display: block;
-    margin: 16px 0;
-    color: white;
-    text-decoration: none;
-    transition: color 0.4s ease;
-}
-
-.footer-links a:hover,
-.footer-info a:hover {
-    text-decoration: underline;
-    color: #f0781f;
-}
-
-/* Estilos para la información del pie de página */
-.footer-info {
+/* Estilos para la sección de la izquierda */
+.left-section,
+.legal-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fdc0af;
+    align-items: flex-start;
+    gap: 25px;
+}
+.legal-section h6 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.left-section p {
+    margin: 0;
+    font-size: 0.8em;
 }
 
-.footer-info p {
-    margin: 6px;
+/* Estilos para el botón de encuesta */
+.encuesta-button {
+    border-radius: 20px;
+    border: solid 2px var(--blanco-puro);
+    color: var(--blanco);
+    font-size: 1.1em;
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease,
+        font-weight 0.5s ease;
+}
+.encuesta-button:hover {
+    color: var(--celeste);
+    font-weight: bold;
+    border: solid 2px var(--celeste);
 }
 
-.footer-info a {
-    color: #fdc0af;
+/* Estilos para la sección de enlaces legales */
+.legal-section a {
+    display: block;
+    color: var(--blanco);
     text-decoration: none;
-    transition: color 0.4s ease;
+    transition: color 0.5s;
+}
+.legal-section a:hover {
+    color: var(--naranja);
 }
 
-/* Estilos para la línea personalizada */
-.custom-line {
-    width: 100%;
-    border: 1px solid #f0781f;
-    margin: 0 auto;
+/* Estilos para la sección de la derecha */
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+.right-section h3 {
+    border: solid 2px var(--blanco-puro);
+    border-radius: 20px;
+    padding: 25px 20px;
+    font-size: 1.5em;
+    margin: 0;
 }
 
-/* Estilos para Dispositivos Móviles */
-@media only screen and (max-width: 767px) {
-    /* Estilos para el encabezado */
-    header {
-        flex-direction: column;
+/* Media query para pantallas grandes y portátiles*/
+@media only screen and (max-width: 1440px) {
+    .header-content,
+    .promos-content,
+    .promociones,
+    .brasas,
+    .parrillas,
+    .guarniciones,
+    .bebidas,
+    .local-content,
+    .faq-header,
+    footer {
         padding: 20px 10px;
     }
-
-    /* Estilos para la sección hero */
-    .hero {
-        padding: 60px 0px;
+    .hero-content,
+    .carta-content,
+    .contact-container,
+    .faq-content {
+        padding: 0 10px;
     }
-
-    /* Estilos para el contenedor de texto y botón de bienvenida */
-    .hero-text-button {
-        text-align: center;
-        width: 90%;
+    .promociones,
+    .brasas,
+    .parrillas,
+    .guarniciones,
+    .bebidas {
+        overflow: scroll;
     }
+}
 
-    .hero-text-button h1 {
-        font-size: 2.3em;
-        white-space: wrap;
+/* Media query para Tablets */
+@media screen and (max-width: 1024px) {
+    .header-content,
+    .promos-content,
+    .promociones,
+    .brasas,
+    .parrillas,
+    .guarniciones,
+    .bebidas,
+    .local-content,
+    .faq-header,
+    footer {
+        padding: 10px 10px;
     }
-
-    .hero-text-button p {
-        font-size: 1em;
-        white-space: wrap;
+    .header-content,
+    .hero-content,
+    .promos-content,
+    .carta-content,
+    .promociones,
+    .brasas,
+    .parrillas,
+    .guarniciones,
+    .bebidas,
+    .local-content,
+    .contact-container,
+    .faq-header,
+    .faq-content,
+    footer {
+        gap: 10px;
     }
-
-    .hero-text-button h1,
-    .hero-text-button p {
-        animation: fadeIn 1.3s ease-in-out 0.6s forwards;
-    }
-
-    /* Estilos para la imagen de la sección hero, carta y contacto*/
-    .hero-img, .carta-image, .contact-image {
-        transform: scale(0.85);
-        display: inline-block;
+    .header-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
         margin: 0 auto;
     }
+    .navbar {
+        order: -1;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    .logo {
+        flex: 1;
+        display: flex;
+    }
+    .logo img {
+        width: 45px;
+        height: 50px;
+    }
+    .dark-mode {
+        flex: 1;
+        display: flex;
+    }
+    .title h1 {
+        font-size: 2.5em;
+    }
+    .title p,
+    .button-promo,
+    .welcome-promo-text p {
+        font-size: 0.8em;
+    }
+    .hero-papas p {
+        font-size: 2.8em;
+    }
+    .promo-button {
+        padding: 25px;
+    }
+    .promo-button div {
+        gap: 25px;
+    }
+    .promo-button h2 {
+        font-size: 1.3em;
+        margin: 0;
+    }
+    .hero-logo img {
+        width: 140px;
+    }
+    .welcome-promo-text {
+        padding: 20px;
+        gap: 35px;
+    }
+    .welcome-promo-text h2 {
+        font-size: 1.8em;
+    }
+    .carta-nav a,
+    .local-text,
+    .local-msg {
+        font-size: 1.1em;
+    }
+    .combo {
+        padding: 15px;
+        gap: 15px;
+    }
+    .combo img {
+        width: 300px;
+        height: 250px;
+    }
+    .product-info {
+        gap: 5px;
+    }
+    .contact-hours img,
+    .contact-address img,
+    .contact-phone img {
+        padding: 0;
+    }
+    .right-section h3 {
+        padding: 20px 15px;
+        font-size: 1.3em;
+    }
+    details {
+        padding: 10px 20px;
+    }
+}
 
-    /* Estilos para el encabezado de la sección de combos */
-    .combos h2 {
-        font-size: 2em;
+/* Media query para Dispositivos Móviles*/
+@media only screen and (max-width: 767px) {
+    .navbar-vertical {
+        padding: 0;
+    }
+    .navbar-vertical img {
+        width: 25px;
+        height: 25px;
+    }
+    .navbar ul {
+        gap: 10px;
+    }
+    .navbar a {
+        font-size: 0.8em;
+    }
+    .hero-content,
+    .carta-content,
+    .contact-container,
+    .faq-content {
+        padding: 0 10px !important;
+    }
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        padding: 10px;
+    }
+    .title {
+        padding: 25px 10px;
+        grid-column: span 2;
+    }
+    .title h1 {
+        font-size: 2.2em;
     }
 
-    .carta-image{
-        cursor: default;
-        transition: none;
+    .promo-button {
+        grid-column: span 2;
     }
-
-    .carta-image.zoomed {
-        position: static;
-        top: auto;
-        left: auto;
-        transform: none;
-        z-index: auto;
-        cursor: default;
+    .hero-papas {
+        font-size: 0.75em;
+        grid-column: 1;
+        grid-row: 3 / 5;
     }
-
-    /* Estilos para Footer */
+    .hero-pollo {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .hero-logo {
+        height: 191px;
+        grid-column: 2;
+        grid-row: 4;
+    }
+    .hero-logo img {
+        width: 120px;
+    }
+    .promos-content,
+    .carta-content,
+    .local-content,
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .welcome-promo-img {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .welcome-promo-img img {
+        display: block;
+        box-sizing: border-box;
+    }
+    .welcome-promo-text {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .welcome-promo-text p {
+        font-size: 0.7em;
+    }
+    .carta-title,
+    .local-title,
+    .welcome-promo-text h2 {
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .carta-nav a,
+    .product-info,
+    .cart-description {
+        font-size: 0.9em;
+    }
+    .cart-title {
+        font-size: 1.4em;
+    }
+    .local-msg,
+    .local-text {
+        font-size: 1em;
+        width: 100%;
+    }
+    .contact-hours,
+    .contact-address,
+    .contact-phone {
+        padding: 25px;
+        width: 100%;
+    }
+    .contact-img img {
+        position: relative;
+    }
+    .contact-hours img,
+    .contact-address img,
+    .contact-phone img {
+        width: 40px;
+        height: 40px;
+    }
+    .faq-title {
+        font-size: 1.5em;
+        padding: 10px 15px;
+    }
+    details {
+        font-size: 1em;
+    }
     .footer-content {
-        padding: 40px 20px;
-        gap: 45px;
+        gap: 35px;
     }
-
-    /* Estilos para el contenedor de texto y botón, enlaces y logo en Footer*/
-    .footer-text-button,
-    .footer-links,
-    .footer-logo {
-        flex: none;
+    .left-section,
+    .legal-section,
+    .right-section {
+        gap: 15px;
     }
-
-    /* Estilos para el logo en Footer */
-    .footer-logo {
-        text-align: center;
-    }
-
-    /* Estilos para las secciones de combos, cartas y contacto local */
-    .combos,
-    .cartas,
-    .local-contact-section {
-        border-radius: 50px;
+    .right-section {
+        align-items: flex-start;
     }
 }

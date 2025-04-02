@@ -9,8 +9,6 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
 ## Estructura del Proyecto
 
 - `index.html`: Página principal del sitio web.
-- `carta.html`: Página que muestra el menú del restaurante.
-- `local.html`: Página de contacto con información para comunicarse con el restaurante.
 - `404.html`: Página de error 404 para manejar rutas no encontradas.
 - `css/`: Directorio que contiene los archivos de estilos CSS.
 - `js/`: Directorio que contiene los archivos JavaScript.
@@ -18,7 +16,6 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
 - `pdf/`: Directorio que contiene documentos PDF como términos y condiciones y políticas de privacidad.
 - `sitemap.xml`: Archivo XML que ayuda a los motores de búsqueda a indexar el sitio web.
 - `robots.txt`: Archivo que controla el acceso de los motores de búsqueda a ciertas partes del sitio web.
-- `browserconfig.xml`: Archivo de configuración para baldosas en navegadores de Microsoft.
 - `security.txt`: Archivo que proporciona información de contacto y políticas de seguridad.
 - `README.md`: Archivo que proporciona información sobre el proyecto.
 - `.editorconfig`: Archivo de configuración para mantener estilos de codificación consistentes.

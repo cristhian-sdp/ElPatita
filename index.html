@@ -1,247 +1,769 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- Metadatos y configuración de la página -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-    />
-    <!-- Título de la página -->
-    <title>El Patita</title>
-    <!-- Enlaces a hojas de estilo CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- Metadatos para SEO -->
-    <meta name="title" content="El Patita" />
-    <meta
-      name="description"
-      content="La Pollería El Patita - Tu lugar favorito para disfrutar del mejor pollo a la brasa en Huanchaco. ¡Ven y descubre nuestro delicioso menú con una variedad de platos tradicionales y bebidas refrescantes! Disfruta de un ambiente acogedor y un servicio excepcional que te hará sentir como en casa. ¡Te esperamos para compartir momentos únicos en familia y amigos! Pollo a la brasa, restaurante en Huanchaco, ambiente familiar, servicio de calidad."
-    />
-    <meta
-      name="keywords"
-      content="El Patita, polleria, polleria cerca de mi, pollo a la brasa, pollo, brasas, Huanchaco, restaurantes en Huanchaco, trujillo, restaurante, comida rápida, combos, combos familiares, menu, parrillas, bebidas, presencial"
-    />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://elpatita.pages.dev" />
-    <meta
-      name="google-site-verification"
-      content="dAO6og7WskD6KDz0cd-VRkcLxs5o3kmpDiMFxkT1mFk"
-    />
-    <meta name="author" content="Cristhian Steffano Díaz Piminchumo" />
-    <!-- Metadatos para Open Graph (para compartir en redes sociales) -->
-    <meta property="og:title" content="El Patita" />
-    <meta
-      property="og:description"
-      content="Disfruta de nuestros deliciosos combos de pollo a la brasa en El Patita. ¡Visítenos en Huanchaco!"
-    />
-    <meta property="og:image" content="img/combos/1-4-pollo.webp" />
-    <meta property="og:url" content="https://elpatita.pages.dev" />
-    <meta property="og:type" content="website" />
-    <!-- Metadatos para Open Graph Video -->
-    <meta property="og:video" content="https://elpatita.pages.dev/video/screen-charged.webm" />
-    <meta property="og:video:type" content="video/screen-charged.webm" />
-    <meta property="og:video:width" content="1280" />
-    <meta property="og:video:height" content="720" />
-    <!-- Enlace al sitemap -->
-    <link
-      rel="sitemap"
-      type="application/xml"
-      title="Sitemap"
-      href="/sitemap.xml"
-    />
-    <!-- Favicon de la página -->
-    <link
-      rel="icon"
-      href="img/favicon/title-logo.webp"
-      type="image/webp"
-      loading="lazy"
-    />
-    <!-- Enlace a fuentes de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
-      as="font"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
-  </head>
-  <body>
-    <!-- Pantalla de carga-->
-    <div class="loading-screen">
-        <video autoplay loop muted>
-          <source src="video/screen-charged.webm" type="video/webm" alt="Cargando...">
-          Tu navegador no soporta el elemento de video.
-        </video>
-    </div>
-    <!-- Encabezado de la pagina-->
-    <header>
-      <!-- Logo -->
-      <div class="logo">
-        <img
-          src="img/favicon/title-logo.webp"
-          alt="El Patita Logo"
-          width="80"
-          height="auto"
-          loading="lazy"
+    <head>
+        <!-- Metadatos y configuración de la página -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
         />
-      </div>
-      <!-- Barra de navegación -->
-      <nav>
-        <div>
-          <ul>
-            <li><a href="#">INICIO</a></li>
-            <li><a href="carta.html">CARTA</a></li>
-            <li><a href="local.html">LOCAL</a></li>
-          </ul>
+        <!--<meta name="csrf-token" content="abc123def456ghi789">-->
+        <meta name="theme-color" content="#f8dfce" />
+        <meta name="rating" content="General" />
+        <!-- Título de la página -->
+        <title>El Patita - Promociones Exclusivas</title>
+        <!-- Enlaces a hojas de estilo CSS -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-- Metadatos para SEO -->
+        <meta name="title" content="El Patita - Promociones Exclusivas" />
+        <meta
+            name="description"
+            content="La Pollería El Patita - Tu lugar favorito para disfrutar del mejor pollo a la brasa en Huanchaco. ¡Ven y descubre nuestro delicioso menú con una variedad de platos tradicionales y bebidas refrescantes! Disfruta de un ambiente acogedor y un servicio excepcional que te hará sentir como en casa. ¡Te esperamos para compartir momentos únicos en familia y amigos! Pollo a la brasa, restaurante en Huanchaco, ambiente familiar, servicio de calidad."
+        />
+        <meta
+            name="keywords"
+            content="El Patita, polleria, polleria cerca de mi, pollo a la brasa, pollo, brasas, Huanchaco, restaurantes en Huanchaco, trujillo, restaurante, comida rápida, promociones, descuentos, combos, combos familiares, menú, parrillas, guarniciones, bebidas, presencial"
+        />
+        <!-- Autor del contenido de la página -->
+        <meta name="author" content="Cristhian Steffano Díaz Piminchumo" />
+        <meta name="copyright" content="© 2025 ElPatita" />
+        <!-- Enlace canónico -->
+        <link rel="canonical" href="https://elpatita.pages.dev" />
+        <!-- Metadatos para Open Graph (para compartir en redes sociales) -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://elpatita.pages.dev" />
+        <meta
+            property="og:title"
+            content="El Patita - Promociones Exclusivas"
+        />
+        <meta
+            property="og:description"
+            content="Disfruta de nuestros deliciosos combos de brasas, parrillas y bebidas en nuestro local presencial. ¡Visítenos en Huanchaco!"
+        />
+        <meta property="og:image" content="img/misc/pollo-inicio.webp" />
+        <!-- Permite indexar la página y seguir los enlaces -->
+        <meta name="robots" content="index, follow" />
+        <!-- Enlace al sitemap -->
+        <link
+            rel="sitemap"
+            type="application/xml"
+            title="Sitemap"
+            href="/sitemap.xml"
+        />
+        <!-- Favicon de la página -->
+        <link
+            rel="icon"
+            href="img/favicon/title-logo.webp"
+            type="image/webp"
+            sizes="any"
+        />
+        <!-- Enlace a fuentes de Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Pantalla de carga-->
+        <div class="loading-screen" aria-live="polite">
+            <video autoplay loop muted playsinline preload="none" aria-label="Video de pantalla de carga de El Patita">
+                <source src="video/screen-charged.webm" type="video/webm" />
+                Tu navegador no soporta el elemento de video.
+            </video>
         </div>
-      </nav>
-      <!-- Mensaje sobre la atención presencial -->
-      <div class="msg-nav">
-        <strong>
-          <p class="msg-text">Solo Atención Presencial</p>
-          <p>+51 993 229 832</p>
-        </strong>
-      </div>
-    </header>
-    <!-- Sección de Bienvenida -->
-    <section class="hero">
-      <!-- Texto de bienvenida -->
-      <div class="hero-text-button">
-        <h1>LA POLLERIA <span>EL PATITA</span></h1>
-        <p>
-          Tu lugar favorito para disfrutar del mejor pollo a la brasa en <span><a href="https://g.co/kgs/TymTg4Y" target="_blank" rel="noopener noreferrer nofollow">Huanchaco</a></span>. 
-          <br>
-          ¡Ven y descubre nuestro delicioso menú con una variedad de
-          platos 
-          <br>
-          tradicionales y bebidas refrescantes!
-        </p>
-        <!-- Botón para redirigir a WhatsApp -->
-        <button
-          type="button"
-          class="wpp-button"
-          onclick="window.location.href='https://wa.me/51993229832';"
-          rel="nofollow"
-        >
-          Separa tu mesa
-        </button>
-      </div>
-      <!-- Imagen de pollo a la brasa -->
-      <div class="hero-img"">
-        <img
-        src="img/pollo-inicio.webp"
-        alt="Pollo a la brasa"
-        width="360"
-        height="auto"
-        loading="lazy"
-      />
-      </div>
-    </section>
-    <!-- Sección de combos clásicos -->
-    <section class="combos">
-      <h2><strong>COMBOS <span>CLÁSICOS</span></strong></h2>
-      <p>¡Elige tu favorito y comparte momentos únicos con familia y amigos!</p>
-
-      <div class="combos-container">
-        <!-- Combo Personal -->
-        <div class="combo">
-          <h3><strong class="combo-title">Combo Personal</strong></h3>
-          <img src="img/combos/1-4-pollo.webp" alt="1/4 Pollo" width="240" height="auto" loading="lazy"/>
-          <p class="combo-description">
-              1/4 de Pollo + Papas fritas + ensalada + 1/2 litro de jugo de
-              maracuyá.
-          </p>
-          <p><strong class="price">S/. 29.00</strong></p>
-        </div>
-        <!-- Combo Familiar -->
-        <div class="combo">
-          <h3><strong class="combo-title">Combo Familiar</strong></h3>
-          <img src="img/combos/1-2-pollo.webp" alt="1/2 Pollo" width="240" height="auto" loading="lazy"/>
-          <p class="combo-description">
-            1/2 Pollo + Papas fritas + ensalada familiar + 1 litro de limonada
-            frozen.
-          </p>
-          <p><strong class="price">S/. 50.00</strong></p>
-        </div>
-        <!-- Combo Extra Familiar -->
-        <div class="combo">
-          <h3><strong class="combo-title">Combo Extra Familiar</strong></h3>
-          <img src="img/combos/1-pollo.webp" alt="Pollo Entero" width="240" height="auto" loading="lazy"/>
-          <p class="combo-description">
-            1 Pollo Entero + Papas fritas + ensalada familiar + 1 litro de chicha
-            morada.
-          </p>
-          <p><strong class="price">S/. 84.00</strong></p>
-        </div>
-      </div>
-    </section>
-    <!-- Sección del pie de página -->
-    <footer>
-        <div class="footer-content">
-          <!-- Logo del pie de página -->
-            <div class="footer-logo">
+        <!-- Barra de progreso -->
+        <div id="progress-bar" class="progress-bar"></div>
+        <!-- Encabezado de la pagina-->
+        <header class="header-content">
+            <!-- Logo -->
+            <div class="logo">
                 <img
                     src="img/favicon/title-logo.webp"
-                    alt="El Patita Logo"
-                    width="160"
-                    height="auto"
-                    loading="lazy"
+                    alt="Logo de la Pollería El Patita"
+                    width="55"
+                    height="60"
+                    title="Logo de la Pollería El Patita"
                 />
             </div>
-            <!-- Texto de agradecimiento y botón de encuesta -->
-            <div class="footer-text-button">
-                <h4>GRACIAS POR <span>PREFERIRNOS</span></h4>
-                <hr class="custom-line" />
-                <p>Nos esforzamos cada día para ofrecerte la mejor experiencia y los sabores más deliciosos. ¡Esperamos verte pronto!</p>
-                <!-- Botón para redirigir a la encuesta -->
-                <button
-                type="button"
-                class="encuesta-button"
-                onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdYzkBOdLRSeoieGLIxuFA7cyFeME0NgLloQCdg2s4Ohp1Zew/viewform?usp=header';"
-                rel="noopener noreferrer nofollow"
-              >
-                ENCUESTA
-              </button>
+            <!-- Barra de navegación -->
+            <nav class="navbar" aria-label="Barra de navegación principal">
+                <ul>
+                    <li>
+                        <a href="#" aria-label="Ir a la sección de inicio"
+                            ><img
+                                src="img/icon/inicio.webp"
+                                alt="Inicio"
+                                width="24"
+                                height="24"
+                            />Inicio</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#carta" aria-label="Ir a la sección de la carta"
+                            ><img
+                                src="img/icon/carta.webp"
+                                alt="Carta"
+                                width="24"
+                                height="24"
+                            />Carta</a
+                        >
+                    </li>
+                    <li>
+                        <a href="#local" aria-label="Ir a la sección del local"
+                            ><img
+                                src="img/icon/local.webp"
+                                alt="Local"
+                                width="24"
+                                height="24"
+                            />Local</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <!-- Botón de Dark Mode -->
+            <div class="dark-mode">
+                <input 
+                    type="checkbox" 
+                    id="darkModeToggle"
+                    aria-label="Activar o desactivar el modo oscuro"
+                    aria-checked="false"
+                    role="switch" 
+                />
+                <label class="dark-mode-toggle" for="darkModeToggle">
+                    <div class="toggle-circle"></div>
+                    <img
+                        src="img/icon/sol.webp"
+                        alt="Sun Icon"
+                        class="icon-sun"
+                    />
+                    <img
+                        src="img/icon/luna.webp"
+                        alt="Moon Icon"
+                        class="icon-moon"
+                    />
+                </label>
             </div>
-            <!-- Enlaces legales -->
-            <div class="footer-links">
-                <h5>LEGAL</h5>
-                <hr class="custom-line" />
-                <!-- Enlaces a términos y condiciones-->
-                <a href="pdf/Terminos-condiciones.pdf" target="_blank" rel="noopener noreferrer nofollow"
-                >Términos y Condiciones</a>
-                <!-- Enlaces a políticas de privacidad-->
-                <a href="pdf/Políticas-privacidad.pdf" target="_blank" rel="noopener noreferrer nofollow"
-                >Políticas de Privacidad</a>
-                <!-- Enlaces a Licencia Creative Commons-->
-                <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer nofollow"
-                >Licencia Creative Commons</a>
+        </header>
+        <main>
+            <!-- Contenido principal de la página -->
+            <article class="hero-content">
+                <section class="hero-papas">
+                    <!-- Imagen de papas fritas -->
+                    <img
+                        src="img/misc/papas-fritas.webp"
+                        alt="Papas fritas"
+                        width="100"
+                        height="auto"
+                    />
+                    <p>
+                        C<br />R<br />O<br />C<br />A<br />N<br />T<br />E<br />S
+                    </p>
+                </section>
+                <section class="title">
+                    <!-- Titulo y Texto de bienvenida -->
+                    <h1>LA POLLERIA <span>EL PATITA</span></h1>
+                    <hr />
+                    <p>
+                        El mejor pollo a la brasa te espera en Huanchaco.
+                        ¡Descúbrelo!
+                    </p>
+                </section>
+                <section class="hero-pollo">
+                    <!-- Imagen de pollo a la brasa -->
+                    <img
+                        src="img/misc/pollo-inicio.webp"
+                        alt="Pollo a la brasa"
+                        width="300"
+                        height="auto"
+                    />
+                </section>
+                <section class="promo-button">
+                    <!-- Contenedor de texto, videos y botón de acción-->
+                    <h2><span>PRUEBA NUESTROS DELICIOSOS </span>COMBOS</h2>
+                    <div>
+                        <video autoplay loop muted playsinline preload="metadata" aria-label="Video de brasas en la pantalla de inicio">
+                        <source src="video/brasas.webm" />
+                        Tu navegador no soporta el elemento de video.
+                        </video>
+                        <video autoplay loop muted playsinline preload="metadata" "Video de papas fritas en la pantalla de inicio">
+                            <source src="video/papas.webm" />
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                        <video autoplay loop muted playsinline preload="metadata" aria-label="Vi    deo de bebidas en la pantalla de inicio">
+                            <source src="video/bebida.webm" />
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                        <button
+                            type="button"
+                            class="button-promo"
+                            onclick="document.getElementById('carta').scrollIntoView({ behavior: 'smooth' });"
+                            rel="noopener noreferrer nofollow"
+                            title="Haz clic para ver nuestras promociones"
+                            aria-label="Desplazarse a la sección de promociones"
+                            role="button"
+                        >
+                            Ver Promociones
+                        </button>
+                    </div>
+                </section>
+                <section class="hero-logo">
+                    <!-- Logo -->
+                    <img
+                        src="img/favicon/title-logo.webp"
+                        alt="Logo de la Pollería El Patita"
+                        width="200"
+                        height="auto"
+                        title="Logo de la Pollería El Patita"
+                    />
+                </section>
+            </article>
+            <article class="promos-content">
+                <!-- Imagen y texto de promociones -->
+                <section class="welcome-promo-img">
+                    <img
+                        src="img/misc/bienvenida-promos.webp"
+                        alt="imagen que referencia a un buen sabor de la comida"
+                        width="500"
+                        height="auto"
+                        loading="lazy"
+                        decoding="async"
+                        title="Explora nuestras promociones exclusivas"
+                    />
+                </section>
+                <section class="welcome-promo-text">
+                    <h2 class="emoji">&#128523;</h2>
+                    <h2>Deliciosos <span>combos</span> te esperan</h2>
+                    <p>
+                        ¡Explora tu combo clásico y comparte momentos únicos en
+                        familia y amigos!
+                    </p>
+                </section>
+            </article>
+            <!-- Sección de la carta -->
+            <article class="carta-content" id="carta">
+                <!-- Título de la carta -->
+                <section class="carta-title">
+                    <h2>Carta</h2>
+                </section>
+                <!-- Navegación de la carta -->
+                <nav class="carta-nav" aria-label="Navegación de la carta">
+                    <ul>
+                        <li><a href="#promociones" aria-label="Ir a la sección de promociones" aria-current="page">PROMOCIONES</a></li>
+                        <li><a href="#brasas" aria-label="Ir a la sección de brasas">BRASAS</a></li>
+                        <li><a href="#parrillas" aria-label="Ir a la sección de parrillas">PARRILLAS</a></li>
+                        <li><a href="#guarniciones" aria-label="Ir a la sección de guarniciones">GUARNICIONES</a></li>
+                        <li><a href="#bebidas" aria-label="Ir a la sección de bebidas">BEBIDAS</a></li>
+                    </ul>
+                </nav>
+            </article>
+            <!-- Sección de productos -->
+            <article class="promociones" id="promociones">
+                
+                <section class="combo">
+                    <img
+                        src="img/cart/1-4-pollo.webp"
+                        alt="Combo Maracuyá"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">NUEVO</p>
+                        <p class="price">S/. 27.90</p>
+                        <p class="discount"><s>S/. 30.90</s></p>
+                    </div>
+                    <h3 class="cart-title">Combo Maracuyá</h3>
+                    <p class="cart-description">
+                        1/4 Pollo + Papas fritas + Ensalada + 1/2 Litro de jugo
+                        de maracuyá.
+                    </p>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/1-2-pollo.webp"
+                        alt="Combo Limonada Familiar"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">NUEVO</p>
+                        <p class="price">S/. 48.90</p>
+                        <p class="discount"><s>S/. 51.90</s></p>
+                    </div>
+                    <h3 class="cart-title">Combo Limonada Familiar</h3>
+                    <p class="cart-description">
+                        1/2 Pollo + Papas fritas + Ensalada familiar + 1 Litro
+                        de limonada frozen.
+                    </p>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/1-pollo.webp"
+                        alt="Combo Chicha Familiar"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">NUEVO</p>
+                        <p class="price">S/. 83.90</p>
+                        <p class="discount"><s>S/. 86.90</s></p>
+                    </div>
+                    <h3 class="cart-title">Combo Chicha Familiar</h3>
+                    <p class="cart-description">
+                        1 Pollo Entero + Papas fritas + Ensalada familiar + 1
+                        Litro de chicha morada.
+                    </p>
+                </section>
+            </article>
+            <article class="brasas hidden" id="brasas">
+                <section class="combo">
+                    <img
+                        src="img/cart/1-8-pollo.webp"
+                        alt="Clásico Personal"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">POPULAR</p>
+                        <p class="price">S/. 11.90</p>
+                    </div>
+                    <h3 class="cart-title">Clásico Personal</h3>
+                    <p class="cart-description">
+                        1/8 Pollo + Papas fritas + Ensalada.
+                    </p>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/1-4-pollo.webp"
+                        alt="Combo Personal"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">POPULAR</p>
+                        <p class="price">S/. 20.90</p>
+                    </div>
+                    <h3 class="cart-title">Combo Personal</h3>
+                    <p class="cart-description">
+                        1/4 Pollo + Papas fritas + Ensalada.
+                    </p>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/1-2-pollo.webp"
+                        alt="Combo Familiar"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">TENDENCIA</p>
+                        <p class="price">S/. 36.90</p>
+                    </div>
+                    <h3 class="cart-title">Combo Familiar</h3>
+                    <p class="cart-description">
+                        1/2 Pollo + Papas fritas + Ensalada familiar.
+                    </p>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/1-pollo.webp"
+                        alt="Combo Extra Familiar"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">TENDENCIA</p>
+                        <p class="price">S/. 70.90</p>
+                    </div>
+                    <h3 class="cart-title">Combo Extra Familiar</h3>
+                    <p class="cart-description">
+                        1 Pollo Entero + Papas fritas + Ensalada familiar.
+                    </p>
+                </section>
+            </article>
+            <article class="parrillas hidden" id="parrillas">
+                <section class="combo">
+                    <img
+                        src="img/cart/parrilla-pollo.webp"
+                        alt="Parrilla de Pollo"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">PERSONAL</p>
+                        <p class="price">S/. 14.90</p>
+                    </div>
+                    <h3 class="cart-title">Parrilla de Pollo</h3>
+                    <p class="cart-description">
+                        Parrilla de pollo + Papas fritas + Ensalada.
+                    </p>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/parrilla-cerdo.webp"
+                        alt="Parrilla de Cerdo"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">PERSONAL</p>
+                        <p class="price">S/. 14.90</p>
+                    </div>
+                    <h3 class="cart-title">Parrilla de Cerdo</h3>
+                    <p class="cart-description">
+                        Parrilla de cerdo + Papas fritas + Ensalada.
+                    </p>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/parrilla-res.webp"
+                        alt="Parrilla de Res"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">TENDENCIA</p>
+                        <p class="price">S/. 14.90</p>
+                    </div>
+                    <h3 class="cart-title">Parrilla de Res</h3>
+                    <p class="cart-description">
+                        Parrilla de res + Papas fritas + Ensalada.
+                    </p>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/parrilla-familiar.webp"
+                        alt="Parrilla Familiar"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">TENDENCIA</p>
+                        <p class="price">S/. 84.90</p>
+                    </div>
+                    <h3 class="cart-title">Parrilla Familiar</h3>
+                    <p class="cart-description">
+                        1/2 Pollo a la brasa + 1/4 parrilla de pollo + 2
+                        chuletas, churrasco + 3 chorizos + porciones de molleja
+                        + ensalada.
+                    </p>
+                </section>
+            </article>
+            <article class="guarniciones hidden" id="guarniciones">
+                <section class="combo">
+                    <img
+                        src="img/cart/papas-fritas.webp"
+                        alt="Papas Fritas"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">POPULAR</p>
+                        <p class="price">S/. 9.90</p>
+                    </div>
+                    <h3 class="cart-title">Papas Fritas</h3>
+                    <p class="cart-description">
+                        Porción de papas fritas crocantes.
+                    </p>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/ensalada.webp"
+                        alt="Ensalada"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">PERSONAL</p>
+                        <p class="price">S/. 9.90</p>
+                    </div>
+                    <h3 class="cart-title">Ensalada</h3>
+                    <p class="cart-description">
+                        Lechuga + tomate + pepino + aderezo de la casa.
+                    </p>
+                </section>
+            </article>
+            <article class="bebidas hidden" id="bebidas">
+                <section class="combo">
+                    <img
+                        src="img/cart/jugo-maracuyá.webp"
+                        alt="Jugo de Maracuyá"
+                        width="380"
+                        height="350"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">NUEVO</p>
+                        <p class="price">S/. 17.90 <b>(1L)</b></p>
+                        <p class="price-half">S/. 9.90 <b>(1/2L)</b></p>
+                    </div>
+                    <h3 class="cart-title">Jugo de Maracuyá</h3>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/limonada-frozen.webp"
+                        alt="Limonada Frozen"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">POPULAR</p>
+                        <p class="price">S/. 14.90 <b>(1L)</b></p>
+                        <p class="price-half">S/. 7.90 <b>(1/2L)</b></p>
+                    </div>
+                    <h3 class="cart-title">Limonada Frozen</h3>
+                </section>
+                <section class="combo">
+                    <img
+                        src="img/cart/chicha-morada.webp"
+                        alt="Chicha Morada"
+                        width="380"
+                        height="330"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="product-info">
+                        <p class="category">TENDENCIA</p>
+                        <p class="price">S/. 14.90 <b>(1L)</b></p>
+                        <p class="price-half">S/. 7.90 <b>(1/2L)</b></p>
+                    </div>
+                    <h3 class="cart-title">Chicha Morada</h3>
+                </section>
+            </article>
+            <article class="local-content" id="local">
+                <section class="local-title">
+                    <h2>Local</h2>
+                </section>
+                <section class="local-text">
+                    <h2>ENCUÉNTRANOS EN <span>HUANCHACO</span></h2>
+                </section>
+                <section class="local-msg">
+                    <h3>Solo Servicio Presencial</h3>
+                    <img
+                        src="img/icon/people.webp"
+                        alt="Ícono de personas"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </section>
+            </article>
+            <!-- Sección de Contacto -->
+            <article class="contact-container">
+                <!-- Mapa de Google Maps -->
+                <section class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3950.225592503341!2d-79.116288!3d-8.07846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwMDQnNDIuNSJTIDc5wrAwNic1OC42Ilc!5e0!3m2!1ses-419!2spe!4v1739143798669!5m2!1ses-419!2spe"
+                        width="400"
+                        height="300"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación de la polleria El Patita"
+                        aria-label="Ir a la sección de bebidas"
+                    ></iframe>
+                </section>
+                <!-- Imagen de Huanchaco -->
+                <section class="contact-img">
+                    <img
+                        src="img/misc/huanchaco.webp"
+                        alt="Contacto"
+                        width="400"
+                        height="300"
+                        loading="lazy"
+                        decoding="async"
+                        title="Vista de Huanchaco"
+                    />
+                </section>
+                <!-- Información de contacto -->
+                <section class="contact-hours">
+                    <img
+                        src="img/icon/time.webp"
+                        alt="Ícono de horario"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <span>
+                        <h3>Horario de Atención</h3>
+                        <p>Lunes a Sábado: 5:00 pm - 10:00 pm</p>
+                    </span>
+                </section>
+                <section class="contact-address">
+                    <img
+                        src="img/icon/dirección.webp"
+                        alt="Ícono de dirección"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <span>
+                        <h3>Dirección</h3>
+                        <p>Av. Cerrito de la Virgen 230, El Tablazo.</p>
+                    </span>
+                </section>
+                <section class="contact-phone">
+                    <img
+                        src="img/icon/whatsapp.webp"
+                        alt="Ícono de WhatsApp"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <span>
+                        <h3>Teléfono</h3>
+                        <a
+                            href="https://wa.me/51993229832"
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                            title="Abrir chat de WhatsApp con +51 993 229 832"
+                            aria-label="Abrir chat de WhatsApp con el número +51 993 229 832"
+                            >+51 993 229 832</a
+                        >
+                    </span>
+                </section>
+            </article>
+            <!-- Sección de preguntas frecuentes -->
+            <article class="faq-header">
+                <section class="faq-title">
+                    <h3>Preguntas Frecuentes...</h3>
+                </section>
+            </article>
+            <!-- Contenido de preguntas frecuentes -->
+            <article class="faq-content">
+                <section class="faq-item">
+                    <details name="info">
+                        <summary>¿Ofrecen servicios de entrega?</summary>
+                        Actualmente, solo disponemos del servicio presencial en
+                        nuestro local. ¡Esperamos poder servirle en persona!
+                    </details>
+                </section>
+                <section class="faq-item">
+                    <details name="info">
+                        <summary>¿Qué métodos de pago aceptan?</summary>
+                        Aceptamos efectivo, yape y tarjetas de crédito. Nuestro
+                        objetivo es hacer que su visita sea lo más conveniente
+                        posible.
+                    </details>
+                </section>
+                <section class="faq-item">
+                    <details name="info">
+                        <summary>¿Se puede reservar mesa para eventos?</summary>
+                        Sí, puedes reservar una mesa para eventos especiales
+                        llamando a nuestro número con al menos 1 día de
+                        anticipación.
+                    </details>
+                </section>
+            </article>
+        </main>
+        <!-- Sección del pie de página -->
+        <footer>
+            <div class="footer-content">
+                <div class="left-section">
+                    <!-- Botón para redirigir a la encuesta -->
+                    <button
+                        type="button"
+                        class="encuesta-button"
+                        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdYzkBOdLRSeoieGLIxuFA7cyFeME0NgLloQCdg2s4Ohp1Zew/viewform?usp=header';"
+                        rel="noopener noreferrer nofollow"
+                        title="Haz clic para responder nuestra encuesta"
+                        aria-label="Abrir encuesta en Google Forms"
+                        role="button"
+                    >
+                        Encuesta
+                    </button>
+                    <!-- Enlace al repositorio de Github -->
+                    <a
+                        href="https://github.com/cristhian-sdp/ElPatita"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        title="Abrir el repositorio de GitHub de El Patita"
+                        aria-label="Abrir el repositorio de GitHub de El Patita"
+                    >
+                        <img
+                            src="img/icon/github.webp"
+                            alt="Ícono de Github"
+                            width="40"
+                            height="40"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </a>
+                    <!-- Derechos reservados -->
+                    <p>&copy; 2025 ElPatita</p>
+                </div>
+                <div class="legal-section">
+                    <!-- Enlaces legales -->
+                    <h6>Legal</h6>
+                    <a
+                        href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Abrir la licencia Creative Commons BY-NC-SA 4.0"
+                        aria-label="Abrir la licencia Creative Commons BY-NC-SA 4.0"
+                        >Licencia</a
+                    >
+                    <a
+                        href="pdf/Terminos-condiciones.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Abrir el documento de Términos y Condiciones"
+                        aria-label="Abrir el documento de Términos y Condiciones"
+                        >Términos y Condiciones</a
+                    >
+                    <a
+                        href="pdf/Políticas-privacidad.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Abrir el documento de Políticas de Privacidad"
+                        aria-label="Abrir el documento de Políticas de Privacidad"
+                        >Políticas de Privacidad</a
+                    >
+                </div>
+                <!-- Logo del pie de página y texto de agradecimiento -->
+                <div class="right-section">
+                    <img
+                        src="img/favicon/title-logo.webp"
+                        alt="Logo de la Pollería El Patita"
+                        width="66"
+                        height="75"
+                        loading="lazy"
+                        decoding="async"
+                        title="Logo de la Pollería El Patita"
+                    />
+                    <h3>GRACIAS POR <span>PREFERIRNOS</span></h3>
+                </div>
             </div>
-        </div>
-        <div class="footer-info">
-            <!-- Información del desarrollador -->
-            <p>Desarrollado por:
-                <a href="https://github.com/cristhian-sdp" target="_blank" rel="nofollow"
-                >Cristhian-sdp</a>
-            </p>
-            <!-- Derechos reservados -->
-            <p>&copy;ElPatita'2024 todos los derechos reservados.</p>
-            </div>
-    </footer>
-    <script src="js/script.js"></script>
-  </body>
+        </footer>
+        <!-- Enlaces a archivo JavaScript -->
+        <script src="js/script.js" defer></script>
+    </body>
 </html>
