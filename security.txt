@@ -1,5 +1,7 @@
 # security.txt
+# Archivo de contacto para reportar problemas de seguridad relacionados con este sitio web.
 
 Contact: mailto:steffanod948@gmail.com
 
 Preferred-Languages: es, en
+Encryption: https://elpatita.pages.dev/pgp-key.txt
