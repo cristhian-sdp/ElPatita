@@ -3,12 +3,11 @@
     /* Paleta de colores */
     --naranja: #f0781f;
     --celeste: #17c6d2;
-    --blanco: #eeeeee;
+    --blanco-puro: #ffffff;
     --negro: #0e081b;
     /* Colores Adicionales*/
     --naranja-claro: #f8dfce;
     --naranja-oscuro: #ec5228;
-    --blanco-puro: #ffffff;
     /* Colores en modo oscuro */
     --celeste-oscuro: #31acb5;
     --gris-oscuro: #545454;
@@ -19,16 +18,12 @@
 /* Estilo global para todos los elementos */
 * {
     font-family: "Nunito";
+    scroll-behavior: smooth;
     scrollbar-width: auto;
     scrollbar-color: var(--naranja) var(--blanco-puro);
 }
-html {
-    scroll-behavior: smooth;
-}
 body {
-    background-color: var(--blanco);
-    margin: 0;
-    padding: 0;
+    background-color: #eeeeee;
 }
 
 /*ANIMACIONES CSS*/
@@ -207,7 +202,7 @@ details summary::before,
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    gap: 25px;
+    gap: clamp(10px, 2vw, 25px);
 }
 
 /* Estilos compartidos para el espaciado y el ajuste del contenido */
@@ -221,13 +216,20 @@ details summary::before,
 
 /* Estilos para el logo */
 .logo {
+    display: flex;
     border-radius: 20px;
     padding: 5px;
     animation: slideDown 1.8s ease-in-out forwards;
 }
+.logo img {
+    width: clamp(45px, 5vw, 55px);
+    height: clamp(50px, 6vw, 60px);
+}
 
 /* Estilos para la barra de navegación */
 .navbar {
+    width: 100%;
+    box-sizing: border-box;
     background-color: var(--naranja-claro);
     border-radius: 20px;
     padding: 10px 20px;
@@ -236,7 +238,7 @@ details summary::before,
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 40px;
+    gap: clamp(10px, 5vw, 40px);
     padding: 0;
     margin: 0;
 }
@@ -253,7 +255,7 @@ details summary::before,
     border-radius: 30px;
     color: var(--naranja);
     color: var(--negro);
-    font-size: 1em;
+    font-size: clamp(0.8em, 1vw, 1em);
     font-weight: bold;
     transition: background-color 0.5s ease, color 0.5s ease;
     border: 2px solid transparent;
@@ -274,8 +276,8 @@ details summary::before,
     right: 10px;
     transform: translateY(-50%);
     background-color: var(--naranja-claro);
-    border-radius: 20px;
-    padding: 5px;
+    border-radius: 30px;
+    padding: clamp(0px, 1vw, 5px);
     display: flex;
     flex-direction: column;
     z-index: 900;
@@ -301,8 +303,8 @@ details summary::before,
     transform: scale(1.3);
 }
 .navbar-vertical img {
-    width: 30px;
-    height: 30px;
+    width: clamp(24px, 5vw, 30px);
+    height: clamp(24px, 5vw, 30px);
     transition: transform 0.5s ease;
 }
 .navbar-vertical a:hover img {
@@ -453,7 +455,7 @@ body.dark-mode-active .contact-hours,
 body.dark-mode-active .contact-address,
 body.dark-mode-active .faq-item {
     background-color: var(--gris-oscuro);
-    color: var(--blanco);
+    color: var(--blanco-puro);
 }
 body.dark-mode-active .local-text {
     background-color: #a6a6a6;
@@ -468,14 +470,14 @@ body.dark-mode-active .contact-phone {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 25px;
+    gap: clamp(10px, 2vw, 25px);
 }
 
 /* Estilos para la imagen de papas*/
 .hero-papas {
     grid-row: span 2 / span 2;
     border-radius: 20px;
-    color: var(--blanco);
+    color: var(--blanco-puro);
     animation: slideInFromLeft 1.3s ease-in-out forwards;
 }
 .hero-papas img,
@@ -498,7 +500,7 @@ body.dark-mode-active .contact-phone {
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
-    font-size: 3.5em;
+    font-size: clamp(2.6em, 3vw, 3.5em);
     z-index: 1;
     margin: 0;
     line-height: 1.1;
@@ -510,7 +512,7 @@ body.dark-mode-active .contact-phone {
     position: relative;
     border-radius: 20px;
     color: var(--blanco-puro);
-    padding: 15px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -519,7 +521,7 @@ body.dark-mode-active .contact-phone {
 }
 .title h1 {
     width: 100%;
-    font-size: 3.2em;
+    font-size: clamp(2.2em, 2.5vw, 3.3em);
     margin: 0 auto;
 }
 .title h1 span,
@@ -529,7 +531,7 @@ body.dark-mode-active .contact-phone {
 .title p {
     opacity: 0.9;
     font-style: italic;
-    font-size: 1.2em;
+    font-size: clamp(0.8em, 1vw, 1.2em);
 }
 hr {
     height: 3px;
@@ -562,6 +564,7 @@ hr {
     animation: slideInFromRight 1.6s ease-in-out forwards;
 }
 .hero-logo img {
+    width: clamp(100px, 15vw, 200px);
     transition: transform 0.6s ease;
 }
 .hero-logo img:hover {
@@ -582,10 +585,10 @@ hr {
     animation: fadeIn 1.7s ease-in-out forwards;
 }
 .promo-button h2 {
-    font-size: 1.9em;
+    font-size: clamp(1.3em, 2vw, 1.9em);
 }
 .promo-button div {
-    gap: 30px;
+    gap: clamp(25px, 3vw, 30px);
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
@@ -600,7 +603,7 @@ hr {
 .button-promo {
     padding: 10px 15px;
     border-radius: 30px;
-    font-size: 1.1em;
+    font-size: clamp(0.8em, 1vw, 1.1em);
     cursor: pointer;
     transition: background-color 0.5s ease, color 0.5s ease,
         font-weight 0.5s ease;
@@ -620,18 +623,20 @@ hr {
     grid-column: span 2 / span 2;
 }
 .welcome-promo-text {
+    width: 100%;
+    box-sizing: border-box;
     background-color: var(--naranja-claro);
-    padding: 45px;
+    padding: clamp(20px, 5vw, 45px);
     grid-column-start: 3;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    gap: 70px;
+    gap: clamp(35px, 5vw, 70px);
 }
 .welcome-promo-text h2 {
-    font-size: 2.5em;
+    font-size: clamp(1.5em, 2.5vw, 2.5em);
     margin: 0;
 }
 
@@ -642,8 +647,9 @@ hr {
 }
 .carta-title,
 .local-title {
-    color: var(--blanco);
-    font-size: 1.8em;
+    width: 100%;
+    color: var(--blanco-puro);
+    font-size: clamp(1.5em, 2vw, 1.8em);
     text-align: center;
     border-radius: 20px;
 }
@@ -670,12 +676,12 @@ hr {
     border: 2px solid transparent;
     border-radius: 30px;
     color: var(--negro);
-    font-size: 1.2em;
+    font-size: clamp(0.9em, 1.5vw, 1.1em);
     transition: background-color 0.5s, color 0.5s;
 }
 .carta-nav a.active,
 .carta-nav a:hover {
-    color: var(--blanco);
+    color: var(--blanco-puro);
     border: solid 2px var(--negro);
 }
 
@@ -698,7 +704,7 @@ hr {
     flex-wrap: nowrap;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 25px;
+    gap: clamp(10px, 2vw, 25px);
 }
 
 /* Estilos para los combos */
@@ -708,22 +714,24 @@ hr {
     flex: 1 0 auto;
     margin: 25px 0;
     flex-direction: column;
-    padding: 35px 25px;
+    padding: clamp(15px, 3vw, 25px);
     grid-row: span 2 / span 2;
     border-radius: 20px;
-    gap: 25px;
+    gap: clamp(15px, 2vw, 25px);
     transition: border 0.5s ease;
 }
 .combo img {
+    width: clamp(280px, 10vw, 380px);
+    height: clamp(230px, 8vw, 330px);
     border: 2px solid transparent;
     border-radius: 20px;
 }
 .product-info {
-    font-size: 1em;
-    color: var(--blanco);
+    font-size: clamp(0.9em, 1vw, 1em);
+    color: var(--blanco-puro);
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: clamp(5px, 1vw, 10px);
     flex-wrap: wrap;
 }
 .category,
@@ -743,11 +751,11 @@ hr {
     background-color: var(--negro);
 }
 .cart-title {
-    font-size: 1.6em;
+    font-size: clamp(1.4em, 2vw, 1.6em);
     margin: 0;
 }
 .cart-description {
-    font-size: 1em;
+    font-size: clamp(0.9em, 1vw, 1em);
     margin: 0;
     max-width: 75%;
 }
@@ -757,16 +765,17 @@ hr {
     padding: 10px;
     background-color: var(--blanco-puro);
     border-radius: 20px;
-    font-size: 1.3em;
+    font-size: clamp(1em, 1.5vw, 1.3em);
     align-content: center;
     text-align: center;
 }
 .local-msg {
+    width: 100%;
     grid-column-start: 4;
     border-radius: 20px;
-    color: var(--blanco);
+    color: var(--blanco-puro);
     padding: 10px 20px;
-    font-size: 1.3em;
+    font-size: clamp(1em, 1.5vw, 1.3em);
     gap: 10px;
 }
 
@@ -776,7 +785,7 @@ hr {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 25px;
+    gap: clamp(10px, 2vw, 25px);
 }
 .contact-map {
     grid-row: span 2 / span 2;
@@ -800,10 +809,11 @@ hr {
 .contact-hours,
 .contact-address,
 .contact-phone {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     background-color: var(--blanco-puro);
     color: var(--naranja-oscuro);
     border-radius: 20px;
@@ -814,15 +824,15 @@ hr {
 }
 .contact-phone {
     background: radial-gradient(circle at 50% 50%, #25d366, #54f35b);
-    color: var(--blanco);
+    color: var(--blanco-puro);
     grid-column-start: 3;
 }
 .contact-hours img,
 .contact-address img,
 .contact-phone img {
-    width: 50px;
-    height: 50px;
-    padding: 10px;
+    width: clamp(40px, 5vw, 50px);
+    height: clamp(40px, 5vw, 50px);
+    padding: clamp(0px, 1vw, 10px);
 }
 .contact-hours span,
 .contact-address span,
@@ -854,24 +864,24 @@ hr {
 }
 .contact-phone a:hover {
     text-decoration: underline;
-    text-decoration-color: var(--blanco);
+    text-decoration-color: var(--blanco-puro);
     font-weight: bold;
 }
 
 /* Estilos para la sección de preguntas frecuentes */
 .faq-title {
-    padding: 10px 40px;
+    padding: clamp(10px, 2vw, 10px) clamp(15px, 5vw, 40px);
     border-radius: 20px;
-    color: var(--blanco);
+    color: var(--blanco-puro);
     grid-column: span 4 / span 4;
-    font-size: 1.7em;
+    font-size: clamp(1.4em, 2vw, 1.7em);
 }
 .faq-content {
     padding: 0 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 25px;
+    gap: clamp(10px, 2vw, 25px);
 }
 .faq-item {
     grid-column: span 4 / span 4;
@@ -883,9 +893,9 @@ hr {
     transform: scale(1.01);
 }
 details {
-    padding: 20px 30px;
+    padding: clamp(10px, 2vw, 20px) clamp(20px, 3vw, 30px);
     position: relative;
-    font-size: 1.2em;
+    font-size: clamp(1em, 1.5vw, 1.2em);
     color: var(--negro);
     cursor: pointer;
 }
@@ -905,7 +915,7 @@ details summary::before {
     content: "+";
     font-size: 1.2em;
     font-weight: bold;
-    color: var(--blanco);
+    color: var(--blanco-puro);
     width: 40px;
     height: 39px;
     border-radius: 50%;
@@ -919,17 +929,17 @@ details[open] summary::before {
 
 /*Estilos para la página de 404*/
 .error-page {
-    padding: 30vh 20px;
+    padding: 25vh 10px;
     color: var(--negro);
     text-align: center;
 }
 .error-page h1 {
-    font-size: 5.5em;
+    font-size: 5.3em;
     margin: 0;
 }
 .error-page p,
 .welcome-promo-text p {
-    font-size: 1.1em;
+    font-size: clamp(0.7em, 0.8vw, 1.1em);
     font-style: italic;
     margin: 0;
 }
@@ -937,15 +947,15 @@ details[open] summary::before {
     display: inline-block;
     margin: 20px 0;
     padding: 10px 20px;
-    color: var(--blanco);
+    color: var(--blanco-puro);
     text-decoration: none;
-    border-radius: 45px;
+    border-radius: 40px;
     font-weight: bold;
 }
 
 /* Estilos para el footer */
 footer {
-    color: var(--blanco);
+    color: var(--blanco-puro);
     padding: 30px 100px;
 }
 .footer-content {
@@ -981,7 +991,7 @@ footer {
 .encuesta-button {
     border-radius: 20px;
     border: solid 2px var(--blanco-puro);
-    color: var(--blanco);
+    color: var(--blanco-puro);
     font-size: 1.1em;
     padding: 10px 16px;
     cursor: pointer;
@@ -995,7 +1005,7 @@ footer {
 }
 .legal-section a {
     display: block;
-    color: var(--blanco);
+    color: var(--blanco-puro);
     text-decoration: none;
     transition: color 0.5s;
 }
@@ -1011,8 +1021,8 @@ footer {
 .right-section h3 {
     border: solid 2px var(--blanco-puro);
     border-radius: 20px;
-    padding: 25px 20px;
-    font-size: 1.5em;
+    padding: clamp(20px, 2vw, 25px) clamp(15px, 1.5vw, 20px);
+    font-size: clamp(1.3em, 2vw, 1.5em);
     margin: 0;
 }
 
@@ -1059,22 +1069,6 @@ footer {
     footer {
         padding: 10px 10px;
     }
-    .header-content,
-    .hero-content,
-    .promos-content,
-    .carta-content,
-    .promociones,
-    .brasas,
-    .parrillas,
-    .guarniciones,
-    .bebidas,
-    .local-content,
-    .contact-container,
-    .faq-header,
-    .faq-content,
-    footer {
-        gap: 10px;
-    }
     .header-content {
         display: flex;
         flex-direction: row;
@@ -1086,98 +1080,22 @@ footer {
     }
     .navbar {
         order: -1;
-        width: 100%;
-        box-sizing: border-box;
         margin: 0;
     }
     .logo {
         flex: 1;
-        display: flex;
-    }
-    .logo img {
-        width: 45px;
-        height: 50px;
     }
     .dark-mode {
         flex: 1;
         display: flex;
     }
-    .title h1 {
-        font-size: 2.5em;
-    }
-    .title p,
-    .button-promo,
-    .welcome-promo-text p {
-        font-size: 0.8em;
-    }
-    .hero-papas p {
-        font-size: 2.8em;
-    }
-    .promo-button {
-        padding: 25px;
-    }
-    .promo-button div {
-        gap: 25px;
-    }
     .promo-button h2 {
-        font-size: 1.3em;
         margin: 0;
-    }
-    .hero-logo img {
-        width: 140px;
-    }
-    .welcome-promo-text {
-        padding: 20px;
-        gap: 35px;
-    }
-    .welcome-promo-text h2 {
-        font-size: 1.8em;
-    }
-    .carta-nav a,
-    .local-text,
-    .local-msg {
-        font-size: 1.1em;
-    }
-    .combo {
-        padding: 15px;
-        gap: 15px;
-    }
-    .combo img {
-        width: 300px;
-        height: 250px;
-    }
-    .product-info {
-        gap: 5px;
-    }
-    .contact-hours img,
-    .contact-address img,
-    .contact-phone img {
-        padding: 0;
-    }
-    .right-section h3 {
-        padding: 20px 15px;
-        font-size: 1.3em;
-    }
-    details {
-        padding: 10px 20px;
     }
 }
 
 /* Media query para Dispositivos Móviles*/
 @media only screen and (max-width: 767px) {
-    .navbar-vertical {
-        padding: 0;
-    }
-    .navbar-vertical img {
-        width: 25px;
-        height: 25px;
-    }
-    .navbar ul {
-        gap: 10px;
-    }
-    .navbar a {
-        font-size: 0.8em;
-    }
     .hero-content,
     .carta-content,
     .contact-container,
@@ -1190,18 +1108,13 @@ footer {
         padding: 10px;
     }
     .title {
-        padding: 25px 10px;
         grid-column: span 2;
     }
-    .title h1 {
-        font-size: 2.2em;
-    }
-
     .promo-button {
         grid-column: span 2;
     }
     .hero-papas {
-        font-size: 0.75em;
+        font-size: 0.7em;
         grid-column: 1;
         grid-row: 3 / 5;
     }
@@ -1213,9 +1126,6 @@ footer {
         height: 191px;
         grid-column: 2;
         grid-row: 4;
-    }
-    .hero-logo img {
-        width: 120px;
     }
     .promos-content,
     .carta-content,
@@ -1232,55 +1142,9 @@ footer {
     }
     .welcome-promo-img img {
         display: block;
-        box-sizing: border-box;
-    }
-    .welcome-promo-text {
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .welcome-promo-text p {
-        font-size: 0.7em;
-    }
-    .carta-title,
-    .local-title,
-    .welcome-promo-text h2 {
-        width: 100%;
-        font-size: 1.5em;
-    }
-    .carta-nav a,
-    .product-info,
-    .cart-description {
-        font-size: 0.9em;
-    }
-    .cart-title {
-        font-size: 1.4em;
-    }
-    .local-msg,
-    .local-text {
-        font-size: 1em;
-        width: 100%;
-    }
-    .contact-hours,
-    .contact-address,
-    .contact-phone {
-        padding: 25px;
-        width: 100%;
     }
     .contact-img img {
         position: relative;
-    }
-    .contact-hours img,
-    .contact-address img,
-    .contact-phone img {
-        width: 40px;
-        height: 40px;
-    }
-    .faq-title {
-        font-size: 1.5em;
-        padding: 10px 15px;
-    }
-    details {
-        font-size: 1em;
     }
     .footer-content {
         gap: 35px;
