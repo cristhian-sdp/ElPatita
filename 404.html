@@ -25,13 +25,6 @@
         <link rel="canonical" href="https://elpatita.pages.dev/404" />
         <!-- Permite indexar la página y seguir los enlaces -->
         <meta name="robots" content="noindex, nofollow" />
-        <!-- Enlace al sitemap -->
-        <link
-            rel="sitemap"
-            type="application/xml"
-            title="Sitemap"
-            href="/sitemap.xml"
-        />
         <!-- Favicon de la página -->
         <link
             rel="icon"
@@ -51,7 +44,7 @@
         <!-- Contenido principal de la página de error -->
         <div class="error-page">
             <h1>404</h1>
-            <p>Lo sentimos, la página que buscas no existe.</p>
+            <p>Lo sentimos, la página que buscas no existe o esta en mantenimiento.</p>
             <!-- Enlace para volver a la página principal -->
             <a href="index.html" aria-label="Ir a la pagina web de el Patita"
                 >Volver a la pagina</a
@@ -83,10 +76,12 @@
                         <img
                             src="img/icon/github.webp"
                             alt="Ícono de Github"
+                            aria-hidden="true"
                             width="40"
                             height="40"
                             loading="lazy"
                             decoding="async"
+                            fetchpriority="low"
                         />
                     </a>
                     <!-- Derechos reservados -->
@@ -125,10 +120,12 @@
                     <img
                         src="img/favicon/title-logo.webp"
                         alt="Logo de la Pollería El Patita"
+                        aria-hidden="true"
                         width="66"
                         height="75"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                         title="Logo de la Pollería El Patita"
                     />
                     <h3>GRACIAS POR <span>PREFERIRNOS</span></h3>
@@ -137,3 +134,4 @@
         </footer>
     </body>
 </html>
+
