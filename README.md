@@ -2,6 +2,8 @@
 
 Bienvenido al repositorio de **elpatita**, un sitio web para un restaurante especializado en pollo a la brasa ubicado en Huanchaco.
 
+![Vista previa de ElPatita](img/misc/readme.webp)
+
 ## Descripción
 
 Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden encontrar información sobre el restaurante, ver el menú, y ponerse en contacto con nosotros.
@@ -18,6 +20,7 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
 - `robots.txt`: Archivo que controla el acceso de los motores de búsqueda a ciertas partes del sitio web.
 - `security.txt`: Archivo que proporciona información de contacto y políticas de seguridad.
 - `README.md`: Archivo que proporciona información sobre el proyecto.
+- `.editorconfig`: Archivo de configuración para mantener estilos de codificación consistentes.
 - `LICENSE`: Archivo que contiene la licencia del proyecto.
 - `CONTRIBUTING.md`: Archivo que proporciona guías para contribuir al proyecto.
 
@@ -29,7 +32,7 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
 
 2. Navega al directorio del proyecto:
     ```sh
-   cd el-patita
+   cd elpatita
 
 ## Contribución
 
@@ -47,3 +50,9 @@ Para más detalles, consulta el archivo [LICENSE](./LICENSE) o visita [Creative 
 ## Contacto
 
 Para cualquier consulta o sugerencia, por favor contacta a través de [steffanod948@gmail.com](mailto:steffanod948@gmail.com).
+
+## Seguridad
+
+Si encuentras alguna vulnerabilidad de seguridad, consulta nuestro [archivo de seguridad](./security.txt) para conocer el proceso adecuado para reportarla.
+
+© 2025 ElPatita Todos los derechos reservados.
