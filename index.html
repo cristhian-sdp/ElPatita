@@ -8,17 +8,12 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
         />
-        <meta
-            name="google-site-verification"
-            content="dAO6og7WskD6KDz0cd-VRkcLxs5o3kmpDiMFxkT1mFk"
-        />
-        <!--<meta name="csrf-token" content="abc123def456ghi789">-->
-        <meta name="theme-color" content="#f8dfce" />
         <meta name="rating" content="General" />
         <!-- Título de la página -->
         <title>El Patita - Promociones Exclusivas</title>
-        <!-- Enlaces a hojas de estilo CSS -->
+        <!-- Enlaces a CSS y JS -->
         <link rel="stylesheet" href="css/styles.min.css" />
+        <script src="js/script.min.js" defer></script>
         <!-- Metadatos para SEO -->
         <meta name="title" content="El Patita - Promociones Exclusivas" />
         <meta
@@ -27,11 +22,15 @@
         />
         <meta
             name="keywords"
-            content="El Patita, polleria, polleria cerca de mi, pollo a la brasa, pollo, brasas, Huanchaco, restaurantes en Huanchaco, trujillo, restaurante, comida rápida, promociones, descuentos, combos, combos familiares, menú, parrillas, guarniciones, bebidas, presencial"
+            content="El Patita, Pollería, polleria cerca de mi, pollo a la brasa, pollo, brasas, Huanchaco, restaurantes en Huanchaco, Trujillo, restaurante, comida rápida, promociones, descuentos, combos, combos familiares, menú, parrillas, guarniciones, bebidas, presencial, servicios, comida para llevar, atención al cliente"
         />
         <!-- Autor del contenido de la página -->
         <meta name="author" content="Cristhian Steffano Díaz Piminchumo" />
         <meta name="copyright" content="© 2025 ElPatita" />
+        <meta
+            name="google-site-verification"
+            content="dAO6og7WskD6KDz0cd-VRkcLxs5o3kmpDiMFxkT1mFk"
+        />
         <!-- Enlace canónico -->
         <link rel="canonical" href="https://elpatita.pages.dev" />
         <!-- Metadatos para Open Graph (para compartir en redes sociales) -->
@@ -48,20 +47,6 @@
         <meta property="og:image" content="img/misc/pollo-inicio.webp" />
         <!-- Permite indexar la página y seguir los enlaces -->
         <meta name="robots" content="index, follow" />
-        <!-- Enlace al sitemap -->
-        <link
-            rel="sitemap"
-            type="application/xml"
-            title="Sitemap"
-            href="/sitemap.xml"
-        />
-        <!-- Favicon de la página -->
-        <link
-            rel="icon"
-            href="img/favicon/title-logo.webp"
-            type="image/webp"
-            sizes="any"
-        />
         <!-- Enlace a fuentes de Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -73,6 +58,13 @@
             href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap&subset=latin"
             rel="stylesheet"
         />
+        <!-- Favicon de la página -->
+        <link
+            rel="icon"
+            href="img/favicon/favicon.ico"
+            type="image/webp"
+            sizes="any"
+        />
     </head>
     <body>
         <!-- Barra de progreso -->
@@ -82,8 +74,9 @@
             <!-- Logo -->
             <div class="logo">
                 <img
-                    src="img/favicon/title-logo.webp"
+                    src="img/favicon/favicon.ico"
                     alt="Logo de la Pollería El Patita"
+                    aria-hidden="true"
                     width="55"
                     height="60"
                     title="Logo de la Pollería El Patita"
@@ -97,6 +90,7 @@
                             ><img
                                 src="img/icon/inicio.webp"
                                 alt="Icono de Inicio"
+                                aria-hidden="true"
                                 width="24"
                                 height="24"
                             />Inicio</a
@@ -107,6 +101,7 @@
                             ><img
                                 src="img/icon/carta.webp"
                                 alt="Icono de Carta"
+                                aria-hidden="true"
                                 width="24"
                                 height="24"
                             />Carta</a
@@ -117,6 +112,7 @@
                             ><img
                                 src="img/icon/local.webp"
                                 alt="Icono de Local"
+                                aria-hidden="true"
                                 width="24"
                                 height="24"
                             />Local</a
@@ -137,11 +133,13 @@
                     <img
                         src="img/icon/sol.webp"
                         alt="Sun Icon"
+                        aria-hidden="true"
                         class="icon-sun"
                     />
                     <img
                         src="img/icon/luna.webp"
                         alt="Moon Icon"
+                        aria-hidden="true"
                         class="icon-moon"
                     />
                 </label>
@@ -189,7 +187,7 @@
                             loop
                             muted
                             playsinline
-                            preload="metadata"
+                            preload="auto"
                             aria-label="Video corto de brasas"
                         >
                             <source src="video/brasas.webm" />
@@ -200,7 +198,7 @@
                             loop
                             muted
                             playsinline
-                            preload="metadata"
+                            preload="auto"
                             aria-label="Video corto de papas fritas"
                         >
                             <source src="video/papas.webm" />
@@ -211,7 +209,7 @@
                             loop
                             muted
                             playsinline
-                            preload="metadata"
+                            preload="auto"
                             aria-label="Video corto de bebidas"
                         >
                             <source src="video/bebida.webm" />
@@ -232,8 +230,9 @@
                 <section class="hero-logo">
                     <!-- Logo -->
                     <img
-                        src="img/favicon/title-logo.webp"
+                        src="img/favicon/favicon.ico"
                         alt="Logo de la Pollería El Patita"
+                        aria-hidden="true"
                         width="200"
                         height="auto"
                         title="Logo de la Pollería El Patita"
@@ -250,6 +249,7 @@
                         height="300"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                         title="Explora nuestras promociones exclusivas"
                     />
                 </section>
@@ -320,6 +320,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">NUEVO</p>
@@ -340,6 +341,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">NUEVO</p>
@@ -360,6 +362,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">NUEVO</p>
@@ -382,6 +385,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">POPULAR</p>
@@ -400,6 +404,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">POPULAR</p>
@@ -418,6 +423,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">TENDENCIA</p>
@@ -436,6 +442,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">TENDENCIA</p>
@@ -456,6 +463,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">PERSONAL</p>
@@ -474,6 +482,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">PERSONAL</p>
@@ -492,6 +501,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">TENDENCIA</p>
@@ -510,6 +520,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">TENDENCIA</p>
@@ -532,6 +543,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">POPULAR</p>
@@ -550,6 +562,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">PERSONAL</p>
@@ -570,6 +583,7 @@
                         height="350"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">NUEVO</p>
@@ -586,6 +600,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">POPULAR</p>
@@ -602,6 +617,7 @@
                         height="330"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <div class="product-info">
                         <p class="category">TENDENCIA</p>
@@ -623,10 +639,12 @@
                     <img
                         src="img/icon/people.webp"
                         alt="Ícono de personas"
+                        aria-hidden="true"
                         width="90"
                         height="80"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                 </section>
             </article>
@@ -642,8 +660,8 @@
                         allowfullscreen=""
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Mapa de ubicación de la polleria El Patita"
-                        aria-label="Mapa interactivo de la ubicación de la polleria El Patita en Huanchaco"
+                        title="Mapa de ubicación de la Pollería El Patita"
+                        aria-label="Mapa interactivo de la ubicación de la Pollería El Patita en Huanchaco"
                     ></iframe>
                 </section>
                 <!-- Imagen de Huanchaco -->
@@ -655,6 +673,7 @@
                         height="300"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                         title="Vista de Huanchaco"
                     />
                 </section>
@@ -663,8 +682,10 @@
                     <img
                         src="img/icon/time.webp"
                         alt="Ícono de horario"
+                        aria-hidden="true"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <span>
                         <h3>Horario de Atención</h3>
@@ -675,8 +696,10 @@
                     <img
                         src="img/icon/dirección.webp"
                         alt="Ícono de dirección"
+                        aria-hidden="true"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <span>
                         <h3>Dirección</h3>
@@ -687,8 +710,10 @@
                     <img
                         src="img/icon/whatsapp.webp"
                         alt="Ícono de WhatsApp"
+                        aria-hidden="true"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                     />
                     <span>
                         <h3>Teléfono</h3>
@@ -721,7 +746,7 @@
                 <section class="faq-item">
                     <details name="info">
                         <summary>¿Qué métodos de pago aceptan?</summary>
-                        Aceptamos efectivo, yape y tarjetas de crédito. Nuestro
+                        Aceptamos efectivo, Yape y tarjetas de crédito. Nuestro
                         objetivo es hacer que su visita sea lo más conveniente
                         posible.
                     </details>
@@ -762,10 +787,12 @@
                         <img
                             src="img/icon/github.webp"
                             alt="Ícono de Github"
+                            aria-hidden="true"
                             width="40"
                             height="40"
                             loading="lazy"
                             decoding="async"
+                            fetchpriority="low"
                         />
                     </a>
                     <!-- Derechos reservados -->
@@ -802,19 +829,19 @@
                 <!-- Logo del pie de página y texto de agradecimiento -->
                 <div class="right-section">
                     <img
-                        src="img/favicon/title-logo.webp"
+                        src="img/favicon/favicon.ico"
                         alt="Logo de la Pollería El Patita"
+                        aria-hidden="true"
                         width="66"
                         height="75"
                         loading="lazy"
                         decoding="async"
+                        fetchpriority="low"
                         title="Logo de la Pollería El Patita"
                     />
                     <h3>GRACIAS POR <span>PREFERIRNOS</span></h3>
                 </div>
             </div>
         </footer>
-        <!-- Enlaces a archivo JavaScript -->
-        <script src="js/script.min.js" defer></script>
     </body>
 </html>
