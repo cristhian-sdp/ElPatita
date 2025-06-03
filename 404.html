@@ -1,137 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!-- Metadatos y configuración de la página -->
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
-        />
-        <!-- Título de la página -->
-        <title>Página no encontrada</title>
-        <!-- Enlaces a hojas de estilo CSS -->
-        <link rel="stylesheet" href="css/styles.min.css" />
-        <!-- Metadatos para SEO -->
-        <meta
-            name="description"
-            content="Página no encontrada en El Patita. Lo sentimos, la página que buscas no existe."
-        />
-        <meta
-            name="keywords"
-            content="404, página no encontrada, error, El Patita"
-        />
-        <!-- Enlace canónico -->
-        <link rel="canonical" href="https://elpatita.pages.dev/404" />
-        <!-- Permite indexar la página y seguir los enlaces -->
-        <meta name="robots" content="noindex, nofollow" />
-        <!-- Favicon de la página -->
-        <link
-            rel="icon"
-            href="img/favicon/title-logo.webp"
-            type="image/webp"
-            sizes="any"
-        />
-        <!-- Enlace a fuentes de Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <!-- Contenido principal de la página de error -->
-        <div class="error-page">
-            <h1>404</h1>
-            <p>Lo sentimos, la página que buscas no existe o esta en mantenimiento.</p>
-            <!-- Enlace para volver a la página principal -->
-            <a href="index.html" aria-label="Ir a la pagina web de el Patita"
-                >Volver a la pagina</a
-            >
-        </div>
-        <!-- Sección del pie de página -->
-        <footer>
-            <div class="footer-content">
-                <div class="left-section">
-                    <!-- Botón para redirigir a la encuesta -->
-                    <button
-                        type="button"
-                        class="encuesta-button"
-                        onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdYzkBOdLRSeoieGLIxuFA7cyFeME0NgLloQCdg2s4Ohp1Zew/viewform?usp=header';"
-                        rel="noopener noreferrer nofollow"
-                        title="Haz clic para responder nuestra encuesta"
-                        aria-label="Abrir encuesta en Google Forms"
-                    >
-                        Encuesta
-                    </button>
-                    <!-- Enlace al repositorio de Github -->
-                    <a
-                        href="https://github.com/cristhian-sdp/ElPatita"
-                        target="_blank"
-                        rel="noopener noreferrer nofollow"
-                        title="Abrir el repositorio de GitHub de El Patita"
-                        aria-label="Abrir el repositorio de GitHub de El Patita"
-                    >
-                        <img
-                            src="img/icon/github.webp"
-                            alt="Ícono de Github"
-                            aria-hidden="true"
-                            width="40"
-                            height="40"
-                            loading="lazy"
-                            decoding="async"
-                            fetchpriority="low"
-                        />
-                    </a>
-                    <!-- Derechos reservados -->
-                    <p>&copy; 2025 ElPatita</p>
-                </div>
-                <div class="legal-section">
-                    <!-- Enlaces legales -->
-                    <h6>Legal</h6>
-                    <a
-                        href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Abrir la licencia Creative Commons BY-NC-SA 4.0"
-                        aria-label="Abrir la licencia Creative Commons BY-NC-SA 4.0"
-                        >Licencia</a
-                    >
-                    <a
-                        href="pdf/Terminos-condiciones.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Abrir el documento de Términos y Condiciones"
-                        aria-label="Abrir el documento de Términos y Condiciones"
-                        >Términos y Condiciones</a
-                    >
-                    <a
-                        href="pdf/Políticas-privacidad.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Abrir el documento de Políticas de Privacidad"
-                        aria-label="Abrir el documento de Políticas de Privacidad"
-                        >Políticas de Privacidad</a
-                    >
-                </div>
-                <!-- Logo del pie de página y texto de agradecimiento -->
-                <div class="right-section">
-                    <img
-                        src="img/favicon/title-logo.webp"
-                        alt="Logo de la Pollería El Patita"
-                        aria-hidden="true"
-                        width="66"
-                        height="75"
-                        loading="lazy"
-                        decoding="async"
-                        fetchpriority="low"
-                        title="Logo de la Pollería El Patita"
-                    />
-                    <h3>GRACIAS POR <span>PREFERIRNOS</span></h3>
-                </div>
-            </div>
-        </footer>
-    </body>
+  <head>
+    <!-- Metadatos y configuración de la página -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título de la página -->
+    <title>404 | Página no encontrada</title>
+    <!-- Enlaces a hojas de estilo CSS -->
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <!-- Permite indexar la página y seguir los enlaces -->
+    <meta name="robots" content="noindex, nofollow" />
+    <!-- Favicon de la página -->
+    <link
+      rel="icon"
+      href="assets/favicon.ico"
+      type="image/x-icon"
+      sizes="any"
+    />
+  </head>
+  <body class="error-page flex-center">
+    <!-- Contenido principal de la página de error -->
+    <main>
+      <section class="error-container">
+        <h1>ERROR 404!</h1>
+        <p>
+          Lo sentimos, la página que buscas no existe o está en mantenimiento.
+        </p>
+        <a
+          href="index.html"
+          class="error-button"
+          aria-label="Ir a la pagina web de el Patita"
+          >Volver a la página</a
+        >
+      </section>
+    </main>
+  </body>
 </html>
-
