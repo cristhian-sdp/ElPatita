@@ -5,6 +5,8 @@ const urlsToCache = [
   '/css/styles.min.css',
   '/js/script.min.js',
   '/assets/favicon.ico',
+  '/assets/favicon-192.png',
+  '/assets/favicon-512.png',
   '/assets/img/misc/pollo-inicio.webp',
   '/assets/img/misc/papas-fritas.webp',
   '/assets/img/misc/alitas-de-pollo.webp',
