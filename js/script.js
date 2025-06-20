@@ -179,3 +179,29 @@ if (footerToggle) {
     }
   });
 }
+// Registrar Service Worker para PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('SW registrado: ', registration);
+      })
+      .catch((registrationError) => {
+        console.log('SW registro falló: ', registrationError);
+      });
+  });
+}
+// Detectar si la app está instalada
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevenir que Chrome muestre automáticamente el prompt
+  e.preventDefault();
+  // Guardar el evento para usarlo después
+  window.deferredPrompt = e;
+  console.log('App puede ser instalada');
+});
+// Detectar cuando la app se instala
+window.addEventListener('appinstalled', (evt) => {
+  console.log('App instalada exitosamente');
+  // Limpiar el prompt guardado
+  window.deferredPrompt = null;
+});
