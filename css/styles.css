@@ -122,7 +122,7 @@ nav {
   padding: 10px 20px;
   z-index: 10;
   transition: border 0.3s ease, background-color 0.4s ease;
-  animation: slideUp 0.8s ease-in-out forwards;
+  animation: slideUp 1s ease-in-out forwards;
 }
 nav img {
   margin-bottom: 3px;
@@ -372,7 +372,6 @@ body.dark-mode .legal-container {
 }
 .papas-container p,
 .circle,
-.cart-nav a::before,
 .img-huanchaco p {
   position: absolute;
   top: 50%;
@@ -555,19 +554,6 @@ h1 span,
   background-color: var(--blanco-puro);
   color: var(--negro-puro);
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
-}
-.cart-nav a::before {
-  content: "";
-  width: 0;
-  height: 0;
-  background-color: var(--naranja-claro);
-  border-radius: 50%;
-  z-index: -1;
-  transition: width 0.5s ease, height 0.5s ease;
-}
-.cart-nav a:hover::before {
-  width: 80px;
-  height: 80px;
 }
 .promociones,
 .brasas,
@@ -824,7 +810,7 @@ details {
 details[open] {
   background-color: var(--blanco-puro);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border-left: 10px solid var(--naranja);
+  border-left: 10px solid var(--naranja-fuerte);
   border-radius: 20px;
   display: block;
 }
@@ -840,18 +826,20 @@ details summary::-webkit-details-marker {
   display: none;
 }
 details summary::before {
-  content: "⮟";
-  font-size: 1em;
+  display: flex;
+  align-items: center;
+  content: "👇";
+  font-size: 1.15em;
   font-weight: bold;
   color: var(--blanco-puro);
-  background-color: var(--naranja);
+  background-color: var(--naranja-fuerte);
   width: 40px;
   height: 40px;
   border-radius: 50%;
   transition: transform 0.4s ease, color 0.4s ease;
 }
 details[open] summary::before {
-  content: "⮝";
+  content: "☝️";
   transform: rotate(360deg);
   transition: transform 0.5s ease, color 0.4s ease;
 }
@@ -1044,7 +1032,7 @@ footer {
   /* Animación de aparecimiento */
   0% {
     opacity: 0;
-    transform: scale(0.96);
+    transform: scale(0.95);
   }
   100% {
     opacity: 1;
