@@ -14,6 +14,8 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
 - `terminos-condiciones.html`: Página que contiene los términos y condiciones del servicio.
 - `politicas-privacidad.html`: Página que contiene las políticas de privacidad.
 - `404.html`: Página de error 404 para manejar rutas no encontradas.
+- `manifest.json`: Archivo de configuración para Progressive Web App (PWA).
+- `sw.js`: Service Worker para funcionamiento offline y cacheo de recursos.
 - `css/`: Directorio que contiene los archivos de estilos CSS.
 - `js/`: Directorio que contiene los archivos JavaScript.
 - `assets/`: Directorio que contiene recursos estáticos:
@@ -21,13 +23,14 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
   - `assets/fonts/`: Fuentes tipográficas.
   - `assets/sprite.svg`: Archivo de sprites para iconos.
   - `assets/favicon.ico`: Icono del sitio.
+  - `assets/video/`: Videos decorativos utilizados en la web.
 - `sitemap.xml`: Archivo XML que ayuda a los motores de búsqueda a indexar el sitio web.
 - `robots.txt`: Archivo que controla el acceso de los motores de búsqueda.
 - `security.txt`: Archivo que proporciona información de contacto y políticas de seguridad.
+- `pgp-key.txt`: Llave pública PGP para contacto seguro.
 - `README.md`: Archivo que proporciona información sobre el proyecto.
-- `.editorconfig`: Archivo de configuración para mantener estilos de codificación consistentes.
-- `LICENSE`: Archivo que contiene la licencia del proyecto.
 - `CONTRIBUTING.md`: Archivo que proporciona guías para contribuir al proyecto.
+- `LICENSE`: Archivo que contiene la licencia del proyecto.
 
 ## Características
 
@@ -37,6 +40,8 @@ Este proyecto es el sitio web oficial de El Patita. Aquí los usuarios pueden en
 - **Navegación SPA-like**: Navegación fluida entre secciones sin recargar la página.
 - **Contenido Legal**: Términos y condiciones y políticas de privacidad implementadas en HTML.
 - **Optimizado para SEO**: Metadatos completos, datos estructurados y enlaces canónicos.
+- **PWA (Progressive Web App)**: Instalación como app móvil, soporte offline, iconos personalizados y experiencia nativa.
+- **Service Worker**: Cacheo de recursos estáticos y videos decorativos para funcionamiento offline.
 
 ## Instalación
 

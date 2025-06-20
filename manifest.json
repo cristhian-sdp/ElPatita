@@ -1,0 +1,40 @@
+{
+    "name": "El Patita - Pollería",
+    "short_name": "El Patita",
+    "description": "La mejor pollería en Huanchaco. Pollo a la brasa, parrillas y más.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#f0781f",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "es",
+    "icons": [
+      {
+        "src": "assets/favicon.ico",
+        "sizes": "48x48",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "assets/img/misc/pollo-inicio.webp",
+        "sizes": "192x192",
+        "type": "image/webp",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "assets/img/misc/pollo-inicio.webp",
+        "sizes": "512x512",
+        "type": "image/webp",
+        "purpose": "any maskable"
+      }
+    ],
+    "categories": ["food", "restaurant", "lifestyle"],
+    "screenshots": [
+      {
+        "src": "assets/img/misc/pollo-inicio.webp",
+        "sizes": "1280x720",
+        "type": "image/webp",
+        "form_factor": "wide"
+      }
+    ]
+  }
