@@ -1,40 +1,40 @@
 {
-    "name": "El Patita - Pollería",
-    "short_name": "El Patita",
-    "description": "La mejor pollería en Huanchaco. Pollo a la brasa, parrillas y más.",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#f0781f",
-    "orientation": "portrait-primary",
-    "scope": "/",
-    "lang": "es",
-    "icons": [
-      {
-        "src": "assets/favicon.ico",
-        "sizes": "48x48",
-        "type": "image/x-icon"
-      },
-      {
-        "src": "assets/favicon.ico",
-        "sizes": "192x192",
-        "type": "image/x-icon",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "assets/favicon.ico",
-        "sizes": "512x512",
-        "type": "image/x-icon",
-        "purpose": "any maskable"
-      }
-    ],
-    "categories": ["food", "restaurant", "lifestyle"],
-    "screenshots": [
-      {
-        "src": "assets/img/misc/pollo-inicio.webp",
-        "sizes": "1280x720",
-        "type": "image/webp",
-        "form_factor": "wide"
-      }
-    ]
-  }
+  "name": "El Patita - Pollería",
+  "short_name": "El Patita",
+  "description": "La mejor pollería en Huanchaco. Pollo a la brasa, parrillas y más.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f0781f",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "assets/favicon-192.png",
+      "sizes": "192x175",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/favicon-512.png",
+      "sizes": "512x467",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "restaurant", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "assets/img/misc/pollo-inicio.webp",
+      "sizes": "1280x720",
+      "type": "image/webp",
+      "form_factor": "wide"
+    }
+  ]
+}
